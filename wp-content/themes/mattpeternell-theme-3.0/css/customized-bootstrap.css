@@ -1,0 +1,378 @@
+/* xxx
+ * Overrides for Wordpresss to improve integration
+ * @author Matthias Thom | http://upplex.de
+ * @package upBootWP 0.1
+ *
+ */
+/* imported customize-bootstrap.less */
+/* here you should use whatever @font-face squirrel generated in the stylesheet.css */
+/**
+ * Overrides for Wordpresss to improve integration
+ * 
+ * @author Matthias Thom | http://upplex.de
+ * @package upBootWP 0.1
+ */
+.container.home_page {
+  margin-top: 5%;
+}
+.container.sub_page {
+  margin-top: 5.714em;
+  margin-bottom: 2.714em;
+}
+.carousel-inner {
+  max-width: 1400px;
+  margin: 0px auto;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.image .entry-meta .entry-date {
+  margin: 0 10px;
+}
+.image .entry-caption > p {
+  font-size: 20px;
+  font-style: italic;
+  padding: 10px;
+  text-align: center;
+}
+.image .entry-content > p {
+  margin: 0 auto;
+  text-align: center;
+  width: 60%;
+  padding: 10px;
+}
+.image .edit-link {
+  margin-right: 10px;
+}
+.image .image-navigation {
+  overflow: auto;
+  width: 100%;
+}
+.image .attachment img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.home .jumbotron {
+  height: 402px;
+  margin-top: 3px;
+  padding-bottom: 0;
+  padding-top: 50px;
+}
+.home_page .page-header {
+  margin-bottom: 40px;
+  padding-bottom: 0;
+  border: none;
+}
+.home_page .page-header h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.home_page .page-header h2 {
+  margin-top: 0px;
+  font-style: italic;
+}
+.home_page .blog-header {
+  margin-bottom: 40px;
+}
+.sub_page .page-header {
+  margin-bottom: 40px;
+  padding-bottom: 0;
+  border: none;
+}
+.sub_page .page-header h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.sub_page .page-header h2 {
+  margin-top: 0px;
+  font-style: italic;
+}
+.sub_page .blog-header {
+  margin-bottom: 40px;
+}
+.blog-title {
+  text-transform: capitalize;
+}
+.subtitle {
+  font-size: 20px;
+}
+.post .entry-header {
+  margin-bottom: 4rem;
+}
+.post footer.entry-meta {
+  overflow: auto;
+  width: 100%;
+}
+.post footer.entry-meta .tags {
+  margin-bottom: 2rem;
+}
+.post footer.entry-meta .btn-group {
+  margin-top: 3em;
+}
+.blog-footer {
+  background-color: #39558c;
+  border-top: 1px solid #5b7ba6;
+  color: #999999;
+  padding: 40px 0;
+  text-align: center;
+}
+.entry-meta {
+  margin-bottom: 30px;
+}
+.entry-meta .vcard {
+  padding: 0 15px;
+}
+.entry-meta .posted-on {
+  display: block;
+}
+.entry-meta .revise {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+.entry-meta .entry-date.published {
+  margin-right: 0.5em;
+}
+.entry-meta .byline {
+  display: block;
+  margin-bottom: 1em;
+}
+/**************************
+* WP - ADMIN Bar Fix
+ ********************************/
+.admin-bar .navbar-fixed-top {
+  top: 32px;
+  border-top: 1px solid #000000;
+}
+.nav-previous {
+  float: left;
+  margin-bottom: 2em;
+}
+.nav-next {
+  float: right;
+  margin-bottom: 2em;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #b2b2b2;
+}
+.widget-area.four {
+  overflow: auto;
+}
+.widget .panel {
+  background-color: #fdfdfd;
+}
+.widget .panel:hover {
+  background-color: #f7f8fa;
+  -webkit-transition: background 500ms ease;
+  -moz-transition: background 500ms ease;
+  -ms-transition: background 500ms ease;
+  -o-transition: background 500ms ease;
+  transition: background 500ms ease;
+}
+.widget-area .panel .panel-body {
+  min-height: 250px;
+}
+.panel-default > .panel-heading {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border: medium none;
+}
+.panel {
+  margin-bottom: 30px;
+}
+.panel.panel-default {
+  white-space: normal;
+}
+.panel:hover {
+  background-color: #d7dde8;
+  -webkit-transition: background 500ms ease;
+  -moz-transition: background 500ms ease;
+  -ms-transition: background 500ms ease;
+  -o-transition: background 500ms ease;
+  transition: background 500ms ease;
+}
+.panel .panel-heading {
+  padding: 10px 15px 5px;
+}
+.panel .panel-body {
+  min-height: 375px;
+  position: relative;
+  padding: 10px 15px 15px;
+}
+.panel .attachment-homepage-thumb.wp-post-image {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  display: inline-block;
+  height: auto;
+  line-height: 1.42857;
+  max-width: 100%;
+  padding: 4px;
+  transition: all 0.2s ease-in-out 0s;
+}
+.panel .attachment-thumbnail.wp-post-image {
+  bottom: 6px;
+  left: 30px;
+  position: absolute;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+.panel > h2 a {
+  text-transform: uppercase;
+}
+.tagcloud {
+  padding: 0 15px;
+}
+.tagcloud a {
+  margin-right: 3px;
+}
+.tag_list {
+  list-style: none outside none;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+.tag_list > li {
+  float: left;
+  list-style: none outside none;
+  margin: 0 3px 0 0;
+  padding: 0;
+  line-height: 18px;
+}
+.container .cycloneslider-template-standard .cycloneslider-pager span {
+  background: none repeat scroll 0 0 #42484b;
+}
+.socialNet {
+  list-style: outside none none;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+.socialNet > li {
+  display: block;
+  float: left;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+.cycle-slideshow,
+.cycle-slideshow * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.home-slideshow {
+  width: 100%;
+  min-width: 240px;
+  max-width: 1170px;
+  margin: 0px auto;
+  padding: 0;
+  position: relative;
+}
+.home-slideshow img {
+  width: 100%;
+  height: auto;
+}
+.cycle-slideshow {
+  width: 100%;
+  min-width: 200px;
+  max-width: 1170px;
+  margin: 30px -15px;
+  padding: 0;
+  position: relative;
+}
+.slidetiles.cycle-slide {
+  margin-left: 15px;
+  margin-right: 15px;
+  overflow: hidden;
+  max-width: 360px;
+  width: 100%;
+}
+.slidetiles .slide-txt {
+  height: 75px;
+  overflow: hidden;
+}
+.slidetiles .panel {
+  max-width: 360px;
+  width: 100%;
+  margin-bottom: 0;
+}
+.slidetiles .panel .panel-body {
+  min-height: 300px;
+}
+/* in case script does not load */
+.cycle-slideshow .slidetiles:first-child {
+  position: static;
+  z-index: 100;
+}
+.home-slideshow .slide_tile:first-child {
+  position: static;
+  z-index: 100;
+}
+.tiles .slide-txt {
+  height: 75px;
+  overflow: hidden;
+}
+/* 
+    media queries 
+    some style overrides to make things more pleasant on mobile devices
+*/
+@media (min-width: 480px) and (max-width: 800px) {
+  .slidetiles.cycle-slide {
+    width: 345px !important;
+  }
+}
+@media (min-width: 981px) and (max-width: 1024px) {
+  .slidetiles.cycle-slide {
+    width: 293px !important;
+  }
+  .slidetiles .attachment-homepage-thumb.wp-post-image {
+    left: 0;
+    right: 0;
+  }
+  .slidetiles .panel-title {
+    font-size: 20px;
+  }
+  .slidetiles .lead {
+    font-size: 14.5px;
+  }
+}
+@media only screen and (max-width: 320px), only screen and (max-device-width: 320px) {
+  .navbar-brand {
+    float: left;
+    font-size: 18px;
+    height: 50px;
+    line-height: 20px;
+    padding: 15px 0;
+    width: 50%;
+  }
+  .slidetiles.cycle-slide {
+    width: 280px;
+  }
+  .slidetiles .panel .panel-body {
+    min-height: 250px;
+  }
+  .slidetiles .panel-title {
+    font-size: 18px;
+  }
+  .slidetiles .lead {
+    font-size: 14px;
+  }
+}
