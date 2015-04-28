@@ -19,26 +19,6 @@
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->	
 <?php wp_footer(); ?>
-<script>
-$(document).ready(function() {
-	/* -------------------------------------------------
-	 * Slideshow Pause and Play Button GLOBAL FUNCTIONs
-	 * ------------------------------------------------- */
-	
-	$('#pauseToggle').click(function() {
-		var slideshow = $('.cycle-slideshow');
-		var playIcon = '<span class=\"glyphicon glyphicon-play\"></span>';
-		var pauseIcon = '<span class=\"glyphicon glyphicon-pause\"></span>';
 
-		if (slideshow.is('.cycle-paused')) {
-			slideshow.cycle('resume');
-			$(this).text('Pause').append(pauseIcon);
-		} else {
-			slideshow.cycle('pause');
-			$(this).text('Play').append(playIcon);
-		}
-	});
-});
-</script>
 </body>
 </html>

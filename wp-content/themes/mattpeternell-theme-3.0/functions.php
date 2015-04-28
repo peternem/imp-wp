@@ -92,10 +92,11 @@ function upbootwp_scripts() {
 	wp_enqueue_style( 'customized-bootstrap', get_template_directory_uri().'/css/customized-bootstrap.css', array(), '20130908');
 	wp_enqueue_script( 'upbootwp-jQuery', get_template_directory_uri().'/js/jquery.js',array(),'2.0.3',true);
 	wp_enqueue_script( 'upbootwp-basefile', get_template_directory_uri().'/js/bootstrap.min.js',array(),'20130905',true);
+	wp_enqueue_script( 'cycle', get_template_directory_uri().'/js/jquery.cycle2.js',array(),'20130905',true);
+	wp_enqueue_script( 'tile', get_template_directory_uri().'/js/jquery.cycle2.tile.js',array(),'20130905',true);
+	wp_enqueue_script( 'carousel', get_template_directory_uri().'/js/jquery.cycle2.carousel.js',array(),'20130905',true);
 	wp_enqueue_script( 'javascript', get_template_directory_uri().'/js/main.js',array(),'20130905',true);
-	wp_enqueue_script( 'upbootwp-basefile', get_template_directory_uri().'/js/jquery.cycle2.js',array(),'20130905',true);
-	wp_enqueue_script( 'upbootwp-basefile', get_template_directory_uri().'/js/jquery.cycle2.carousel.js',array(),'20130905',true);
-	wp_enqueue_script( 'upbootwp-basefile', get_template_directory_uri().'/js/jquery.cycle2.tile.js',array(),'20130905',true);
+	
 }
 add_action( 'wp_enqueue_scripts', 'upbootwp_scripts' );
 

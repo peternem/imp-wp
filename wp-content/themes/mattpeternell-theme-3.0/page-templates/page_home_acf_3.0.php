@@ -9,64 +9,6 @@
 get_header(); ?>
 
 <?php while (have_posts()) : the_post(); ?>
-<!-- <div class="jumbotron"> -->
-<!-- 	<div class="container"> -->
-<!-- 	    <div id='slideshow' class="home-slideshow" data-cycle-fx="scrollHorz"  data-cycle-slides=".slide_tile" data-cycle-pause-on-hover="true"  data-cycle-speed="1000"  data-cycle-timeout="6000" data-cycle-prev="#prev" data-cycle-next="#next"> -->
-<!-- 			<div class="slide_tile"> -->
-				<?php
-// 				// Advanced Custom Fieldset - Featurette
-// 				if(get_field('slide_1_image')){
-// 					echo '<img class="img-responsive" src="' . get_field('slide_1_image') . '"/>';
-// 					?>
-<!-- 					<div class="carousel-caption"> -->
-						<?php
-// 						echo "<h1>".get_field('slide_1_title')."</h1>";
-// 						echo "<p>".get_field('slide_1_subtitle')."</p>";
-// 					?>
-<!-- 					</div> -->
-				<?php
-// 				} 
-// 				?>
-<!-- 			</div> -->
-<!-- 			<div class="slide_tile"> -->
-				<?php
-// 				// Advanced Custom Fieldset - Featurette
-// 				if(get_field('slide_2_image'))
-// 				{
-// 					echo '<img class="img-responsive" src="' . get_field('slide_2_image') . '"/>';
-// 					?>
-<!-- 					<div class="carousel-caption"> -->
-						<?php
-// 						echo "<h1>".get_field('slide_2_title')."</h1>";
-// 						echo "<p>".get_field('slide_2_subtitle')."</p>";
-// 						?>
-<!-- 					</div> -->
-				<?php
-// 				} 
-// 				?>
-<!-- 			</div> -->
-<!-- 			<div class="slide_tile"> -->
-				<?php
-// 				// Advanced Custom Fieldset - Featurette
-// 				if(get_field('slide_3_image'))
-// 				{
-// 					echo '<img class="img-responsive" src="' . get_field('slide_3_image') . '"/>';
-// 					?>
-<!-- 					<div class="carousel-caption"> -->
-						<?php
-// 						echo "<h1>".get_field('slide_3_title')."</h1>";
-// 						echo "<p>".get_field('slide_3_subtitle')."</p>";
-// 						?>
-<!-- 					</div> -->
-				<?php
-// 				} 
-// 				?>
-<!-- 			</div>		 -->
-<!-- 		</div> -->
-<!-- 	</div> -->
-<!-- </div> -->
-
-
 		<div class="container home_page">
 			<div class="row">
 				<div class="col-md-12 col-lg-12">
@@ -99,15 +41,19 @@ get_header(); ?>
 				)); ?>		
 			</div>
 					
-			<div class="row cycle-slideshow"  >
+			<div class="row cycle-slideshow"
+    data-cycle-fx=carousel
+    data-cycle-carousel-fluid=true
+    data-cycle-slides="div.slidetiles" >
 			<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				$args = array( 
 					'post_type' => 'post',
  					'posts_per_page' =>6,
  					'paged' => $paged,
  					'orderby' => 'post_date',
- 					'order' => 'date' , //ASC//DESC
-					'cat' => 5,
+ 					'order' => 'date' ,
+					'category' => 7,
+					//'category__and' => array( 5, 7 ),
  					'post_status' => 'publish',
 				);
 				$wp_query = new WP_Query($args);
