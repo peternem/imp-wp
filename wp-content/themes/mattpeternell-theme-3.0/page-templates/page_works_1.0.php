@@ -58,7 +58,7 @@ get_header(); ?>
  					'paged' => $paged,
  					'orderby' => 'post_date',
  					'order' => 'date' , //ASC//DESC
-					'cat' => 5,
+					'category__and' => array( 5, 7 ),
  					'post_status' => 'publish',
 				);
 				$wp_query = new WP_Query($args);
