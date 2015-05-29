@@ -13,8 +13,13 @@ get_header(); ?>
 		<?php
 			if ( is_category() ) :
 				single_cat_title( '<h1 class="blog-title">Categorized: ', true, '</h1>');
+
 			elseif ( is_tag() ) :
 				single_tag_title( '<h1 class="blog-title">Tagged: ', true, '</h1>');
+			
+			elseif (is_tax() ):
+                 single_tag_title();
+        
 			elseif ( is_author() ) :
 				/* Queue the first post, that way we know
 				 * what author we're dealing with (if that is the case).
@@ -33,7 +38,8 @@ get_header(); ?>
 				printf( __( '<h1 class="blog-title">Month: %s', 'upbootwp' ), '<span>' . get_the_date( 'F Y' ) . '</span></h1>' );
 			elseif ( is_year() ) :
 				printf( __( '<h1 class="blog-title">Year: %s', 'upbootwp' ), '<span>' . get_the_date( 'Y' ) . '</span></h1>' );
-		
+                
+                	
 			elseif ( is_tax( 'post_format', 'post-format-aside' ) ) :
 				_e( 'Asides', 'upbootwp' );
 		

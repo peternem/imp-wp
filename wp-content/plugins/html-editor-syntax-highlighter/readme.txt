@@ -1,10 +1,10 @@
 === HTML Editor Syntax Highlighter ===
 Contributors: nixdns
-Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DC9K7UMY8AGUJ
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=TKH76XU7BFNCA
 Tags: html editor, syntax highlighter, plugin editor, syntax, highlighting, syntax highlighting, text editor, editor, text editor syntax, editor, editor syntax
 Requires at least: 3.3
-Tested up to: 3.9.1
-Stable tag: 1.6.0
+Tested up to: 4.1.1
+Stable tag: 1.6.7
 
 Add syntax highlighting to the HTML editor.
 
@@ -30,6 +30,28 @@ If you like the plugin, don’t hesitate to support me and leave a review :)
 2. Activate the plugin on the 'Plugins' page
 
 == Changelog ==
+
+= 1.6.7 =
+* Added paragraph tag button, it's visible only when the visual editor is disabled
+* Added minimum editor window height for the full-height mode
+
+= 1.6.6 =
+* Added minimum editor window height for the full-height mode
+
+= 1.6.5 =
+* Fixes for full-height mode
+* Fixed the issue with a hidden first line on smaller screens
+
+= 1.6.4 =
+* Fixed the issue with a hidden first line on smaller screens
+
+= 1.6.3 =
+* Fixed editor window height and resize handler
+* "headers already sent" issue
+
+= 1.6.2 =
+* Compatibility with WP 4.0
+* Fixed fullscreen mode
 
 = 1.6.0 =
 * You can change font size in the editor

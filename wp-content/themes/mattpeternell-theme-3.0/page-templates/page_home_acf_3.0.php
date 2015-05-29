@@ -45,14 +45,17 @@ get_header(); ?>
     data-cycle-fx=carousel
     data-cycle-carousel-fluid=true
     data-cycle-slides="div.slidetiles" >
-			<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			<?php $catName =  get_cat_ID("websites");
+			
+			$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+			     
 				$args = array( 
 					'post_type' => 'post',
  					'posts_per_page' =>6,
  					'paged' => $paged,
  					'orderby' => 'post_date',
  					'order' => 'date' ,
-					'category' => 7,
+					'cat' => $catName,
 					//'category__and' => array( 5, 7 ),
  					'post_status' => 'publish',
 				);

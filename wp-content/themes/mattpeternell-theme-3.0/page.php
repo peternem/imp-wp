@@ -12,7 +12,7 @@
  */
 
 get_header(); ?>
-<div class="container sub_page">
+<div class="container-fluid sub_page">
 	<div class="row">
 		<div class="col-md-8">
 			<div id="primary" class="content-area">

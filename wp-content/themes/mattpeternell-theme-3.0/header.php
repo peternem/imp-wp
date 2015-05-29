@@ -30,10 +30,10 @@
 
 <body <?php body_class(); ?>>
 <?php do_action( 'before' ); ?>
-<header id="masthead" class="container" role="banner">
+<header id="masthead" role="banner">
 	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container">
-			<div class="row">
+		<div class="container-fluid">
+			<div class="mp-row row">
 				<div class="col-md-12 col-lg-12">
 			        <div class="navbar-header">
 			        	<aside id="polylang-3" class="col-lg-4 center-block widget widget_polylang"></aside>
@@ -51,7 +51,7 @@
 					<?php 
 					$args = array('theme_location' => 'primary', 
 								  'container_class' => 'navbar-collapse collapse', 
-								  'menu_class' => 'nav navbar-nav',
+								  'menu_class' => 'nav navbar-nav navbar-right',
 								  'fallback_cb' => '',
 		                          'menu_id' => 'main-menu',
 		                          'walker' => new Upbootwp_Walker_Nav_Menu()); 

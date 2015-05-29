@@ -37,9 +37,11 @@ function upbootwp_setup() {
 	 */
 	add_theme_support( 'post-thumbnails', array( 'post' ) );          // Posts only
 	add_theme_support( 'post-thumbnails', array( 'page' ) );
+	add_image_size( 'careers-featured', 2500, 1400, true );
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'homepage-thumb', 300, 200, array( 'left', 'top' )  ); // Hard crop left top
-	
+	add_image_size( 'homepage-thumb-port', 300, 350,  array( 'left', 'top' ));
+	add_image_size( 'homepage-thumb-land', 300, 188,  array( 'left', 'top' ));
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'Bootstrap WP Primary' ),
 	) );
@@ -59,6 +61,96 @@ function upbootwp_setup() {
 	
 	
 }
+
+add_action( 'init', 'themes_taxonomy');
+function themes_taxonomy() {
+register_taxonomy(
+    'careers','careers',
+    array(
+        'hierarchical'      => true,
+        'label'             => 'Categories',
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true
+        )
+    ); 
+} 
+
+add_action( 'init', 'codex_career_init' );
+
+function codex_career_init() {
+    $labels = array(
+        'name'               => _x( 'Careers', 'post type general name'),
+        'singular_name'      => _x( 'Careers Item', 'post type singular name'),
+        'menu_name'          => _x( 'Careers', 'admin menu'),
+        'name_admin_bar'     => _x( 'Careers', 'add new on admin bar'),
+        'add_new'            => _x( 'New', 'Career News Item'),
+        'add_new_item'       => __( 'Add New Career News Item'),
+        'new_item'           => __( 'New Career Item'),
+        'edit_item'          => __( 'Edit Careers Item'),
+        'view_item'          => __( 'View Careers Item'),
+        'all_items'          => __( 'All Careers'),
+        'search_items'       => __( 'Search Careers'),
+        'parent_item_colon'  => __( 'Parent Careers:'),
+        'not_found'          => __( 'No Careers Found.'),
+        'not_found_in_trash' => __( 'No Careers Found in Trash.')
+    );
+
+    $args = array(
+        'labels'             => $labels,
+        'public'             => true,
+        'publicly_queryable' => true,
+        'show_ui'            => true,
+        'show_in_menu'       => true,
+        'query_var'          => true,
+        'rewrite' => array( 'slug' => 'careers','with_front' => true),
+        'capability_type'    => 'post',
+        'has_archive'        => true,
+        'hierarchical'       => true,
+        'menu_position'      => 5,
+        'supports'           => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'comments' ),
+        'taxonomies'        => array('post_tag') // this is IMPORTANT
+    );
+    register_post_type( 'careers', $args ); 
+}
+
+
+
+
+add_filter('pre_get_posts', 'query_post_type');
+function query_post_type($query) {
+  if(is_category() || is_tag()) {
+    $post_type = get_query_var('post_type');
+    if($post_type)
+        $post_type = $post_type;
+    else
+        $post_type = array('post','careers', 'nav_menu_item');
+        $query->set('post_type',$post_type);
+    return $query;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function new_excerpt_more( $more ) {
 	return ' <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
 }
@@ -88,8 +180,11 @@ function upbootwp_widgets_init() {
 add_action( 'widgets_init', 'upbootwp_widgets_init' );
 
 function upbootwp_scripts() {
+    // Add Font Awesome stylesheet
+   
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri().'/css/bootstrap.css', array(), '20130908');
 	wp_enqueue_style( 'customized-bootstrap', get_template_directory_uri().'/css/customized-bootstrap.css', array(), '20130908');
+	wp_enqueue_style( 'font-awesome-icons', get_template_directory_uri().'/css/font-awesome.min.css' );
 	wp_enqueue_script( 'upbootwp-jQuery', get_template_directory_uri().'/js/jquery.js',array(),'2.0.3',true);
 	wp_enqueue_script( 'upbootwp-basefile', get_template_directory_uri().'/js/bootstrap.min.js',array(),'20130905',true);
 	wp_enqueue_script( 'cycle', get_template_directory_uri().'/js/jquery.cycle2.js',array(),'20130905',true);
@@ -229,18 +324,18 @@ function upbootwp_breadcrumbs() {
 	}
 }
 
-add_filter( 'default_content', 'custom_editor_content' );
-function custom_editor_content( $content ) {
-	global $current_screen;
-    if ( $current_screen->post_type == 'page') {
-	$content = '<p>This is your sidebar content. Add Content or Image Here!</p>';
-} elseif ( $current_screen->post_type == 'post') {
-	$content = '<p>This is your sidebar content. Add Content or Image Here!</p>';
-} else {
-    $content = '<p>This is your sidebar content. Add Content or Image Here!</p>';
-}
-	return $content;
-}
+// add_filter( 'default_content', 'custom_editor_content' );
+// function custom_editor_content( $content ) {
+	// global $current_screen;
+    // if ( $current_screen->post_type == 'page') {
+	// $content = '<p>This is your sidebar content. Add Content or Image Here!</p>';
+// } elseif ( $current_screen->post_type == 'post') {
+	// $content = '<p>This is your sidebar content. Add Content or Image Here!</p>';
+// } else {
+    // $content = '<p>This is your sidebar content. Add Content or Image Here!</p>';
+// }
+	// return $content;
+// }
 
 // Register custom footer and sidbar widget widgets
 register_sidebar( array(

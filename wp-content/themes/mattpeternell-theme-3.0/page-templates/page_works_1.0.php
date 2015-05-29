@@ -9,58 +9,80 @@
 get_header(); ?>
 
 <?php while (have_posts()) : the_post(); ?>
-<div class="container sub_page">
-	<div class="row">
+<div class="container-fluid sub_page">
+	<div class="mp-row row">
 		<div class="col-md-12 col-lg-12">	
 			<?php if(function_exists('upbootwp_breadcrumbs')) upbootwp_breadcrumbs(); ?>
 			<header class="entry-header page-header">
 				<h1 class="entry-title"><?php the_title(); ?></h1>
 				<?php if(function_exists('the_subtitle')) the_subtitle( '<h2 class="subtitle">', '</h2>');?>
 			</header><!-- .entry-header -->
-			<div class="row">
-				<?php
-				// Advanced Custom Fieldset - Featurette
-				if(get_field('text_left'))
-				{
-					echo '<div class="col-md-7 col-lg-7">' . get_field('text_left') . '</div>';
-				}
-				 
-				?>
-				<?php
-				// Advanced Custom Fieldset - Featurette
-				if(get_field('image_right'))
-				{
-					echo '<div class="col-md-5 col-lg-5"><img class="img-thumbnail" src="'.get_field('image_right').'"/></div>';
-				}
-				 
-				?>
-			</div>
-			<div class="entry-content">
-				<?php the_content(); ?>
-				<?php endwhile; // end of the loop. ?>
-				<?php
-					wp_link_pages(array(
-						'before' => '<div class="page-links">'.__('Pages:', 'upbootwp'),
-						'after'  => '</div>',
-					));
-				?>
-			</div><!-- .entry-content -->
-			<footer class="entry-meta">
-				<?php edit_post_link( __( 'Edit', 'upbootwp' ), '<div class=""><span class="edit-link">', '</span></div>' ); ?>
-			</footer>
+		</div>
+		<?php
+		// Advanced Custom Fieldset - Featurette
+		if(get_field('text_left'))
+		{
+			echo '<div class="col-md-7 col-lg-7">' . get_field('text_left') . '</div>';
+		}
+		 
+		?>
+		<?php
+		// Advanced Custom Fieldset - Featurette
+		if(get_field('image_right'))
+		{
+			echo '<div class="col-md-5 col-lg-5"><img class="img-thumbnail" src="'.get_field('image_right').'"/></div>';
+		}
+		 
+		?>
+		<div class="col-md-12 entry-content">
+			<?php the_content(); ?>
+			<?php endwhile; // end of the loop. ?>
+			<?php
+				wp_link_pages(array(
+					'before' => '<div class="page-links">'.__('Pages:', 'upbootwp'),
+					'after'  => '</div>',
+				));
+			?>
+		</div><!-- .entry-content -->
+		<footer class="col-md-12 entry-meta">
+			<?php edit_post_link( __( 'Edit', 'upbootwp' ), '<div class=""><span class="edit-link">', '</span></div>' ); ?>
+		</footer>
 		</div><!-- .col-md-12 -->
-	</div><!-- .row -->
-	<div class="row">
-		<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$args = array( 
-					'post_type' => 'post',
- 					'posts_per_page' =>12,
- 					'paged' => $paged,
- 					'orderby' => 'post_date',
- 					'order' => 'date' , //ASC//DESC
-					'category__and' => array( 5, 7 ),
- 					'post_status' => 'publish',
-				);
+
+	<div class="mp-row row">
+	    
+		<?php 
+		
+
+		    $pageCategory = "";
+            
+		    $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		    if(is_page('print-portfolio')) {
+                $catName =  get_cat_ID("print");
+               $pgName = 'print-portfolio';
+               $args = array( 
+                    'post_type' => 'post',
+                    'posts_per_page' =>12,
+                    'paged' => $paged,
+                    'orderby' => 'post_date',
+                    'order' => 'date' , //ASC//DESC
+                    'cat' => $catName,
+                    //'post_status' => 'publish',
+                );
+            } 
+            if(is_page('web-portfolio')) {
+               $catName =  get_cat_ID("websites");
+                
+               $args = array( 
+                    'post_type' => 'post',
+                    'posts_per_page' =>12,
+                    'paged' => $paged,
+                    'orderby' => 'post_date',
+                    'order' => 'date' , //ASC//DESC
+                    'cat' => $catName,
+                    'post_status' => 'publish',
+                );
+            }
 				$wp_query = new WP_Query($args);
 				
 				while ( have_posts() ) : the_post(); ?>
@@ -83,13 +105,28 @@ get_header(); ?>
 							?>
 							<?php 
 							if ( has_post_thumbnail() ) {
-								?>
-								<a href="<?php the_permalink(); ?>">
-								<?php 
-								//the_post_thumbnail('thumbnail');
-								the_post_thumbnail('homepage-thumb');
-								?>
-								</a><?php 
+								 if($pgName) { ?>
+                                    <a href="<?php the_permalink(); ?>">
+                                    <?php 
+                                    the_post_thumbnail('homepage-thumb');
+                                    // the_post_thumbnail('homepage-thumb-port');
+                                    // the_post_thumbnail('homepage-thumb-land');
+                                  
+                                    ?>
+                                    </a>
+                                      
+								 <?php    
+								 } else {
+								 ?>
+                                    <a href="<?php the_permalink(); ?>">
+                                    <?php 
+                                    //the_post_thumbnail('thumbnail');
+                                    the_post_thumbnail('homepage-thumb');
+                                    //the_post_thumbnail('homepage-thumb-port');
+                                    ?>
+                                    </a>
+								 <?php   
+								 }
 							}
 							?>
 							<!--<p><a class="btn btn-primary btn-xs" href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">View details »</a></p>  -->
@@ -99,7 +136,7 @@ get_header(); ?>
 			</div>
 		<?php endwhile; ?>
 	</div>
-	<div class="row">
+	<div class="mp-row row">
 	<!-- then the pagination links -->
 		<div class="col-md-6 col-lg-6 nav-previous">
 			<div class="nav-previous">
@@ -112,7 +149,7 @@ get_header(); ?>
 			</div>
 		</div>
 	</div>
-	<div class="row">
+	<div class="mp-row row">
 		<?php /* Global footer sidebar */ if ( ! is_404() ) : ?>
 			<div id="footer-widgets" class="widget-area four">
 				<?php if ( is_active_sidebar( 'sidebar-7' ) ) : ?>
