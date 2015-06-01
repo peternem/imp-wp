@@ -38,10 +38,11 @@ function upbootwp_setup() {
 	add_theme_support( 'post-thumbnails', array( 'post' ) );          // Posts only
 	add_theme_support( 'post-thumbnails', array( 'page' ) );
 	add_image_size( 'careers-featured', 2500, 1400, true );
+    add_image_size( 'careers-featured-narrow', 2500, 700, array( 'left', 'top' ) );
 	add_theme_support( 'post-thumbnails' );
 	add_image_size( 'homepage-thumb', 300, 200, array( 'left', 'top' )  ); // Hard crop left top
-	add_image_size( 'homepage-thumb-port', 300, 350,  array( 'left', 'top' ));
-	add_image_size( 'homepage-thumb-land', 300, 188,  array( 'left', 'top' ));
+	add_image_size( 'homepage-thumb-port', 350, 350,  array( 'left', 'top' ));
+	add_image_size( 'homepage-thumb-land', 350, 188,  array( 'left', 'top' ));
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'Bootstrap WP Primary' ),
 	) );
