@@ -1,16 +1,9 @@
 /* xxx-xxx
+
  * Overrides for Wordpresss to improve integration
  * @author Matthias Thom | http://upplex.de
  * @package upBootWP 0.1
  *
- */
-/* imported customize-bootstrap.less */
-/* here you should use whatever @font-face squirrel generated in the stylesheet.css */
-/**
- * Overrides for Wordpresss to improve integration
- * 
- * @author Matthias Thom | http://upplex.de
- * @package upBootWP 0.1
  */
 .breadcrumb {
   background-color: #fbfbfb;
