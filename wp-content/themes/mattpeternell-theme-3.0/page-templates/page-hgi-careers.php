@@ -71,17 +71,17 @@ get_header(); ?>
             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <div id="post-<?php the_ID(); ?>" <?php post_class('row'); ?>>
                     <div class="col-md-2">
-<?php
-$terms = get_the_terms($the_query->ID, 'careers');
-echo '';
-foreach ($terms as $taxindex => $taxitem) {
-    ?>
-<?php echo $taxitem->name; ?>
-
-<?php
-}
-echo ''
-?>
+					<?php
+					$terms = get_the_terms($the_query->ID, 'careers');
+					echo '';
+					foreach ($terms as $taxindex => $taxitem) {
+					    ?>
+					<?php echo $taxitem->name; ?>
+					
+					<?php
+					}
+					echo ''
+					?>
                     </div>
                     <div class="col-md-6">
                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
