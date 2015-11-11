@@ -8,7 +8,7 @@
  * @package upBootWP 0.1
  */
 get_header(); ?>
-<div class="container sub_page">
+<div class="container-fluid sub_page">
 	<div class="blog-header">	
 		<?php
 			if ( is_category() ) :
@@ -72,14 +72,14 @@ get_header(); ?>
 	</div>
 	<div class="row">
 		<div class="col-md-12 col-lg-12 blog-main">
-			<div class="row">
+			<div class="flexy">
 					<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<div class="col-md-4 col-lg-4 tiles">
+			<div class="tiles">
 				<div id="post-<?php the_ID(); ?>" class="panel panel-default <?php if(is_category('featured')): ?>featured-post<?php endif; ?>">
-					<div class="panel-body">
-						<div class="panel-heading">
+					
+						
 						<h2 class="panel-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-						</div>
+						
 						<div class="panel-body">
 							<?php if( function_exists( 'the_subtitle' ) ) the_subtitle( '<div class="slide-txt"><p class="lead">', '</p></div>' ); ?>
 							<?php
@@ -95,14 +95,15 @@ get_header(); ?>
 								?>
 								<a href="<?php the_permalink(); ?>">
 								<?php 
-								the_post_thumbnail('homepage-thumb');
+								//the_post_thumbnail('homepage-thumb');
+								the_post_thumbnail('web-thumb-4x6',  array( 'class' => 'img-responsive' ) );
 								?>
 								</a><?php 
 							}
 							?>
 							<!--<p><a class="btn btn-primary btn-xs" href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">View details »</a></p>  -->
 						</div>
-					</div>
+				
 				</div>
 			</div>
 				<?php endwhile; else: ?>

@@ -1,5 +1,5 @@
 <div class="mp-row row">
-    <div class="row-title col-md-12">
+    <div class="row-title col-md-12 text-center">
         <h2>Recent Print Work</h2>
     </div>
     <div class="col-md-12">

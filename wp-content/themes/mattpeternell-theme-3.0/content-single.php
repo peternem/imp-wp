@@ -66,7 +66,7 @@
 		// Advanced Custom Fieldset - Featurette
 		if(get_field('image_right'))
 		{
-			echo '<div class="col-md-4 col-lg-4 col-md-offset-1"><img class="img-thumbnail" src="'.get_field('image_right').'"/></div>';
+			echo '<div class="col-md-5 col-lg-5"><img class="img-thumbnail" src="'.get_field('image_right').'"/></div>';
 		}
 		 
 		?>

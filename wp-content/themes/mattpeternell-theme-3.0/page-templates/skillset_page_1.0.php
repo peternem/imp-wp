@@ -20,42 +20,37 @@ get_header(); ?>
                 </div>
             </div>
             <?php if(function_exists('upbootwp_breadcrumbs')) upbootwp_breadcrumbs(); ?>
-			<!-- <div id="recent-work-web" class="content-area container-fluid white odd" >
-			    <div class="mp-row row">
-    				<div class="col-md-12 col-lg-12">
-    				</div>
-    			</div>
-    		</div> -->
-			<div id="recent-work-web" class="content-area container-fluid white even" >
-    			<div class="mp-row row">
-    				<div class="col-md-8 entry-content">
-    				    <?php if(function_exists('the_subtitle')) the_subtitle( '<h2 cclass="panel-title">', '</h2>');?>
-    					<?php the_content(); ?>
-    				</div>
-    				<div id="home-tag-cloud" class="col-md-4">
-                       <?php if ( function_exists( 'wp_tag_cloud' ) ) : ?>
-                        
-                        <h2>Popular Tags</h2>
-                        <ul class="mp-tags">
-                        <li><?php wp_tag_cloud( 'smallest=8&largest=22' ); ?></li>
-                        </ul>
-                        
-                        <?php endif; ?>
-                    </div>
-    				<footer class="col-md-12 entry-meta">
-                        <div class="">
-                            <?php edit_post_link( __( 'Edit', 'upbootwp' ), '<span class="edit-link">', '</span>' ); ?>
-                        </div>
-                    </footer>		
-    			<?php endwhile; // end of the loop. ?>
-    			<?php
-    				wp_link_pages(array(
-    					'before' => '<div class="page-links">'.__('Pages:', 'upbootwp'),
-    					'after'  => '</div>',
-    				)); ?>		
-    			</div>
+            <div class="container-fluid">
+				<div id="recent-work-web" class="content-area white even" >
+	    			<div class="mp-row row">
+	    				<div class="col-md-7 col-lg-7">	
+							<?php if(function_exists('the_subtitle')) the_subtitle( '<h2>', '</h2>');?>
+							<?php the_content(); ?>
+	    				</div>
+	    				<div id="home-tag-cloud" class="col-md-5 col-lg-5">
+	                       <?php if ( function_exists( 'wp_tag_cloud' ) ) : ?>
+	                        
+	                        <h2>Popular Tags</h2>
+	                        <ul class="mp-tags">
+	                        <li><?php wp_tag_cloud( 'smallest=8&largest=22' ); ?></li>
+	                        </ul>
+	                        
+	                        <?php endif; ?>
+	                    </div>
+	    				<footer class="col-md-12 entry-meta">
+	                        <div class="">
+	                            <?php edit_post_link( __( 'Edit', 'upbootwp' ), '<span class="edit-link">', '</span>' ); ?>
+	                        </div>
+	                    </footer>		
+	    			<?php endwhile; // end of the loop. ?>
+	    			<?php
+	    				wp_link_pages(array(
+	    					'before' => '<div class="page-links">'.__('Pages:', 'upbootwp'),
+	    					'after'  => '</div>',
+	    				)); ?>		
+	    			</div>
+				</div>
 			</div>
-		    
 		        
 		        
 		        
@@ -86,27 +81,26 @@ get_header(); ?>
             // }
             if ( $postx_counter & 1 ) {
               ?>
-              <div id="recent-work-web" class="content-area container-fluid grey odd" >
+              <section id="recent-work-web" class="content-area grey odd" >
               <?php
             } else {
               ?>
-              <div id="recent-work-web" class="content-area container-fluid white even" >
+              <section id="recent-work-web" class="content-area white-alt even" >
               <?php
             }
                         ?>
           
-                <div class="mp-row row" data-ca-item="<?php echo $postx_counter ?>">
-                    <div class="col-md-8">
-                        <h2 class="panel-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-                        <?php if(function_exists('the_subtitle')) the_subtitle( '<h3 class="subtitle">', '</h3>');?>
-                        <?php the_content(); ?>
-                    </div>
-                     <div class="col-md-4">
-                        <?php the_post_thumbnail('homepage-thumb-port', array( 'class' => 'mp-img img-responsive img-thumbnail' )); ?>
-                     </div>
-                </div>
-          </div>
-            
+	                <div class="mp-row row" data-ca-item="<?php echo $postx_counter ?>">
+	                    <div class="col-md-7">
+	                        <h2 class="panel-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+	                        <?php if(function_exists('the_subtitle')) the_subtitle( '<h3 class="subtitle">', '</h3>');?>
+	                        <?php the_content(); ?>
+	                    </div>
+	                     <div class="col-md-5 col-lg-5 text-center">
+	                        <?php the_post_thumbnail('web-thumb-6x4', array( 'class' => 'mp-img img-responsive img-thumbnail' )); ?>
+	                     </div>
+	                </div>
+	          	</section>
             
             
             
@@ -135,6 +129,8 @@ get_header(); ?>
 						<?php endif; ?>
 					</div><!-- #footer-widgets -->
 			<?php endif; ?>
-			<!--</div> -->
+			<!--</div> -->         
+            </div>
+
 			<?php get_footer(); ?>
 

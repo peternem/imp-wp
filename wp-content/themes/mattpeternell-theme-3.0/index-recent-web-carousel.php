@@ -1,5 +1,5 @@
 <div class="mp-row row">
-    <div class="row-title col-md-12">
+    <div class="row-title col-md-12 text-center">
         <h2>Recent Web Work</h2>
     </div>
     <div class="col-md-12">
@@ -26,7 +26,6 @@ data-cycle-slides="div.slidetiles" >
             while ( have_posts() ) : the_post(); ?>
         <div class="slidetiles">
             <div class="panel panel-default">
-                <div class="panel-body">
                     <div class="panel-heading">
                         <h2 class="panel-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
                     </div>
@@ -48,7 +47,6 @@ data-cycle-slides="div.slidetiles" >
                         ?>
                         <!--<p><a class="btn btn-primary btn-xs" href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">View details »</a></p>  -->
                     </div>
-                </div>
             </div>
         </div>
 <?php endwhile; ?>

@@ -1,5 +1,44 @@
 // JavaScript Document
 jQuery(document).ready(function() {
+	function wpex_staticheader() {
+		var header_height = jQuery('.navbar').outerHeight();
+		jQuery('#page').css({
+			paddingTop: header_height
+		});	
+		
+		if (jQuery('#wpadminbar').length) {
+			var admin_height = jQuery('#wpadminbar').outerHeight();
+			jQuery('.navbar').css({
+				position: 'fixed',
+				top: admin_height
+			});
+	
+		}
+	}
+	
+	wpex_staticheader();
+	
+	jQuery(window).resize(function () {
+		wpex_staticheader();
+	});
+	
+	jQuery(window).bind('orientationchange', function(event) {
+		var header_height = jQuery('.navbar').outerHeight();
+		jQuery('#page').css({
+			paddingTop: header_height
+		});
+		
+		if (jQuery('#wpadminbar').length) {
+			var admin_height = jQuery('#wpadminbar').outerHeight();
+			jQuery('.navbar').css({
+				position: 'fixed',
+				top: admin_height
+			});
+	
+		}
+	});
+		
+	
 	initCycle();
 	//Check to see if the window is top if not then display button
 	jQuery(window).scroll(function(){

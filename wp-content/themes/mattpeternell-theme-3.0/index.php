@@ -22,23 +22,23 @@
 					
 					<?php if ( have_posts() ) : ?>
 					    <?php if( is_home() ) { ?>
+					        	<div id="welcome" class="container-fluid content-area white">
+	                                <?php get_template_part('index-welcome'); ?>
+	                            </div>
+	                            <!-- About Section -->
+	                            <div id="recent-work-web" class="content-area grey">
+	                                <?php get_template_part('index-recent-web-carousel'); ?>
+	                            </div>
+	                            <div id="intro-about" class="container-fluid content-area white">
+	                                <?php get_template_part('index-about-site'); ?>
+	                            </div>
+	                            <div id="recent-work-print" class="content-area grey">
+	                                <?php get_template_part('index-recent-print-carousel'); ?>
+	                            </div>
+	                            <div id="intro-about-mp" class="container-fluid content-area white">
+	                                <?php get_template_part('index-about-mp'); ?>
+	                            </div>
 					        
-					        <div id="welcome" class="content-area container-fluid white">
-                                <?php get_template_part('index-welcome'); ?>
-                            </div>
-                            <!-- About Section -->
-                            <div id="recent-work-web" class="content-area container-fluid grey">
-                                <?php get_template_part('index-recent-web-carousel'); ?>
-                            </div>
-                            <div id="intro-about" class="content-area container-fluid white">
-                                <?php get_template_part('index-about-site'); ?>
-                            </div>
-                            <div id="recent-work-print" class="content-area container-fluid grey">
-                                <?php get_template_part('index-recent-print-carousel'); ?>
-                            </div>
-                            <div id="intro-about-mp" class="content-area container-fluid white">
-                                <?php get_template_part('index-about-mp'); ?>
-                            </div>
                         <?php } else { ?>
 					
     						<?php while ( have_posts() ) : the_post(); ?>

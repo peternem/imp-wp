@@ -43,6 +43,8 @@ function upbootwp_setup() {
 	add_image_size( 'homepage-thumb', 300, 200, array( 'left', 'top' )  ); // Hard crop left top
 	add_image_size( 'homepage-thumb-port', 350, 350,  array( 'left', 'top' ));
 	add_image_size( 'homepage-thumb-land', 350, 188,  array( 'left', 'top' ));
+	add_image_size( 'web-thumb-4x6', 400, 600,  array( 'center', 'top' ));
+	add_image_size( 'web-thumb-6x4', 600, 400,  array( 'center', 'top' ));
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'Bootstrap WP Primary' ),
 	) );
