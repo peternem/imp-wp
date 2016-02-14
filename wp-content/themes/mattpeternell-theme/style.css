@@ -1,0 +1,28 @@
+/*
+Theme Name: mattpeternell-theme 3.0
+Theme URI: http://upplex.de/bootstrap-3-wordpress-theme-framework/
+Author: Mpeternell.com - Original theme by upplex
+Author URI: Mpeternell.com & http://upplex.de
+Description: MP Bootstrap3WP and upBootWP is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc. and Twitter Bootstrap 3. Feel free to edit it. 
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Text Domain: upbootwp
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+upBootWP is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc. and Twitter Bootstrap 3 
+
+*/
+
+.wp-caption {}
+.wp-caption-text {}
+.sticky {}
+.gallery-caption {}
+.bypostauthor {}
+.alignright {}
+.alignleft {}
+.aligncenter {}

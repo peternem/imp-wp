@@ -1,0 +1,702 @@
+/* xxx-xxx-xxx
+
+ * Overrides for Wordpresss to improve integration
+ * @author Matthias Thom | http://upplex.de
+ * @package upBootWP 0.1
+ *
+ */
+.flexy {
+  -webkit-display: -webkit-box;
+  -webkit-display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 0 auto;
+}
+.flexy .tiles {
+  display: flex;
+  padding: 1.667em;
+}
+.flexy .tiles .panel {
+  display: flex;
+  margin-bottom: 0;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+  padding: 3rem;
+  width: 100%;
+}
+.flexy .tiles .lead {
+  font-size: 18px;
+  line-height: inherit;
+}
+.flexy .tiles .panel-title {
+  padding-bottom: 1rem;
+  flex: 1 0 auto;
+}
+.flexy .tiles .slide-txt {
+  padding-bottom: 1rem;
+  flex: 1 0 auto;
+}
+@media all and (min-width: 30em) {
+  .flexy .tiles {
+    width: 100%;
+  }
+}
+@media all and (min-width: 40em) {
+  .flexy .tiles {
+    width: 50%;
+  }
+}
+@media all and (min-width: 60em) {
+  .flexy .tiles {
+    width: 33.333%;
+  }
+}
+@media all and (min-width: 80em) {
+  .flexy .tiles {
+    width: 25.000%;
+  }
+}
+.page-cloud {
+  padding-top: 60px;
+}
+.breadcrumb {
+  margin: 0 auto;
+}
+.page .jumbotron {
+  margin-bottom: 0;
+  padding: 0px;
+  position: relative;
+}
+.page .jumbotron h1,
+.page .jumbotron .h1 {
+  font-size: 67px;
+}
+.page .jumbotron p {
+  font-size: 18px;
+}
+.page .jumbotron .container {
+  left: 0;
+  margin: 0 auto;
+  padding-left: 4.5%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  background-color: #000;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 17, 19, 0.6)), color-stop(100%, rgba(16, 17, 19, 0)));
+  background: -webkit-linear-gradient(top, rgba(16, 17, 19, 0.6), rgba(16, 17, 19, 0) 100%);
+  background: linear-gradient(to bottom, rgba(16, 17, 19, 0.6), rgba(16, 17, 19, 0) 100%);
+}
+.page .jumbotron h1,
+.page .jumbotron p {
+  color: #fff;
+}
+.container.sub_page {
+  margin-top: 5.714em;
+  margin-bottom: 2.714em;
+}
+.container-fluid {
+  max-width: 1915px;
+}
+.white {
+  background-color: #ffffff;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.grey {
+  background-color: #e3e2e2;
+  padding: 10rem 30px 10rem;
+}
+.grey .text-center > h2 {
+  margin: 0 auto 5rem;
+}
+.white-alt {
+  background-color: #fff;
+  padding: 10rem 30px 10rem;
+}
+.white-alt .text-center > h2 {
+  margin: 0 auto 5rem;
+}
+.container-fluid.grey .mp-row {
+  margin: 5.5% auto;
+}
+.container-fluid .row-title {
+  padding-bottom: 3%;
+  text-align: center;
+}
+.container-fluid .row-title h2 {
+  margin: 0;
+}
+.carousel-inner {
+  max-width: 2500px;
+  margin: 0px auto;
+}
+.carousel-inner .item {
+  width: 100%;
+  height: 0;
+  padding-bottom: 40%;
+  overflow: hidden;
+}
+.fullscreen-gradient {
+  position: fixed;
+  -ms-transform: translatez(0);
+  -moz-transform: translatez(0);
+  -webkit-transform: translatez(0);
+  transform: translatez(0);
+}
+.carousel {
+  background-color: #4c4c4c;
+}
+.carousel .carousel-control {
+  z-index: 10;
+}
+.carousel .carousel-caption {
+  background-color: #000;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 17, 19, 0.6)), color-stop(100%, rgba(16, 17, 19, 0)));
+  background: -webkit-linear-gradient(top, rgba(16, 17, 19, 0.6), rgba(16, 17, 19, 0) 100%);
+  background: linear-gradient(to bottom, rgba(16, 17, 19, 0.6), rgba(16, 17, 19, 0) 100%);
+  height: 100%;
+  left: 0;
+  margin: 0 auto;
+  padding-bottom: 0;
+  padding-top: 15%;
+  right: 0;
+  width: 100%;
+}
+.carousel .carousel-caption h1 {
+  color: #fff;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+.content-area p {
+  line-height: 2;
+}
+.mp-tags {
+  margin: 0;
+  padding: 0;
+}
+.mp-tags > li {
+  list-style: none;
+}
+.image .entry-meta .entry-date {
+  margin: 0 10px;
+}
+.image .entry-caption > p {
+  font-size: 20px;
+  font-style: italic;
+  padding: 10px;
+  text-align: center;
+}
+.image .entry-content > p {
+  margin: 0 auto;
+  text-align: center;
+  width: 60%;
+  padding: 10px;
+}
+.image .edit-link {
+  margin-right: 10px;
+}
+.image .image-navigation {
+  overflow: auto;
+  width: 100%;
+}
+.image .attachment img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+.home .jumbotron {
+  height: 402px;
+  margin-top: 3px;
+  padding-bottom: 0;
+  padding-top: 50px;
+}
+.home_page .page-header {
+  margin-bottom: 40px;
+  padding-bottom: 0;
+  border: none;
+}
+.home_page .page-header h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.home_page .page-header h2 {
+  margin-top: 0px;
+  font-style: italic;
+}
+.home_page .blog-header {
+  margin-bottom: 40px;
+}
+.sub_page .mp-row {
+  padding-bottom: 5rem;
+  padding-top: 5rem;
+}
+.sub_page .page-header h1 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.sub_page .page-header h2 {
+  margin-top: 0px;
+  font-style: italic;
+}
+.sub_page .blog-header {
+  margin-bottom: 40px;
+}
+.blog-title {
+  text-transform: capitalize;
+}
+.subtitle {
+  color: #39558c;
+  font-size: 20px;
+}
+.post .entry-header {
+  margin-bottom: 4rem;
+}
+.post footer.entry-meta {
+  overflow: auto;
+  width: 100%;
+}
+.post footer.entry-meta .tags {
+  margin-bottom: 2rem;
+}
+.post footer.entry-meta .btn-group {
+  margin-top: 3em;
+}
+.blog-footer {
+  background-color: #39558c;
+  border-top: 1px solid #5b7ba6;
+  color: #999999;
+  text-align: center;
+}
+.site-info {
+  padding-bottom: 3rem;
+  padding-top: 3rem;
+}
+.entry-meta {
+  margin-bottom: 30px;
+}
+.entry-meta .vcard {
+  padding: 0 15px;
+}
+.entry-meta .posted-on {
+  display: block;
+}
+.entry-meta .revise {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+.entry-meta .entry-date.published {
+  margin-right: 0.5em;
+}
+.entry-meta .byline {
+  display: block;
+  margin-bottom: 1em;
+}
+/**************************
+* WP - ADMIN Bar Fix
+ ********************************/
+.admin-bar .navbar-fixed-top {
+  top: 32px;
+  border-top: 1px solid #000000;
+}
+.nav-previous {
+  float: left;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.nav-next {
+  float: right;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  background-color: rgba(0, 0, 0, 0.25);
+  color: #b2b2b2;
+}
+.navbar-nav.navbar-right:last-child {
+  margin-right: inherit;
+}
+.widget-area.four {
+  overflow: auto;
+}
+.widget .panel {
+  background-color: #fdfdfd;
+}
+.widget .panel:hover {
+  background-color: #f7f8fa;
+  -webkit-transition: background 500ms ease;
+  -moz-transition: background 500ms ease;
+  -ms-transition: background 500ms ease;
+  -o-transition: background 500ms ease;
+  transition: background 500ms ease;
+}
+.widget-area .panel .panel-body {
+  min-height: 250px;
+}
+.panel-default > .panel-heading {
+  background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+  border: medium none;
+}
+.panel.panel-default {
+  white-space: normal;
+}
+.panel:hover {
+  background-color: #d7dde8;
+  -webkit-transition: background 500ms ease;
+  -moz-transition: background 500ms ease;
+  -ms-transition: background 500ms ease;
+  -o-transition: background 500ms ease;
+  transition: background 500ms ease;
+}
+.panel .panel-heading {
+  padding: 10px 15px 5px;
+}
+.panel .panel-body {
+  padding: 10px 15px 15px;
+}
+.panel .panel-body .lead {
+  font-size: 18px;
+  line-height: inherit;
+}
+.panel .attachment-homepage-thumb.wp-post-image {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  display: inline-block;
+  height: auto;
+  line-height: 1.42857;
+  max-width: 100%;
+  padding: 4px;
+  transition: all 0.2s ease-in-out 0s;
+}
+.panel .attachment-thumbnail.wp-post-image {
+  bottom: 6px;
+  left: 30px;
+  position: absolute;
+  padding: 4px;
+  line-height: 1.428571429;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+}
+.panel > h2 a {
+  text-transform: uppercase;
+}
+.tagcloud {
+  padding: 0 15px;
+}
+.tagcloud a {
+  margin-right: 3px;
+}
+.tag_list {
+  list-style: none outside none;
+  margin: 0;
+  padding: 0;
+}
+.tag_list > li {
+  float: left;
+  list-style: none outside none;
+  margin: 0 3px 0 0;
+  padding: 0;
+  line-height: 18px;
+}
+.container .cycloneslider-template-standard .cycloneslider-pager span {
+  background: none repeat scroll 0 0 #42484b;
+}
+.socialNet {
+  list-style: outside none none;
+  margin: 0;
+  overflow: auto;
+  padding: 0;
+}
+.socialNet > li {
+  display: block;
+  float: left;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+}
+.cycle-slideshow,
+.cycle-slideshow * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.home-slideshow {
+  width: 100%;
+  min-width: 240px;
+  max-width: 1170px;
+  margin: 0px auto;
+  padding: 0;
+  position: relative;
+}
+.home-slideshow img {
+  width: 100%;
+  height: auto;
+}
+.cycle-slideshow {
+  width: 100%;
+  min-width: 200px;
+  max-width: 1915px;
+  margin: 0px auto;
+  padding: 0;
+  position: relative;
+}
+.slidetiles.cycle-slide {
+  height: 451px;
+  margin-left: 25px;
+  margin-right: 25px;
+  max-width: 366px;
+  overflow: hidden;
+  width: 100%;
+}
+.slidetiles .slide-txt {
+  height: 100px;
+  overflow: hidden;
+}
+.slidetiles .panel-title {
+  font-size: 22px;
+}
+.slidetiles .panel {
+  width: 100%;
+  margin-bottom: 0;
+}
+.slidetiles .panel .panel-body {
+  min-height: 404px;
+}
+.slidetiles .panel .panel-body > a {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+/* in case script does not load */
+.cycle-slideshow .slidetiles:first-child {
+  position: static;
+  z-index: 100;
+}
+.home-slideshow .slide_tile:first-child {
+  position: static;
+  z-index: 100;
+}
+.tiles .slide-txt {
+  min-height: 75px;
+  overflow: hidden;
+}
+.tiles .panel-title {
+  font-size: 22px;
+}
+/* 
+    media queries 
+    some style overrides to make things more pleasant on mobile devices
+*/
+@media (min-width: 480px) and (max-width: 800px) {
+  .slidetiles.cycle-slide {
+    max-width: 450px;
+  }
+}
+@media (min-width: 981px) and (max-width: 1024px) {
+  .slidetiles.cycle-slide {
+    width: 293px !important;
+  }
+  .slidetiles .attachment-homepage-thumb.wp-post-image {
+    left: 0;
+    right: 0;
+  }
+  .slidetiles .panel-title {
+    font-size: 20px;
+  }
+  .slidetiles .lead {
+    font-size: 14.5px;
+  }
+}
+@media (max-width: 768px) {
+  h1,
+  .h1 {
+    font-size: 38px;
+  }
+  #home-tag-cloud {
+    display: none;
+  }
+  .carousel .carousel-caption {
+    padding-top: 15%;
+  }
+  .carousel .cap-subtitle {
+    display: none;
+  }
+}
+@media (max-width: 480px) {
+  .page .jumbotron {
+    margin: 0;
+  }
+  .page .jumbotron .container {
+    top: 0px;
+  }
+  .page .jumbotron .jumbo-img {
+    margin-top: 49px;
+  }
+  .page .jumbotron h1 {
+    font-size: 30px;
+  }
+  .page .jumbotron p {
+    font-size: 16px;
+  }
+  .flexy .tiles {
+    display: flex;
+    padding: 0;
+    margin-bottom: 3rem;
+  }
+  .navbar .row .col-md-12 {
+    padding: 0;
+  }
+  .navbar .navbar-toggle {
+    margin-right: 15px;
+  }
+  .carousel .carousel-caption {
+    display: none;
+  }
+  .navbar-brand {
+    padding: 12px;
+  }
+  .slidetiles.cycle-slide {
+    width: 263px;
+  }
+  .slidetiles .panel .panel-body {
+    min-height: 250px;
+  }
+  .slidetiles .panel-title {
+    font-size: 18px;
+  }
+  .slidetiles .lead {
+    font-size: 14px;
+  }
+}
+@media (max-width: 320px) {
+  body {
+    font-size: 16px;
+  }
+  .navbar-brand {
+    width: 65%;
+    margin: 1% 0 0;
+  }
+  .slidetiles.cycle-slide {
+    width: 259px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .panel .panel-body {
+    min-height: 250px;
+    padding: 10px;
+  }
+  .panel .panel-body .lead {
+    font-size: 14px;
+  }
+  .panel .panel-body .tag_list {
+    font-size: 14px;
+  }
+  .panel .panel-title {
+    font-size: 18px;
+  }
+  .row {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .col-xs-1,
+  .col-sm-1,
+  .col-md-1,
+  .col-lg-1,
+  .col-xs-2,
+  .col-sm-2,
+  .col-md-2,
+  .col-lg-2,
+  .col-xs-3,
+  .col-sm-3,
+  .col-md-3,
+  .col-lg-3,
+  .col-xs-4,
+  .col-sm-4,
+  .col-md-4,
+  .col-lg-4,
+  .col-xs-5,
+  .col-sm-5,
+  .col-md-5,
+  .col-lg-5,
+  .col-xs-6,
+  .col-sm-6,
+  .col-md-6,
+  .col-lg-6,
+  .col-xs-7,
+  .col-sm-7,
+  .col-md-7,
+  .col-lg-7,
+  .col-xs-8,
+  .col-sm-8,
+  .col-md-8,
+  .col-lg-8,
+  .col-xs-9,
+  .col-sm-9,
+  .col-md-9,
+  .col-lg-9,
+  .col-xs-10,
+  .col-sm-10,
+  .col-md-10,
+  .col-lg-10,
+  .col-xs-11,
+  .col-sm-11,
+  .col-md-11,
+  .col-lg-11,
+  .col-xs-12,
+  .col-sm-12,
+  .col-md-12,
+  .col-lg-12 {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+/* scroll-to-top
+----------------------------------------------------
+*/
+.scroll-to-top {
+  background: #363636;
+  background: rgba(100, 100, 100, 0.4);
+  color: #FFF;
+  bottom: 4%;
+  cursor: pointer;
+  display: none;
+  position: fixed;
+  right: 20px;
+  z-index: 999;
+  font-size: 16px;
+  text-align: center;
+  line-height: 40px;
+  width: 40px;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.3s linear;
+  -moz-transition: background-color 0.3s linear;
+  -o-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+.scroll-to-top:hover {
+  background: #DA4453;
+  opacity: .8;
+}
