@@ -1,0 +1,32 @@
+.search {
+    .site-main {
+        @media (min-width: $medium-screen + 1) {
+            padding-top: $base-top-page-offset;
+        }
+        @media (max-width: $medium-screen) {
+            padding-top: $base-top-page-offset * 2;
+        }
+    }
+    .page-title {
+        margin-bottom: 0;
+    }
+    .my-search-results {
+        .entry-title {
+            text-align: left;
+        }
+        .post, .web_portfolio, .print_portfolio {
+            margin-bottom: $base-top-page-offset * 2;
+            overflow: auto;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            h1 {
+                margin-bottom: 0;
+            }
+            h2.subtitle {
+                max-width: 480px;
+                margin: 0 auto 1rem;
+            }
+        }
+    }
+}

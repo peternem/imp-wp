@@ -59,3 +59,8 @@ local.properties
 # TeXlipse plugin
 .texlipse
 .com.apple.timemachine.supported
+/wp-content/themes/my-underscore-theme/nbproject/private/
+/nbproject/private/
+/wp-content/themes/my-underscore-wp-theme/nbproject/private/
+/wp-content/themes/imp-twentysixteen/nbproject/private/
+/wp-content/themes/imp-twentyseventeen/nbproject/private/

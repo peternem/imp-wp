@@ -1,0 +1,862 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 22, 2016, 6:30:36 PM
+    Author     : mattpeternell
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento:400,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Work+Sans:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900');
+//@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+//@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans:300,400,700,800');
+//@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,500italic,700,700italic,900,900italic,300,300italic,400italic);
+//@import url(https://fonts.googleapis.com/css?family=Cuprum:400,400italic,700,700italic);
+@import "utils/utils";
+@import "_normalize";   
+@import 'plugins/plugins';
+@import 'base/base';
+@import 'modules/modules';
+
+/***********************************
+ * Font-awesome Global Styling 
+ **********************************/
+
+.fa.fa-angle-double-right {
+    margin-left: 10px;
+    vertical-align: baseline;
+}
+
+
+/***********************************
+ * helper Classes Margin Spacers Mobile Styling 
+ **********************************/
+@media (max-width: $small-screen) {
+    .margin-bottom-50 {
+         margin-bottom: 2.778em;
+    }
+}
+
+/***********************************
+ * helper Classes Styling 
+ **********************************/
+
+.align-left {
+    text-align: left;
+}
+.align-center {
+    text-align: center;
+}
+.align-right {
+    text-align: right;
+}
+
+/***********************************
+ * Helper Classes - Hide content blocks 
+ **********************************/
+
+
+@media (max-width: $small-screen-2) and (orientation: landscape) {
+    .hide-sm {
+        display: none !important;
+    }
+}
+
+/***********************************
+ * Navigation Styling 
+ **********************************/
+
+.nav {
+    .overview-link {
+        border-bottom: 1px solid #ccc;
+        font-style: italic;
+        background-color: lighten(#7cd1e4, 10%); //#b99b02;
+    }
+    &.nav-justified.aux-menu {
+        margin: 0 auto;
+        max-width: 980px;
+        a {
+            color: $global-color-brown-alt;
+            &:hover, &:focus {
+                color: #fff !important;
+            }
+        }
+    }
+}
+
+.post-navigation {
+    h4 {
+        margin-bottom: 3rem;
+    }
+}
+
+/*************************************************
+ * 
+ * Button Styling
+ * 
+ *************************************************/
+
+.link-group {
+    //background-color: #ccc;
+    padding:  $global-margin-top 0;
+    width: 100%;
+}
+
+/* FSCF form styling
+----------------------------------------------------
+*/
+.fscf-div-form {
+    .fscf-required-indicator, .fscf-required-text {
+        color: red;
+        font-size: 12px;
+    }
+    .fscf-required-indicator {
+        margin-left: 5px;
+    }
+    .fscf-div-submit {
+        margin-bottom: 45px;
+        margin-top: 45px;
+    }
+}
+
+/*************************************************
+ * 
+ * Container Styling
+ * 
+ *************************************************/
+
+header.section-header {
+    text-align: center;
+    .section-title {
+        margin-bottom: $global-section-margin;
+    }
+}
+
+
+.opac-30-bground {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: #e5e4e4 #e5e4e4 #e5e4e4 #e5e4e4;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+}
+
+.black {
+    h1 {
+        color: #000;
+    }
+    p {
+        color: #000;
+    }
+} 
+
+.darker-background {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.cat-quick-links {
+    padding: 80px;
+    min-height: 400px;
+    background-color: #e9e9e9;
+    overflow: hidden;
+    position: relative;
+    .btn {
+        margin: 10px;
+        min-width: 230px;
+        padding: 10px 12px;
+        text-transform: capitalize;
+        transform: translateX(0px) translateY(0px);
+    }
+    .entry-title {
+        margin-top: 0;
+        margin-bottom: 5rem;
+    }
+    p.excerpt {
+        font-size: 18px;
+        margin-bottom: 4rem;
+    }
+    ul {
+        display: table;
+        list-style: outside none none;
+        margin: 0px auto;
+        padding: 0;
+        li {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+}
+
+.container-fluid {
+    &.white {
+        background-color: #ffffff;
+        height: auto;
+        overflow: auto;
+        position: relative;
+    }
+    &.grey {
+        background-color: $global-color-blue-25; //@global-color-teal;
+        height: auto;
+        overflow: auto;
+        position: relative;
+    }
+    .row-title {
+        padding-bottom: 3%;
+        text-align: center;
+        h1 {
+            margin: 0;
+        }
+    }
+}
+
+/*********************************************
+ * 
+ * Post entry content Styling
+ * 
+ ********************************************/
+
+
+/*********************************************
+ * 
+ * Page Styling
+ * 
+ ********************************************/
+.catimg {
+    margin: 0px auto;
+}
+
+.page-cloud {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+.mp-tags {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.tag-cta {
+    .mp-tags {
+        a {
+            color: #0071a8;
+            &:hover {
+                color: lighten(#0071a8, 13.5%);
+            }
+        }
+    }
+}
+.wp-caption-text {
+    font-style: italic;
+    padding: 1rem;
+    text-align: center;
+}
+
+.type-people {
+    margin-bottom: 10rem;
+}
+
+.home {
+    .page-header {
+        margin-top: 0;
+        .section-title {
+            color: $global-color-tomato;
+            margin-bottom: 40px;
+            text-align: center;
+            text-transform: upper;
+        }
+    }
+    .row-title h1 {
+        color: $global-color-tomato;
+        margin: 0;
+    }
+}
+
+.mp-row.row.page-content {
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+.page, .single, .archive {
+    .fixed.img-responsive {
+        height: auto;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+}
+
+.page, .single, .archive {
+    .page-header {
+        border-bottom: 1px solid #eeeeee;
+        .section-title {
+            //color: @global-color-tomato;
+            text-align: left;
+            text-transform: capitalize;
+        }
+        .subtitle {
+            color: darken(#fff, 10%);
+        }	
+    }
+    .entry-header {
+        border-bottom: 1px solid #eeeeee;
+        margin: 0 0 25px;
+        padding-bottom: 11.5px;
+        .section-title, .entry-title {
+            color: $global-color-tomato;
+            text-align: left;
+            text-transform: capitalize;
+        }	
+    }
+    .grey {
+        .subtitle {
+            color: $global-color-blue-75;
+        }
+    }
+}
+
+.type-post {
+    margin-bottom: 10rem;
+    overflow: auto;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    .entry-meta {
+        margin-bottom: 1rem;
+    }
+}
+
+.home {
+    .jumbotron {
+        margin: 0 -25px;
+        padding: 0;
+        position: relative;
+    }
+    .photo {
+        .h1, h1 {
+            color: #fff;
+            margin-top: 0px;
+        }
+
+        p.subtitle {
+            color: darken(#fff, 10%);
+        }
+        p {
+            color: darken(#fff, 20%);
+        }	
+    }		
+    .caption {
+        bottom: 25%;
+        left: 25%;
+        position: absolute;
+        top: 25%;
+        right: 25%;
+        text-align: center;
+        .inner-caption {
+
+        }
+    }
+    .filter {
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;	
+        background: none;
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 17, 19, $global-filter-alpha)), color-stop(100%, rgba(16, 17, 19, $global-filter-alpha)));
+        background: -webkit-linear-gradient(top, rgba(16, 17, 19, $global-filter-alpha), rgba(16, 17, 19, $global-filter-alpha) 100%);
+        background: linear-gradient(to bottom, rgba(16, 17, 19, $global-filter-alpha), rgba(16, 17, 19, $global-filter-alpha) 100%);
+    }
+
+    .tile-title {
+        margin-bottom: 0;
+        margin-top: 2.5%;
+        text-align: center;
+    }
+
+    .tile-container {
+        text-align: center;
+        padding: 2.5% 5% 2.5%;
+    }
+}
+.page, .single, .archive {
+    .jumbotron {
+        background: none;
+        margin-bottom: 0;
+        //padding: 0 0 600px;
+        position: relative;
+        h1, .h1 {
+            font-size: 46px;
+        }
+        p {
+            font-size: inherit;
+        }
+
+        .container-fluid {
+            bottom: 0;
+            left: 0;
+            margin: 0 auto;
+            position: absolute;
+            right: 0;
+            top: 0;
+            max-width: 100%;
+            width: 100%;
+            background-color: #000;
+            background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 17, 19, $global-filter-alpha)), color-stop(100%, rgba(16, 17, 19, 0.25)));
+            background: -webkit-linear-gradient(top, rgba(16, 17, 19, $global-filter-alpha), rgba(16, 17, 19,0.25) 100%);
+            background: linear-gradient(to bottom, rgba(16, 17, 19, $global-filter-alpha), rgba(16, 17, 19, 0.25) 100%);
+        }
+
+        h1, p {
+            color: #fff;
+            max-width: 800px;
+        }
+        .img-responsive {
+            height: auto;
+            margin: 0 auto;
+            max-width: 1920px;
+            width: 100%;
+        }
+    }
+}
+
+.site-info {
+    @include outer-container(100%);
+    background-color: $dark-gray;
+    text-align: center;
+    p {
+        margin: 0;
+        font-size: 0.75em;
+        color: #fff;
+    }
+}
+
+.sermon-tables {
+    display: table;
+    margin: 0 auto;
+    max-width: 980px;
+    text-align: left;
+    width: 100%;
+    .panel-heading {
+        margin-bottom: 1em;
+    }
+    .panel-body {
+        padding: 15px;
+        width: 100%;
+        margin-bottom: 4em;
+    }
+    th { 
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+        padding: 5px 10px;
+    }
+    td { 
+        text-align: left;
+        padding: 5px 10px;
+        vertical-align: top;
+    }
+    .title, {
+        width: 20%;
+    }
+    .tags {
+        width: 10%;
+    }
+    .date {
+        width: 10%;
+    }
+    .time {
+        width: 10%;
+    }
+    img.artwork {
+        float: left;
+        height: auto;
+        max-width: 100px;
+        width: 100%;
+    }
+    .perma-link {
+        float: left;
+        margin-left: 1em;
+    }
+}
+
+.fa.fa-external-link {
+    margin-left: 0.5em;
+}
+
+.eventDate {
+    margin-bottom: 2em;
+    em {
+        margin-left: 1rem;
+    }
+}
+.leadership-tables {
+    display: table;   /* Allow the centering to work */
+    margin: 0 auto;
+    text-align: center;
+}
+.leadership-groups {
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+    max-width: 970px;
+    list-style: none;
+    padding-top: 20px;
+
+    > li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 15px 30px;
+        text-align: center;
+    }
+    .portrait .img-responsive {
+        max-width: 200px;
+        margin: 0px auto;
+    }
+    .bio {
+        padding: 15px;
+    }
+}
+
+/*************************************************
+ * CTA Styling 
+ *************************************************/
+
+.cta .col-sm-6.col-md-3 {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.cta-box {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    margin: 0px auto;
+    .title {
+        background-color: $global-color-blue-75; //@global-color-orange;
+        bottom: 0;
+        left: 0;
+        padding: 3% 5.666%;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        a {
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            &:hover {
+                color: $global-color-brown;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* Grayscale Rollover effect.  Also uses greyscale-functions, imagesloaded js scripts
+ * For effect to work css class name of '.grayscale' must be added to parent element of targeted image.
+------------------------------------------------*/
+
+.grayscale img {
+    -webkit-filter: grayscale(70%); /* Webkit Nightlies & Google Chrome Canary */
+    -webkit-transition: all .3s ease-in-out;/* Fade to color for Chrome and Safari */
+    -webkit-backface-visibility: hidden; /* Fix for transition flickering */
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
+    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\"pictureFilter\" ><feColorMatrix type=\"saturate\" values=\"0.3\" /></filter></svg>#pictureFilter"); /* Firefox 10+, Firefox on Android */
+    filter: gray(70%); /* IE8-9 */
+}
+.grayscale img:hover {
+    -webkit-filter: grayscale(0%);
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    filter:  grayscale(0%); /* Applies to FF + IE */
+}
+
+.tile {
+    position: relative;
+    max-width: 175px;
+    width: 100%;
+    margin: 1.75% 2.5%;
+    display: inline-block;
+    .title {
+        background-color: $global-color-blue-75; //$global-color-orange;
+        bottom: 0;
+        left: 0;
+        padding: 3% 5.666%;
+        position: absolute;
+        right: 0;
+        text-align: right;
+        &:hover {
+            background-color: lighten($global-color-blue-75, 20%); //$global-color-orange;
+        }
+        a {
+            color: white;
+            font-size: 16px;
+            font-weight: 400;
+            display: inline-block;
+            width: 100%;
+            &:hover {
+                color: $global-color-brown;
+                text-decoration: none;
+
+            }
+        }
+    }
+}
+
+.video-wrap {
+    background-color: #000;
+    height: 100%;
+    max-width: $global-max-width;
+    top: 0;
+    width: 100%;
+}
+
+#my-video {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 11;
+}
+
+.home .content-overlay {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100%;
+}
+
+.inner-main {
+    background-color: #fff;
+    height: auto;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    padding-bottom: 105px;
+}
+
+.featured-image {
+    background-color: #000;
+    background-size: cover;
+    display: block;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 5;
+    margin: 0;
+    padding: 0;
+    .nccIcon , .locationArrow {
+        display: none;
+    }
+    .nccIcon {
+        top: 50%;
+    }
+}
+
+#big-video-wrap .big-video-image {
+    max-width: none;
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+}
+
+.carousel {
+    .carousel-control {
+        z-index: 10;
+    }
+    .carousel-caption {
+        background-color: #000;
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 17, 19, 0.6)), color-stop(100%, rgba(16, 17, 19, 0)));
+        background: -webkit-linear-gradient(top, rgba(16, 17, 19, 0.6), rgba(16, 17, 19, 0) 100%);
+        background: linear-gradient(to bottom, rgba(16, 17, 19, 0.6), rgba(16, 17, 19, 0) 100%);
+        height: 100%;
+        left: 0;
+        margin: 0 auto;
+        padding-bottom: 0;
+        padding-top: 12%;
+        right: 0;
+        width: 100%;
+        h1 {
+            color: #fff;
+        }
+    }
+}
+
+/*.slidetile-area {
+    //margin-bottom: 6rem;
+    overflow: auto;
+    @media (max-width: 768px) {
+        margin-top: 4rem;
+    }
+}*/
+
+/************************************************
+ * 
+ *  Content Area Styling
+ * 
+ ***********************************************/
+
+
+
+/*.subtitle {
+    color: $global-color-teal;
+    font-size: $jumbotron-font-size;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.2;
+}*/
+
+p.excerpt {
+    font-size: 18px;
+}
+
+
+
+
+.nav-previous {
+    float: left;
+}
+.nav-next {
+    float: right;
+}
+
+
+
+
+.container .cycloneslider-template-standard .cycloneslider-pager span {
+    background: none repeat scroll 0 0 #42484b;
+}
+h3.social-title {
+    margin: 3rem 0;
+}
+ul.socialNet {
+    list-style: outside none none;
+    margin: 0px auto;
+    overflow: auto;
+    padding: 0;
+    display: table;
+    > li {
+        display: block;
+        float: left;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    .fa {
+        font-size: 3em;
+    }
+}
+
+
+.tiles .panel-title {
+    font-size: 22px;
+}
+/************************************************
+ * Search Styling
+ ***********************************************/
+.search {
+    .content-area {
+        margin-bottom: 10rem;
+    }	
+}
+
+/************************************************
+ *  Footer Area Styling
+ ***********************************************/
+.parallax-footer {
+    padding: 80px;
+    min-height: 100px;
+}
+
+.blog-footer {
+    background-color: #ffffff;
+    border-top: 4px solid  lighten(#ffffff, 10%);
+    color: #ccc;
+    padding: 40px 0;
+    text-align: center;
+    .widget {
+        margin-bottom: 5rem;
+    }
+    a {
+        color: #999;
+        &:hover {
+            color: #f3633c;
+        }
+    }
+}
+
+
+/*@media (max-width: 1199px) and (min-width: 992px) {
+    .home #masthead {
+        display: block;
+    }
+    .navbar {
+        .navbar-brand {
+            max-width: 37%;
+        }
+    }
+    .content-overlay .nccIcon {
+        display: none;
+    }
+    .featured-image {
+        position: relative;
+    }
+    .featured-image {
+        .nccIcon {
+            display:block;
+        }
+        .locationArrow {
+            display: none;
+        }
+    }
+    .home {
+        .content-overlay {
+            display: block;
+            position: relative;
+            top: auto;
+            z-index: auto;
+            width: 100%;
+            height: 100%;
+        }
+        .caption {
+            left: 15%;
+            right: 15%;
+        }
+    }
+    .navbar.navbar-inverse.over-vid {
+        border: none;
+        border-radius: 0;
+        left: 0;
+        margin: 0;
+        min-height: 5px;
+        position: relative;
+        right: 0;
+        bottom: 0;
+    }
+
+}*/
+
+
+
+
+
+
+
+
+/*@media (max-width: 768px) {
+    .col-lg-6 img.img-thumbnail {
+        max-width: 50%;
+        margin-bottom: 2em;
+    }
+}*/

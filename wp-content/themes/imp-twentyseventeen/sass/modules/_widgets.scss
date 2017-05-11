@@ -1,0 +1,15 @@
+.single-sidebar {
+
+    .widget {
+        margin-bottom: 3rem;
+        &:last-child {
+            margin-bottom: 0;
+            @media (max-width: $small-screen) {
+                margin-bottom: 3rem;
+            }
+        }
+        @media (max-width: $small-screen) {
+            text-align: center;
+        }
+    }
+}

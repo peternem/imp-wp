@@ -1,0 +1,114 @@
+#{$all-buttons} {
+    appearance: none;
+    background-color: $action-color;
+    border: 0;
+    border-radius: $base-border-radius;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: $button-font-family;
+    font-size: $base-font-size;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    line-height: 1;
+    margin-top: 12px;
+    padding: $small-spacing $base-spacing;
+    text-decoration: none;
+    transition: background-color $base-duration $base-timing;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &:hover,
+        &:focus {
+        background-color: shade($action-color, 20%);
+        color: #fff;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+
+        &:hover {
+            background-color: $action-color;
+        }
+    }
+}
+
+.btn-primary {
+    border: 1px solid transparent;
+    background-color: #0078d7;
+    border: 1px solid transparent;
+    color: #fff;
+    margin-top: 12px;
+    max-width: 374px;
+    min-width: 120px;
+    outline: 1px dashed transparent;
+    text-transform: uppercase;  
+    &:hover {
+        background-color: #006cc2;
+        border-color: rgba(0, 0, 0, 0.4);
+        color: #fff;
+        transition: border-color $base-duration $base-timing;
+        transition: background-color $base-duration $base-timing;
+    }
+    &:focus {
+        background-color: #006cc2;
+        border-color: rgba(0, 0, 0, 0.4);
+        outline-color: #000;
+    }
+}
+
+.btn-secondary {
+    border: 1px solid transparent;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #000000;
+    margin-top: 12px;
+    max-width: 374px;
+    min-width: 120px;
+    outline: 1px dashed transparent;
+    text-transform: uppercase;  
+    &:hover {
+        color: #000;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-color: rgba(0, 0, 0, 0.4);
+        transition: border-color $base-duration $base-timing;
+        //transition: background-color $base-duration $base-timing;
+    }
+    &:focus {
+        color: #000;
+        background-color: rgba(0, 0, 0, 0.2);
+        outline-color: #000;
+    }
+    &:active {
+        color: #000;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+.btn-light {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0);
+    color: #000000;
+    margin-top: 12px;
+    max-width: 374px;
+    min-width: 120px;
+    outline: 1px dashed transparent;
+    text-transform: uppercase;  
+    &:hover {
+        color: #000;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-color: rgba(0, 0, 0, 0.4);
+        transition: border-color $base-duration $base-timing;
+        //transition: background-color $base-duration $base-timing;
+    }
+    &:focus {
+        color: #000;
+        background-color: rgba(0, 0, 0, 0.2);
+        outline-color: #000;
+    }
+    &:active {
+        color: #000;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}

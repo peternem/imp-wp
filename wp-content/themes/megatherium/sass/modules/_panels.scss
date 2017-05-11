@@ -1,0 +1,31 @@
+
+.panel {
+    background-color: rgba(221, 221, 221, 0.25);
+    border: 1px solid rgba(204,204,204, 0.35);
+    //background-color: rgba(221,221,221, 0.65); //rgba(170,170,170,0.85); //rgba(42, 178, 245, 0.75);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    white-space: normal;
+    &:hover {
+        background-color: rgba(221,221,221,0.8); //rgba(255, 172, 69, 0.8);//#d7dde8;
+        -webkit-transition: background 500ms ease;
+        -moz-transition: background 500ms ease;
+        -ms-transition: background 500ms ease;
+        -o-transition: background 500ms ease;
+        transition: background 500ms ease;
+    }
+    .attachment-thumbnail.wp-post-image {
+        bottom: 6px;
+        left: 30px;
+        position: absolute;
+        padding: 4px;
+        line-height: 1.428571429;
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        border-radius: 4px;
+        -webkit-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+        display: inline-block;
+        max-width: 100%;
+        height: auto;
+    }
+}

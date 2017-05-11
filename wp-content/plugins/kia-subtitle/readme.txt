@@ -3,26 +3,28 @@ Contributors: helgatheviking
 Donate link: https://inspirepay.com/pay/helgatheviking
 Tags: subtitle, simple
 Requires at least: 3.8
-Tested up to: 4.1
-Stable tag: 1.6.3
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tested up to: 4.5.1
+Stable tag: 1.6.6
+License: GPLv3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
 The KIA Subtitle plugin allows you to easily add a subtitle to your posts.
 
 == Description ==
 
-This plugin is adapted from [Luc Princen's The Subtitle plugin](http://www.to-wonder.com/the-subtitle).  It differs in its class-based organization, uses less jquery, and only saves the post meta when needed.
+KIA subtitle allows you to easily add a subtitle to your posts and retrieve it in the loop in the same manner as the post title. By using `the_subtitle()` or `get_the_subtitle()`.
 
-The subtitle allows you to easily add a subtitle to your posts and retrieve it in the loop in the same manner as the post title. By using `the_subtitle()` or `get_the_subtitle()`.
-
-It adds a simple inputfield right under the title field of posts, pages and any custom post type.  It also add a subtitle column to the edit screen as well as to the quick edit.
+It adds a simple input field right under the title field of posts, pages and any custom post type.  It also add a subtitle column to the edit screen as well as to the quick edit.
 
 You can also use the shortcode `[the-subtitle]` to display it within the post content.
 
+= WPML Ready =
+
+KIA Subtitle has been tested by WPML and will allow you to translate the subtitle multilingual sites.
+
 = Support =
 
-Support is handled in the [WordPress forums](http://wordpress.org/support/plugin/kia-subtitle). Please note that support is limited and does not cover any custom implementation of the plugin. 
+Support is handled in the [WordPress forums](http://wordpress.org/support/plugin/kia-subtitle). Please note that support is limited and does not cover any custom implementation of the plugin.
 
 Please report any bugs, errors, warnings, code problems to [Github](https://github.com/helgatheviking/KIA-Subtitle/issues)
 
@@ -72,7 +74,7 @@ As an *example* if you wanted to display the subtitle on standard single posts, 
 	<?php the_post_thumbnail(); ?>
 	<?php if ( is_single() ) : ?>
 	<h1 class="entry-title"><?php the_title(); ?></h1>
-        <?php if( function_exists( 'the_subtitle' ) ) the_subtitle( '<h2 class="subtitle">', '</h2>' ); ?>
+		<?php if( function_exists( 'the_subtitle' ) ) the_subtitle( '<h2 class="subtitle">', '</h2>' ); ?>
 	<?php else : ?>
 	<h1 class="entry-title">
 		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'twentytwelve' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
@@ -93,7 +95,54 @@ If you have wrapped the subtitle in an H2 tag with the class of subtitle like in
 h2.subtitle { color: pink; }
 `
 
+= Can I add the subtitle to the Page Title Meta tag =
+`
+function kia_add_subtitle_to_wp_title( $title ) {
+	if ( is_single() && function_exists('get_the_subtitle')) && $subtitle == get_the_subtitle( get_the_ID() ) ) {
+	$title .= $subtitle;
+	}
+}
+add_filter('wp_title','kia_add_subtitle_to_wp_title');
+`
+
+= Is this translation ready? =
+WPML now supports KIA Subtitle!
+
+= The Subtitle is not after the product title in WooCommerce =
+
+WooCommerce calls their product title column "name" and completely removes the default "title" column, so KIA Subtitle inserts the subtitle at the end. You can add the following to your child theme's `functions.php` or preferably a site-specific snippets plugin and re-arrange the products posts column order.
+
+`
+add_filter( 'manage_product_posts_columns', 'kia_reorder_woocommerce_columns', 99 );
+
+function kia_reorder_woocommerce_columns( $columns ){
+	if( isset( $columns['subtitle'] ) && isset( $columns['name'] ) ){
+
+		// remove and stash the subtitle column
+		$subtitle = array( 'subtitle' => $columns['subtitle'] );
+		unset( $columns['subtitle'] );
+
+		// find the "name" column
+		$index =  array_search( "name", array_keys( $columns) );
+
+		// reform the array
+		$columns = array_merge( array_slice( $columns, 0, $index + 1, true ), $subtitle, array_slice( $columns, $index, count( $columns ) - $index, true ) );
+	}
+	return $columns;
+}
+`
+
 == Changelog ==
+
+= 1.6.6 =
+* Insert subtitle after title, or at end if subtitle does not exist
+
+= 1.6.5 =
+* Add wpml-config.xml for compatibility with WPML
+
+= 1.6.4 =
+* Add link to plugin settings
+* testing against WP4.4
 
 = 1.6.3 =
 * fix docblock

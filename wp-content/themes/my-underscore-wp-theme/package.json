@@ -1,0 +1,27 @@
+{
+  "name": "my-underscore-wp-theme",
+  "title": "my-underscore-wp-theme",
+  "description": "The best WordPress theme ever made!",
+  "version": "0.2.0",
+  "homepage": "http://wordpress.org/themes",
+  "author": {
+    "name": "MJPeternell",
+    "email": "mjpeternell@gmail.com",
+    "url": "mattpetenell.net"
+  },
+  "devDependencies": {
+    "angular-sanitize": "^1.5.2",
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-compress": "^1.1.1",
+    "grunt-contrib-concat": "^0.1.3",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^0.6.2",
+    "grunt-contrib-jshint": "^0.1.1",
+    "grunt-contrib-less": "^1.2.0",
+    "grunt-contrib-nodeunit": "^0.1.2",
+    "grunt-contrib-uglify": "^0.1.2",
+    "grunt-contrib-watch": "^0.2.0"
+  },
+  "keywords": []
+}

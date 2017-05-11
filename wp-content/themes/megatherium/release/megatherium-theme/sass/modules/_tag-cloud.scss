@@ -1,0 +1,83 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 1, 2017, 7:18:37 PM
+    Author     : mattpeternell
+*/
+
+.mp-tags {
+    /*    list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;*/
+}
+
+.tag-list {
+    li {
+        display: inline-block;
+        a {
+            margin: 0;
+            @include text_link_hover(lighten, #2ab2f5, 25%, 500);
+            &:after {
+                content: ",";
+                color: #000;
+                margin-left: 3px;
+                margin-right: 3px;
+            }
+        }
+        &:last-child {
+            a:after {
+                display: none
+            }
+        }
+    }
+
+}
+
+
+.tag-cloud {
+    .mp-tags {
+        li {
+            display: block;
+            float: left;
+            margin-right: 1rem;
+        }
+        a {
+            display: inline;
+            color: #2ab2f5;
+            line-height: 1.75em;
+            margin-left: 0.25rem;
+            font-family: 'Lato', sans-serif;
+            &:hover {
+                color: lighten(#0071a8, 13.5%);
+            }
+            &.tagsize-xs {
+                font-size: 1em;
+                font-weight: 300;
+            }
+            &.tagsize-sm {
+                font-size: 1.25em;
+                font-weight: 400;
+            }
+            &.tagsize-md {
+                font-size: 1.50em;
+                font-weight: 400;
+            }
+            &.tagsize-lg {
+                font-size: 1.75em;
+                font-weight: 700;
+            }
+            &.tagsize-xl {
+                font-size: 1.85em;
+                font-weight: 700;
+            }
+            &.tagsize-xxl {
+                font-size: 2em;
+                font-weight: 900;
+            }
+        }
+    }
+}

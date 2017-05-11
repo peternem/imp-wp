@@ -1,0 +1,237 @@
+.no-parallax {
+    height: 100vh;
+    position: relative;
+    position: relative;
+    background-color: #fff;
+}
+
+.parallax-container-single {
+    //height: 375px;
+    position: relative;
+    .caption {
+        //background-color: rgba(0, 0, 0, 0.25);
+        @media (min-width: $small-screen + 1) {
+            left: $global-pg-lr-margin;
+            right: $global-pg-lr-margin;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        @media (max-width: $small-screen) {
+            left: $global-pg-lr-margin/2;
+            right: $global-pg-lr-margin/2;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        position: absolute;
+    }
+    .section-title {
+        color: #fff;
+        font-weight: 700;
+        margin: 0 0 0.5em;
+    }
+    .subtitle {
+        @media (max-width: $small-screen + 1) {
+            text-align: left;
+        }
+    }
+    .filter {
+        bottom: 0;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        max-width: 100%;
+        width: 100%;
+        background-color: #000;
+        background: -webkit-gradient(linear, left top, left bottom, from(rgba(16, 17, 19, $global-filter-alpha)), color-stop(100%, rgba(16, 17, 19, 0.25)));
+        background: -webkit-linear-gradient(top, rgba(16, 17, 19, $global-filter-alpha), rgba(16, 17, 19,0.25) 100%);
+        background: linear-gradient(to bottom, rgba(16, 17, 19, $global-filter-alpha), rgba(16, 17, 19, 0.25) 100%);
+    }
+}
+
+.parallax-mirror {
+    background-color: #000;
+}
+
+.parallax-container {
+    background: transparent;
+    overflow: hidden;
+    position: relative;
+    .title-desc-inner {
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+        padding: 5%;
+        position: absolute;
+        left: 50%;
+        top: 35%;
+        transform: translateX(-50%) translateY(-35%);
+        text-align: center;   
+        @media (max-width: $xxsmall-screen) {
+            padding: 1%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    }
+    .btn {
+        border: 1px solid #fff;
+        text-transform: capitalize;
+        transform: translateX(0px) translateY(0px);
+    }
+    &.hero {
+        h1 {
+            font-weight: 500;
+            letter-spacing: 3px;
+            margin-bottom: 0.50rem;
+            text-transform: uppercase;
+            @media (max-width: $xsmall-screen) {
+                font-size: 1.35em;
+            }
+            //text-shadow: 2px 2px 2px rgba(0,0,0, 0.5);
+        }
+        h2 {
+            font-weight: 300;
+            font-size: 2.25rem;
+            margin-bottom: 2rem;
+            @media (max-width: $xsmall-screen) {
+                font-size: 1.25em;
+            }
+            @media (max-width: $small-screen) {
+                margin-bottom: 2rem;
+            }
+            //text-shadow: 2px 2px 2px rgba(0,0,0, 0.5);
+        }
+    }
+    &.opacity {
+        .btn-default {
+            background-color: rgba(255,255,255, 0.8);
+            color: darken(#fff, 75%);
+        }
+        .btn-default:hover, .btn-default:focus, .btn-default.focus, .btn-default:active, .btn-default.active {
+            background-color: rgba(230,230,230, 1);
+        }
+        .btn-primary {
+            background-color: rgba(255, 172, 69, 0.8);
+        }
+        .btn-primary:hover, .btn-primary:focus, .btn-primary.focus, .btn-primary:active, .btn-primary.active {
+            background-color: rgba(255, 172, 69, 1);
+        }		
+    }
+    .entry-header {
+        margin-bottom: 4rem;
+        @media (max-width: $small-screen) {
+            margin-bottom: 2rem;
+        }
+        .entry-title {
+            margin: 0 auto 0.50rem;
+            text-align: center;
+        }
+        .lead {
+            margin: 0 auto;
+            font-size: 1.5rem;
+            @media (min-width: $medium-screen + 1) {
+                max-width: 680px;
+            }
+            @media (max-width: $medium-screen) {
+                max-width: 480px;
+            }
+        }
+    }
+    .entry-title {
+        margin-top: 0;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    .lead {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    p.excerpt {
+        font-size: 18px;
+        margin-bottom: 4rem;
+    }
+    &.white {
+        h1, p, h2 {
+            color: #000;
+        }
+        .entry-title {
+            //text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+        p.lead {
+            //text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+        }
+        .tiles {
+            p.lead {
+                text-shadow: none;
+            }
+        }
+    }
+    .hero-links {
+        display: table;
+        list-style: outside none none;
+        margin: 0px auto;
+        padding: 0;
+        > li {
+            display: inline-block;
+            padding: 0;
+            @media (min-width: $small-screen + 1) {
+                margin-bottom: .50em;
+            }
+            @media (max-width: $small-screen) {
+                //width: 100%;
+                margin-right: 1em;
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+            @media (max-width: $xsmall-screen) {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 1rem;
+                &:last-child {
+                    margin-right: 0;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        a {
+            @media (min-width: $small-screen + 1) {
+                margin-right: 1em;
+            }
+            @media (max-width: $xsmall-screen) { 
+                width: 60%;
+            }
+
+        }
+    }
+    ul.skillset {
+        display: block;
+        list-style: inherit;
+    }
+    ul.skillset > li {
+        display: inherit;
+    }
+    .see-more-link {
+        padding: 2rem 0 0;
+        text-align: center;
+    }
+
+}
+
+@media (max-width: $small-screen) {
+    .parallax-container {
+        img {
+            max-width: 50%;
+        }
+    }
+}
+
+@media (max-width: $xxsmall-screen) {
+    .parallax-container {
+        .btn {
+            min-width: 230px;
+            margin: 5px;
+        }
+    }
+}

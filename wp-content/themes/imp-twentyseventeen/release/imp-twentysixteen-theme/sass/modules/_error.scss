@@ -1,0 +1,10 @@
+.error404 {
+    .site-main {
+        @media (min-width: $medium-screen + 1) {
+            padding-top: $base-top-page-offset;
+        }
+        @media (max-width: $medium-screen) {
+            padding-top: $base-top-page-offset * 2;
+        }
+    }
+}

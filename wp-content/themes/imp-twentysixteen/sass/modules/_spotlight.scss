@@ -1,0 +1,108 @@
+.list-group-item:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0;
+}
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+
+.spotlight {
+    position: absolute;
+    right: -320px;
+    top: 115px;
+    width: 26rem;
+    z-index: 100;
+    -webkit-transition: right 0.5s ease-in-out;
+    -moz-transition:right 0.5s ease-in-out;
+    -o-transition: right 0.5s ease-in-out;
+    transition: right 0.5s ease-in-out;
+    &.contact {
+        top: 208px;
+    }
+    &.open-spot {
+        right: 0;
+        -webkit-transition: right 0.5s ease-in-out;
+        -moz-transition:right 0.5s ease-in-out;
+        -o-transition: right 0.5s ease-in-out;
+        transition: right 0.5s ease-in-out;
+    }
+    .list-group-item {
+        background-color: rgba(23, 144, 210, 0.6);
+        overflow: auto;
+        padding: 0;
+        border: none;
+        > .badge {
+            background-color: rgba(23, 144, 210, 0.6);
+            border-radius: 0;
+            display: table;
+            color: #b9cede;
+            float: left;
+            width: 6rem;
+            height: 6rem;
+            padding: 0px;
+            a {
+                color: #fff;
+                display: block;
+                font-size: 2em;
+                line-height: 3;
+                text-align: center;
+                &:hover {
+                    color: #f3633c
+                }
+            }
+        }
+    }
+    .list-content {
+        display: block;
+        float: left;
+        height: 6rem;
+        overflow: auto;
+        width: 20rem;
+        margin-bottom: 0;
+        p {
+            font-size: 0.875em;
+            line-height: 20px;
+            color: #e8e8e8;
+            padding: 10px 15px;
+            margin-bottom: 0;
+            a {
+                color: #e8e8e8;
+                text-decoration: underline;
+            }
+        }
+    }
+    .fa.fa-info {
+        display: table-cell;
+        vertical-align: middle;
+    }
+}
+
+@media (max-width: $small-screen) {
+    .spotlight {
+        top: 25px;
+        width: 24rem;
+        .list-group-item {
+            > .badge {
+                width: 4rem;
+                height: 4rem;
+                font-size: 20px;
+                line-height: 40px;
+            }	    	
+        }
+        .list-content {
+            height: 4rem;
+            width: 20rem;
+            p {
+                font-size: 0.875em;
+                line-height: 14px;
+                padding: 6px 15px;
+            }
+        }
+        &.contact {
+            top: 100px;
+        }
+    }
+}

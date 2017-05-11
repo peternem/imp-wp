@@ -1,0 +1,893 @@
+[{
+        "id": 2715,
+        "date": "2017-03-20T16:12:43",
+        "date_gmt": "2017-03-20T16:12:43",
+        "guid": {
+            "rendered": "\/?p=2715"
+        },
+        "modified": "2017-03-22T16:47:01",
+        "modified_gmt": "2017-03-22T16:47:01",
+        "slug": "test-post",
+        "status": "publish",
+        "type": "post",
+        "link": "\/test-post\/",
+        "title": {
+            "rendered": "Test Post"
+        },
+        "content": {
+            "rendered": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper leo ex, id placerat massa mollis et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer tincidunt justo nec ultrices venenatis. Maecenas viverra congue mi, quis mollis dolor condimentum ac. Aenean placerat neque metus, eget vestibulum diam consectetur sed. Quisque felis nisi, fringilla nec rutrum sit amet, sodales ut velit. Cras eu tortor rhoncus, rutrum lectus a, porttitor ligula. Vestibulum pulvinar, urna at eleifend tincidunt, neque ligula finibus magna, sit amet pharetra odio enim vel dui. <\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ullamcorper leo ex, id placerat massa mollis et. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Integer tincidunt justo nec ultrices venenatis. Maecenas viverra congue mi, quis mollis dolor condimentum ac. Aenean placerat neque metus, eget vestibulum diam consectetur sed. Quisque [&hellip;]<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 2657,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [44, 2],
+        "tags": [12, 13, 14, 56, 16],
+        "featured_image_src": "\/wp-content\/uploads\/2016\/11\/mms-pixit-nyc-150x150.jpg",
+        "author_meta": {
+            "ID": "1",
+            "user_nicename": "mjpeternellgmail-com",
+            "user_url": "http:\/\/www.google.com",
+            "user_registered": "2015-06-24 15:08:39",
+            "display_name": "mjpeternell@gmail.com",
+            "nickname": "mjpeternell@gmail.com"
+        },
+        "fields": {
+            "acf_post_text_box": "Lorem ipsum dolor sit amet"
+        },
+        "tag_names": ["Bootstrap", "CMS", "CSS", "Ecommerce", "Google Analytics"],
+        "category_names": ["About", "branding"],
+        "_links": {
+            "self": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2715"
+                }],
+            "collection": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts"
+                }],
+            "about": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/types\/post"
+                }],
+            "author": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/users\/1"
+                }],
+            "replies": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/comments?post=2715"
+                }],
+            "version-history": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2715\/revisions"
+                }],
+            "wp:featuredmedia": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media\/2657"
+                }],
+            "wp:attachment": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media?parent=2715"
+                }],
+            "wp:term": [{
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/categories?post=2715"
+                }, {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/tags?post=2715"
+                }],
+            "curies": [{
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }]
+        }
+    }, {
+        "id": 2464,
+        "date": "2016-01-28T18:07:45",
+        "date_gmt": "2016-01-28T18:07:45",
+        "guid": {
+            "rendered": "\/?p=2464"
+        },
+        "modified": "2016-11-01T16:03:18",
+        "modified_gmt": "2016-11-01T16:03:18",
+        "slug": "front-end-web-development",
+        "status": "publish",
+        "type": "post",
+        "link": "\/front-end-web-development\/",
+        "title": {
+            "rendered": "Front-end Web Development"
+        },
+        "content": {
+            "rendered": "<p>I am a well versed Front End web developer and designer with skills\u00a0in custom WordPress sites and themes, PHP, HTML, CSS, LESS compiled CSS, Flash Actionscript 3,\u00a0 JavaScript, JQuery,\u00a0GIT version control, Twitter bootstrap framework, Adobe Creative Suites, etc.<\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>I am a well versed Front End web developer and designer.<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 2467,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [1],
+        "tags": [],
+        "featured_image_src": "\/wp-content\/uploads\/2016\/01\/mobile-devices-600x400-150x150.png",
+        "author_meta": {
+            "ID": "1",
+            "user_nicename": "mjpeternellgmail-com",
+            "user_url": "http:\/\/www.google.com",
+            "user_registered": "2015-06-24 15:08:39",
+            "display_name": "mjpeternell@gmail.com",
+            "nickname": "mjpeternell@gmail.com"
+        },
+        "fields": false,
+        "tag_names": [],
+        "category_names": ["Uncategorized"],
+        "_links": {
+            "self": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2464"
+                }],
+            "collection": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts"
+                }],
+            "about": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/types\/post"
+                }],
+            "author": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/users\/1"
+                }],
+            "replies": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/comments?post=2464"
+                }],
+            "version-history": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2464\/revisions"
+                }],
+            "wp:featuredmedia": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media\/2467"
+                }],
+            "wp:attachment": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media?parent=2464"
+                }],
+            "wp:term": [{
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/categories?post=2464"
+                }, {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/tags?post=2464"
+                }],
+            "curies": [{
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }]
+        }
+    }, {
+        "id": 2440,
+        "date": "2016-01-26T00:47:37",
+        "date_gmt": "2016-01-26T00:47:37",
+        "guid": {
+            "rendered": "\/?p=2440"
+        },
+        "modified": "2016-11-26T04:10:17",
+        "modified_gmt": "2016-11-26T04:10:17",
+        "slug": "my-web-portfolio",
+        "status": "publish",
+        "type": "post",
+        "link": "\/my-web-portfolio\/",
+        "title": {
+            "rendered": "My Web Portfolio"
+        },
+        "content": {
+            "rendered": "<p style=\"text-align: justify;\">xxxMy code written to be standards compliant, validated and supported in the latest browsers. Most of the sites I do nowadays are responsive, making them easier and faster to use on smaller devices.<\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>xxxMy code written to be standards compliant, validated and supported in the latest browsers. Most of the sites I do nowadays are responsive, making them easier and faster to use on smaller devices.<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 2467,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [4, 1],
+        "tags": [],
+        "featured_image_src": "\/wp-content\/uploads\/2016\/01\/mobile-devices-600x400-150x150.png",
+        "author_meta": {
+            "ID": "1",
+            "user_nicename": "mjpeternellgmail-com",
+            "user_url": "http:\/\/www.google.com",
+            "user_registered": "2015-06-24 15:08:39",
+            "display_name": "mjpeternell@gmail.com",
+            "nickname": "mjpeternell@gmail.com"
+        },
+        "fields": false,
+        "tag_names": [],
+        "category_names": ["Skillset", "Uncategorized"],
+        "_links": {
+            "self": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2440"
+                }],
+            "collection": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts"
+                }],
+            "about": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/types\/post"
+                }],
+            "author": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/users\/1"
+                }],
+            "replies": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/comments?post=2440"
+                }],
+            "version-history": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2440\/revisions"
+                }],
+            "wp:featuredmedia": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media\/2467"
+                }],
+            "wp:attachment": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media?parent=2440"
+                }],
+            "wp:term": [{
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/categories?post=2440"
+                }, {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/tags?post=2440"
+                }],
+            "curies": [{
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }]
+        }
+    }, {
+        "id": 2388,
+        "date": "2016-01-17T20:41:02",
+        "date_gmt": "2016-01-17T20:41:02",
+        "guid": {
+            "rendered": "\/?p=2388"
+        },
+        "modified": "2016-11-24T05:15:23",
+        "modified_gmt": "2016-11-24T05:15:23",
+        "slug": "my-skillset",
+        "status": "publish",
+        "type": "post",
+        "link": "\/my-skillset\/",
+        "title": {
+            "rendered": "My Skillset"
+        },
+        "content": {
+            "rendered": "<p>Skate ipsum dolor sit amet, mini ramp face plant gnarly Christ air hand rail rad tic-tac. Slap maxwell gnar bucket Japan air hanger griptape slide rock and roll Justin Regan. Slam kidney Christ air regular footed freestyle skater mongo. Vert Z-Roller griptape gnarly betty slide durometer Japan air. Z-Roller boneless ledge stoked crailtap spine g-turn nosegrind. Slappy bluntslide crail slide Saran Wrap Kevin Harris powerslide pogo.<\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>lappy bluntslide crail slide Saran Wrap Kevin Harris powerslide pogo.<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 2392,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [1],
+        "tags": [],
+        "featured_image_src": "\/wp-content\/uploads\/2016\/01\/newberry-crater-mtb-2010-150x150.jpg",
+        "author_meta": {
+            "ID": "1",
+            "user_nicename": "mjpeternellgmail-com",
+            "user_url": "http:\/\/www.google.com",
+            "user_registered": "2015-06-24 15:08:39",
+            "display_name": "mjpeternell@gmail.com",
+            "nickname": "mjpeternell@gmail.com"
+        },
+        "fields": false,
+        "tag_names": [],
+        "category_names": ["Uncategorized"],
+        "_links": {
+            "self": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2388"
+                }],
+            "collection": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts"
+                }],
+            "about": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/types\/post"
+                }],
+            "author": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/users\/1"
+                }],
+            "replies": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/comments?post=2388"
+                }],
+            "version-history": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2388\/revisions"
+                }],
+            "wp:featuredmedia": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media\/2392"
+                }],
+            "wp:attachment": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media?parent=2388"
+                }],
+            "wp:term": [{
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/categories?post=2388"
+                }, {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/tags?post=2388"
+                }],
+            "curies": [{
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }]
+        }
+    }, {
+        "id": 2352,
+        "date": "2016-01-15T22:59:53",
+        "date_gmt": "2016-01-15T22:59:53",
+        "guid": {
+            "rendered": "\/?p=2352"
+        },
+        "modified": "2016-11-26T04:09:39",
+        "modified_gmt": "2016-11-26T04:09:39",
+        "slug": "my-print-portfolio",
+        "status": "publish",
+        "type": "post",
+        "link": "\/my-print-portfolio\/",
+        "title": {
+            "rendered": "My Print Portfolio"
+        },
+        "content": {
+            "rendered": "<div class=\"entry-content\">\n<p>I have experience building a variety of multimedia documents such as brochures, price books, catalogs, mailers, point of purchase merchandise, stickers, and technical documents.All multimedia documents have been created using the latest Adobe Creative Suites programs.<\/p>\n<\/div>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>My print marketing capabilities range from building brochures, flyers, POP merchandise and technical documents.<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 2492,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [43],
+        "tags": [],
+        "featured_image_src": "\/wp-content\/uploads\/2016\/01\/print-graphic-150x150.jpg",
+        "author_meta": {
+            "ID": "1",
+            "user_nicename": "mjpeternellgmail-com",
+            "user_url": "http:\/\/www.google.com",
+            "user_registered": "2015-06-24 15:08:39",
+            "display_name": "mjpeternell@gmail.com",
+            "nickname": "mjpeternell@gmail.com"
+        },
+        "fields": false,
+        "tag_names": [],
+        "category_names": ["Recent Print"],
+        "_links": {
+            "self": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2352"
+                }],
+            "collection": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts"
+                }],
+            "about": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/types\/post"
+                }],
+            "author": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/users\/1"
+                }],
+            "replies": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/comments?post=2352"
+                }],
+            "version-history": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2352\/revisions"
+                }],
+            "wp:featuredmedia": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media\/2492"
+                }],
+            "wp:attachment": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media?parent=2352"
+                }],
+            "wp:term": [{
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/categories?post=2352"
+                }, {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/tags?post=2352"
+                }],
+            "curies": [{
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }]
+        }
+    }, {
+        "id": 2317,
+        "date": "2015-06-01T16:56:40",
+        "date_gmt": "2015-06-01T16:56:40",
+        "guid": {
+            "rendered": "http:\/\/www.mattpeternell.net\/?p=2317"
+        },
+        "modified": "2016-11-01T16:03:18",
+        "modified_gmt": "2016-11-01T16:03:18",
+        "slug": "web-analytics-and-seo",
+        "status": "publish",
+        "type": "post",
+        "link": "\/web-analytics-and-seo\/",
+        "title": {
+            "rendered": "Web Analytics and SEO"
+        },
+        "content": {
+            "rendered": "<p>I use Google Analytics to measuring web traffic, monitor business and market research, and use it as a tool to improve the effectiveness and optimization of the web sites I build or maintain.<\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>I use Google Analytics to measuring web traffic, monitor business and market research, and use it as a tool to improve the effectiveness and optimization of the web sites I build or maintain.<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 2322,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [4],
+        "tags": [],
+        "featured_image_src": "\/wp-content\/uploads\/2015\/06\/google-com-analytics-web-150x150.jpg",
+        "author_meta": {
+            "ID": "1",
+            "user_nicename": "mjpeternellgmail-com",
+            "user_url": "http:\/\/www.google.com",
+            "user_registered": "2015-06-24 15:08:39",
+            "display_name": "mjpeternell@gmail.com",
+            "nickname": "mjpeternell@gmail.com"
+        },
+        "fields": false,
+        "tag_names": [],
+        "category_names": ["Skillset"],
+        "_links": {
+            "self": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2317"
+                }],
+            "collection": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts"
+                }],
+            "about": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/types\/post"
+                }],
+            "author": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/users\/1"
+                }],
+            "replies": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/comments?post=2317"
+                }],
+            "version-history": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2317\/revisions"
+                }],
+            "wp:featuredmedia": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media\/2322"
+                }],
+            "wp:attachment": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media?parent=2317"
+                }],
+            "wp:term": [{
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/categories?post=2317"
+                }, {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/tags?post=2317"
+                }],
+            "curies": [{
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }]
+        }
+    }, {
+        "id": 2315,
+        "date": "2015-06-01T16:56:00",
+        "date_gmt": "2015-06-01T16:56:00",
+        "guid": {
+            "rendered": "http:\/\/www.mattpeternell.net\/?p=2315"
+        },
+        "modified": "2016-11-01T16:03:18",
+        "modified_gmt": "2016-11-01T16:03:18",
+        "slug": "backend-web-development",
+        "status": "publish",
+        "type": "post",
+        "link": "\/backend-web-development\/",
+        "title": {
+            "rendered": "Backend Web Development"
+        },
+        "content": {
+            "rendered": "<p>On the backend side of web design, I have a solid understanding of PHP, a basic understanding of the Java programming language and the capability to build and run simple JUnit automation tests.<\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>On the backend side of web design, I have a solid understanding of PHP, a basic understanding of the Java programming language and the capability to build and run simple JUnit automation tests.<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 2277,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [4],
+        "tags": [],
+        "featured_image_src": "\/wp-content\/uploads\/2015\/05\/screencapture-sbgi-net-1431626597533-150x150.jpg",
+        "author_meta": {
+            "ID": "1",
+            "user_nicename": "mjpeternellgmail-com",
+            "user_url": "http:\/\/www.google.com",
+            "user_registered": "2015-06-24 15:08:39",
+            "display_name": "mjpeternell@gmail.com",
+            "nickname": "mjpeternell@gmail.com"
+        },
+        "fields": false,
+        "tag_names": [],
+        "category_names": ["Skillset"],
+        "_links": {
+            "self": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2315"
+                }],
+            "collection": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts"
+                }],
+            "about": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/types\/post"
+                }],
+            "author": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/users\/1"
+                }],
+            "replies": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/comments?post=2315"
+                }],
+            "version-history": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2315\/revisions"
+                }],
+            "wp:featuredmedia": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media\/2277"
+                }],
+            "wp:attachment": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media?parent=2315"
+                }],
+            "wp:term": [{
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/categories?post=2315"
+                }, {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/tags?post=2315"
+                }],
+            "curies": [{
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }]
+        }
+    }, {
+        "id": 2313,
+        "date": "2015-06-01T16:54:51",
+        "date_gmt": "2015-06-01T16:54:51",
+        "guid": {
+            "rendered": "http:\/\/www.mattpeternell.net\/?p=2313"
+        },
+        "modified": "2016-11-26T03:29:36",
+        "modified_gmt": "2016-11-26T03:29:36",
+        "slug": "web-design-uiux",
+        "status": "publish",
+        "type": "post",
+        "link": "\/web-design-uiux\/",
+        "title": {
+            "rendered": "Web Design UI\/UX"
+        },
+        "content": {
+            "rendered": "<p>From a design point of view, I can create a site from scratch or let the a designer create the site mock-up and I will implement the design and make it a reality.<\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>From a design point of view, I can create a site from scratch or let the a designer create the site mock-up and I will implement the design and make it a reality.<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 2658,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [4],
+        "tags": [],
+        "featured_image_src": "\/wp-content\/uploads\/2016\/11\/placeholder-1080x1280-grey-1-150x150.jpg",
+        "author_meta": {
+            "ID": "1",
+            "user_nicename": "mjpeternellgmail-com",
+            "user_url": "http:\/\/www.google.com",
+            "user_registered": "2015-06-24 15:08:39",
+            "display_name": "mjpeternell@gmail.com",
+            "nickname": "mjpeternell@gmail.com"
+        },
+        "fields": false,
+        "tag_names": [],
+        "category_names": ["Skillset"],
+        "_links": {
+            "self": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2313"
+                }],
+            "collection": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts"
+                }],
+            "about": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/types\/post"
+                }],
+            "author": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/users\/1"
+                }],
+            "replies": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/comments?post=2313"
+                }],
+            "version-history": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2313\/revisions"
+                }],
+            "wp:featuredmedia": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media\/2658"
+                }],
+            "wp:attachment": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media?parent=2313"
+                }],
+            "wp:term": [{
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/categories?post=2313"
+                }, {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/tags?post=2313"
+                }],
+            "curies": [{
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }]
+        }
+    }, {
+        "id": 2311,
+        "date": "2015-06-01T16:54:06",
+        "date_gmt": "2015-06-01T16:54:06",
+        "guid": {
+            "rendered": "http:\/\/www.mattpeternell.net\/?p=2311"
+        },
+        "modified": "2016-11-29T05:08:50",
+        "modified_gmt": "2016-11-29T05:08:50",
+        "slug": "responsive-web-design",
+        "status": "publish",
+        "type": "post",
+        "link": "\/responsive-web-design\/",
+        "title": {
+            "rendered": "Responsive Web Design"
+        },
+        "content": {
+            "rendered": "<p>I am well versed in the ways of responsive web design (RWD). Based on work experience, I have the ability to build a website that has an optimized viewing experience across all devices such as mobile phones, tablets and desktops computers.<\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>I am well versed in the ways of responsive web design (RWD). Based on work experience, I have the ability to build a website that has an optimized viewing experience across all devices such as mobile phones, tablets and desktops computers.<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 2323,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [4],
+        "tags": [],
+        "featured_image_src": "\/wp-content\/uploads\/2015\/06\/icon-mobile-websites-150x150.png",
+        "author_meta": {
+            "ID": "1",
+            "user_nicename": "mjpeternellgmail-com",
+            "user_url": "http:\/\/www.google.com",
+            "user_registered": "2015-06-24 15:08:39",
+            "display_name": "mjpeternell@gmail.com",
+            "nickname": "mjpeternell@gmail.com"
+        },
+        "fields": false,
+        "tag_names": [],
+        "category_names": ["Skillset"],
+        "_links": {
+            "self": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2311"
+                }],
+            "collection": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts"
+                }],
+            "about": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/types\/post"
+                }],
+            "author": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/users\/1"
+                }],
+            "replies": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/comments?post=2311"
+                }],
+            "version-history": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2311\/revisions"
+                }],
+            "wp:featuredmedia": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media\/2323"
+                }],
+            "wp:attachment": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media?parent=2311"
+                }],
+            "wp:term": [{
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/categories?post=2311"
+                }, {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/tags?post=2311"
+                }],
+            "curies": [{
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }]
+        }
+    }, {
+        "id": 2299,
+        "date": "2015-05-29T15:07:39",
+        "date_gmt": "2015-05-29T15:07:39",
+        "guid": {
+            "rendered": "http:\/\/www.mattpeternell.net\/?p=2299"
+        },
+        "modified": "2016-11-26T03:54:42",
+        "modified_gmt": "2016-11-26T03:54:42",
+        "slug": "full-service-web-developer",
+        "status": "publish",
+        "type": "post",
+        "link": "\/full-service-web-developer\/",
+        "title": {
+            "rendered": "Full-service Web Developer"
+        },
+        "content": {
+            "rendered": "<p>I am a full-service web developer who has over eight years of web and marketing experience. I have the capability of building websites using a wide variety of web technologies, such as Flash ActionScript, HTML 4 &amp; 5, CSS 2 &amp; 3, JQuery, JavaScript, PHP, MYSQL and XML data.<\/p>\n<p>My marketing capabilities range from building brochures, flyers, POP merchandise and technical documents.<\/p>\n<p>On this website you will find samples of my web development and marketing projects. Feel free to contact me via email to inquire about my services.<\/p>\n",
+            "protected": false
+        },
+        "excerpt": {
+            "rendered": "<p>I am a full-service web developer who has over eight years of web and marketing experience. I have the capability of building websites using a wide variety of web technologies, such as Flash ActionScript, HTML 4 &amp; 5, CSS 2 &amp; 3, JQuery, JavaScript, PHP, MYSQL and XML data. My marketing capabilities range from building [&hellip;]<\/p>\n",
+            "protected": false
+        },
+        "author": 1,
+        "featured_media": 2658,
+        "comment_status": "open",
+        "ping_status": "open",
+        "sticky": false,
+        "template": "",
+        "format": "standard",
+        "meta": [],
+        "categories": [1],
+        "tags": [],
+        "featured_image_src": "\/wp-content\/uploads\/2016\/11\/placeholder-1080x1280-grey-1-150x150.jpg",
+        "author_meta": {
+            "ID": "1",
+            "user_nicename": "mjpeternellgmail-com",
+            "user_url": "http:\/\/www.google.com",
+            "user_registered": "2015-06-24 15:08:39",
+            "display_name": "mjpeternell@gmail.com",
+            "nickname": "mjpeternell@gmail.com"
+        },
+        "fields": false,
+        "tag_names": [],
+        "category_names": ["Uncategorized"],
+        "_links": {
+            "self": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2299"
+                }],
+            "collection": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts"
+                }],
+            "about": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/types\/post"
+                }],
+            "author": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/users\/1"
+                }],
+            "replies": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/comments?post=2299"
+                }],
+            "version-history": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/posts\/2299\/revisions"
+                }],
+            "wp:featuredmedia": [{
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media\/2658"
+                }],
+            "wp:attachment": [{
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/media?parent=2299"
+                }],
+            "wp:term": [{
+                    "taxonomy": "category",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/categories?post=2299"
+                }, {
+                    "taxonomy": "post_tag",
+                    "embeddable": true,
+                    "href": "http:\/\/mattpeternell.dev\/wp-json\/wp\/v2\/tags?post=2299"
+                }],
+            "curies": [{
+                    "name": "wp",
+                    "href": "https:\/\/api.w.org\/{rel}",
+                    "templated": true
+                }]
+        }
+    }]

@@ -1,0 +1,33 @@
+.three-col-cta {
+    background-color: rgba(0,0,0,.1);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    .column-4 {
+        text-align: center;
+        padding: 0 1rem;
+    }
+    .icon {
+        margin-bottom: 15px;
+        .fa {
+            //border-color:#333333;
+            //border-width:1px;
+            //background-color:#333333;
+            height:100px;
+            width:100px;
+            line-height:100px;
+            border-radius:50%;
+            color:#333;
+            font-size:68px;
+        }
+    }
+    .content-box-heading {
+        line-height:40px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+    .a {
+
+
+    }
+}

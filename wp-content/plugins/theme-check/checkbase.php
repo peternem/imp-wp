@@ -78,6 +78,9 @@ function checkcount() {
 
 // some functions theme checks use
 function tc_grep( $error, $file ) {
+	if ( ! file_exists( $file ) ) {
+		return '';
+	}
 	$lines = file( $file, FILE_IGNORE_NEW_LINES ); // Read the theme file into an array
 	$line_index = 0;
 	$bad_lines = '';
@@ -96,6 +99,9 @@ function tc_grep( $error, $file ) {
 }
 
 function tc_preg( $preg, $file ) {
+	if ( ! file_exists( $file ) ) {
+		return '';
+	}
 	$lines = file( $file, FILE_IGNORE_NEW_LINES ); // Read the theme file into an array
 	$line_index = 0;
 	$bad_lines = '';
@@ -105,7 +111,10 @@ function tc_preg( $preg, $file ) {
 			$error = $matches[0];
 			$this_line = str_replace( '"', "'", $this_line );
 			$error = ltrim( $error );
-			$pre = ( FALSE !== ( $pos = strpos( $this_line, $error ) ) ? substr( $this_line, 0, $pos ) : FALSE );
+			$pre = '';
+			if ( !empty( $error ) ) {
+				$pre = ( FALSE !== ( $pos = strpos( $this_line, $error ) ) ? substr( $this_line, 0, $pos ) : FALSE );
+			}
 			$pre = ltrim( htmlspecialchars( $pre ) );
 			$bad_lines .= "<pre class='tc-grep'>" . __("Line ", "theme-check") . ( $line_index+1 ) . ": " . $pre . htmlspecialchars( substr( stristr( $this_line, $error ), 0, 75 ) ) . "</pre>";
 		}
@@ -132,7 +141,7 @@ function tc_strxchr($haystack, $needle, $l_inclusive = 0, $r_inclusive = 0){
 }
 
 function tc_filename( $file ) {
-	$filename = ( preg_match( '/themes\/[a-z0-9]*\/(.*)/', $file, $out ) ) ? $out[1] : basename( $file );
+	$filename = ( preg_match( '/themes\/[a-z0-9-]*\/(.*)/', $file, $out ) ) ? $out[1] : basename( $file );
 	return $filename;
 }
 

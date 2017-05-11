@@ -1,0 +1,46 @@
+<div class="container">
+    <h1><a href="/">Mattpeternell.devssss</a></h1>
+    <ul class="nav navbar-nav">
+        <li ng-repeat="item in data.items"> 
+            <span ng-bind-html="menu"></span>
+        </li>  
+    </ul>
+</div>
+<div class="container">
+    <h2>Posts</h2>	
+    <ul>
+        <li ng-repeat="post in data.posts">
+            <a href="/{{post.slug}}" ng-bind-html="post.title"></a>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <h2>Categories</h2>
+    <ul>
+        <li ng-repeat="category in data.categories">
+            <span ng-if="current_category_id && category.ID == current_category_id" ng-bind-html="category.name"></span>
+            <a ng-if="!current_category_id || category.ID != current_category_id" href="category/{{category.slug}}" ng-bind-html="category.name"></a>
+        </li>
+    </ul>
+</div>
+<div class="container">
+    <h2>{{data.pageTitle}}</h2>
+
+    <div id="{{post.slug}}" ng-repeat="post in data.posts" class="row row-margin">
+
+        <div  class="col-md-8">
+            <h2><a href="/{{post.slug}}" ng-bind-html="post.title"></a></h2>
+            <h3>Content</h3>
+            <div ng-bind-html="post.content"></div>
+            <h3>Excerpt</h3>
+            <div ng-bind-html="post.excerpt"></div>
+        </div>
+        <div class="col-md-4">
+            <a href="/{{post.slug}}" ng-if="post.featured_image.source"><img ng-src="{{post.featured_image.attachment_meta.sizes.thumbnail.url}}" title="{{post.featured_image.title}}" alt="{{post.featured_image.title}}" /></a>
+        </div>
+
+    </div>
+</div>
+<p ng-if="is404">{{errorMessage}}</p>
+
+<br />
