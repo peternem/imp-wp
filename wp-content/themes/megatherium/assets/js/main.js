@@ -1,4 +1,4 @@
-/*!  - v1.0.0 - 2017-05-10
+/*!  - v1.0.0 - 2017-05-11
  * https://github.com/peternem/imp-wp#readme
  * Copyright (c) 2017; * Licensed GPLv2+ */
 /* 
@@ -11,33 +11,9 @@
 
 jQuery(window).load(function () {
     console.log("window load");
-    jQuery('#webCarousel').bxSlider({
-        adaptiveHeight: true,
-        mode: 'fade',
-        pager: false,
-        onSliderLoad: function () {
-            console.log("slider load");
-            //jQuery( this ).bxSlider();
-            setTimeout(function () {
-
-            }, 100);
-        }
-    });
-
-    jQuery('body').on('load', '#webCarousel', function (e) {
-        console.log('hello!');
-    });
 });
 jQuery(document).ready(function () {
-    console.log("ready");
-
-    //Portfolio Slider
-//    jQuery('#slidebx').bxSlider({
-//        adaptiveHeight: true,
-//        mode: 'fade',
-//        pager: false
-//    });
-
+    console.log("Document ready");
 
 
     jQuery("#learny").click("click", function () {

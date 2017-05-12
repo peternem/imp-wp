@@ -8,7 +8,7 @@
 function _s_backbone_get_request_path()
 {
     global $wp_rewrite;
-
+         
     if ($wp_rewrite->using_permalinks()) {
         global $wp;
 

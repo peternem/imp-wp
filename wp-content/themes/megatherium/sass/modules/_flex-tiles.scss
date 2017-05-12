@@ -175,19 +175,6 @@ and open the template in the editor.
                 margin-right: 0; 
             }
         }
-        /*        @media (min-width: $small-screen) {
-                    &:nth-last-child(2) {
-                        //margin-bottom: 0;
-                    }
-                }*/
-        /*        @media (min-width: $small-screen +1) and (max-width: $medium-screen) {
-                    width: 47.5%;
-                    margin-right:$global-pg-lr-margin/2;
-                    margin-bottom: $global-pg-lr-margin/2;
-                    &:nth-child(2n) {
-                        margin-right: 0; 
-                    }
-                }*/
         @media (min-width: $small-screen-2) and (max-width: $medium-screen) {
             width: 47.5%;
             margin-right: $global-pg-lr-margin/2;
@@ -236,6 +223,14 @@ and open the template in the editor.
                     color: darken(#fff, 25%);
                 }
             }
+        }
+        .wp-image {
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            line-height: 1.42857;
+            padding: 4px;
+            transition: all 0.2s ease-in-out 0s;
         }
         .panel-body {
             display: flex;

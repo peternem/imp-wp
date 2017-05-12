@@ -37,7 +37,7 @@
                     <p><strong>Web Technologies Utilized:</strong></p>
                     <ul class="tag-list single-posts">
                         <% _.each(item.cpt_tag, function(item,key,list){ %>
-                        <li><a href="tag/<%= item.slug %>"><%= item.name %></a></li>
+                        <li><a href="/tag/<%= item.slug %>"><%= item.name %></a></li>
                         <% }); %>
                     </ul>
                 </footer>

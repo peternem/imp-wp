@@ -1,4 +1,4 @@
-/*!  - v1.0.0 - 2017-05-10
+/*!  - v1.0.0 - 2017-05-11
  * https://github.com/peternem/imp-wp#readme
  * Copyright (c) 2017; * Licensed GPLv2+ */
 /* 
@@ -7,9 +7,9 @@
  * and open the template in the editor.
  */
 
-(function ($, Backbone, _, undefined, wpApiSettings) {
+(function (jQuery, Backbone, _, undefined, wpApiSettings) {
     'use strict';
-
+    wp.api.loadPromise.done(function () {
         var WebPosts = Backbone.View.extend({
             initialize: function () {
                 this.render();
@@ -18,16 +18,21 @@
                 //var data = new Data();
                 var that = this;
                 var data = new wp.api.collections.WebPortfolio();
-               
+
                 data.fetch({
                     success: function (data) {
                         console.log(data.toJSON());
-                        var template_cpt = _.template($('#webCptTemplate').html())({data: data.toJSON()});
-                        $('#webCptContent').html(template_cpt);
+                        var template_cpt = _.template(jQuery('#webCptTemplate').html())({data: data.toJSON()});
+                        jQuery('#webCptContent').html(template_cpt);
+                        jQuery('#webCarousel').bxSlider({
+                            adaptiveHeight: true,
+                            mode: 'fade',
+                            pager: false
+                        });
                     }
                 });
             }
         });
         var webPost = new WebPosts();
-        $(document).ready(function () {});
+    });
 })(jQuery, Backbone, _, wpApiSettings);

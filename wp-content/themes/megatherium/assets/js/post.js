@@ -1,4 +1,4 @@
-/*!  - v1.0.0 - 2017-05-10
+/*!  - v1.0.0 - 2017-05-11
  * https://github.com/peternem/imp-wp#readme
  * Copyright (c) 2017; * Licensed GPLv2+ */
 /* 
@@ -8,9 +8,9 @@
  */
 
 
-(function ($, Backbone, _, undefined, wpApiSettings) {
+(function (jQuery, Backbone, _, undefined, wpApiSettings) {
     'use strict';
-    $(document).ready(function () {
+    wp.api.loadPromise.done(function () {
         var MyPosts = Backbone.View.extend({
             //el:  '.selector',
             initialize: function () {
@@ -22,10 +22,9 @@
                 var data_posts = new wp.api.collections.Posts();
                 data_posts.fetch({
                     success: function (data_posts) {
-//                        console.log(data_posts.models);
-//                        console.log(data_posts._byId);
-                        var templatexxx = _.template($('#postContentTemplate').html())({data_posts: data_posts.toJSON()});
-                        $('#postContent').html(templatexxx);
+                        var templatexxx = _.template(jQuery('#postContentTemplate').html())({data_posts: data_posts.toJSON()});
+                        jQuery('#postContent').html(templatexxx);
+                        
 
                     }
                 });

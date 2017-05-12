@@ -124,9 +124,6 @@ function megatherium_scripts() {
 
     wp_enqueue_style('_s_backbone-style', get_stylesheet_uri());
     wp_enqueue_style('font-awesome-icons', get_template_directory_uri() . '/assets/css/font-awesome' . $minified . '.css');
-    
-    //wp_enqueue_script('_s_backbone-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true);
-    //wp_enqueue_script('_s_backbone-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true);
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr.custom.92053' . $minified . '.js', array('jquery'), 'v2.8.3');
     //wp_enqueue_script('jquery-js', get_template_directory_uri() . '/assets/js/vendor/jquery.js', array(), '20130115', true);
     wp_enqueue_script('parallax', get_template_directory_uri() . '/assets/js/vendor/parallax' . $minified . '.js', array(), '20130905', true);
@@ -138,7 +135,7 @@ function megatherium_scripts() {
 
     if (is_singular()) {
         wp_enqueue_script('comment-reply');
-    } elseif (is_home() || is_front_page() || is_archive() || is_search()) {
+    } elseif (is_home() || is_front_page() || is_search()) {
         global $wp_rewrite;
 
         wp_enqueue_script('_s_backbone-loop', get_template_directory_uri() . '/assets/js/loop' . $minified . '.js', array('wp-api', 'jquery', 'backbone', 'underscore'), '1.0', true);
@@ -159,6 +156,7 @@ function megatherium_scripts() {
         if (is_category() || is_tag() || is_tax()) {
             $local['loopType'] = 'archive';
             $local['taxonomy'] = get_taxonomy($queried_object->taxonomy);
+            print_r($local);
         } elseif (is_search()) {
             $local['loopType'] = 'search';
             $local['searchQuery'] = get_search_query();
@@ -190,6 +188,10 @@ function megatherium_scripts() {
                 'parameters' => _s_backbone_get_request_parameters(),
             ),
         );
+        echo '<pre>';
+        print_r($local);
+        echo '</pre>';
+        
         wp_localize_script('_s_backbone-post-loop', 'settings', $local, 'wpApiSettings');
     }
     if (is_singular('web_portfolio')) {
@@ -208,7 +210,9 @@ function megatherium_scripts() {
                 'parameters' => _s_backbone_get_request_parameters(),
             ),
         );
-        //print_r($local);
+//        echo '<pre>';
+//        print_r($local);
+//        echo '</pre>';
         wp_localize_script('web-cpt-loop', 'settings', $local, 'wpApiSettings');
     }
 }
@@ -234,10 +238,17 @@ require get_template_directory() . '/inc/extras.php';
  * ACF Theme Options
  */
 require get_template_directory() . '/inc/acf-theme-options.php';
+
 /**
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
+
+/*
+ * Breadcrumb trail........
+ */
+require get_template_directory() . '/inc/breadcrumb.php';
+
 
 add_action('rest_api_init', 'add_thumbnail_to_JSON');
 
@@ -441,3 +452,17 @@ function wp_rest_api_alter() {
 }
 
 add_action('rest_api_init', 'wp_rest_api_alter');
+
+function wpse28145_add_custom_types( $query ) {
+    if( is_tag() && $query->is_main_query() ) {
+
+        // this gets all post types:
+        $post_types = get_post_types();
+
+        // alternately, you can add just specific post types using this line instead of the above:
+        // $post_types = array( 'post', 'your_custom_type' );
+
+        $query->set( 'post_type', $post_types );
+    }
+}
+add_filter( 'pre_get_posts', 'wpse28145_add_custom_types' );

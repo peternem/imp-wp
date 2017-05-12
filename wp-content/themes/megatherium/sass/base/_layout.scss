@@ -12,6 +12,10 @@ html {
     padding-top: 4rem;
 }
 
+.archive .site-content {
+    padding-top: 5rem;
+}
+
 .inner-container {
     @include outer-container(1280px);
     background-color: pink;
@@ -104,4 +108,9 @@ html {
                         }*/
         }
     }
+}
+
+.my-container.archive .my-inner-container {
+    margin-top: 0;
+    padding-top: 10rem;
 }

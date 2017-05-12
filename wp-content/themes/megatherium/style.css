@@ -606,6 +606,9 @@ html {
 .site-main {
   padding-top: 4rem; }
 
+.archive .site-content {
+  padding-top: 5rem; }
+
 .inner-container {
   max-width: 1280px;
   margin-left: auto;
@@ -755,6 +758,10 @@ html {
       .my-container .col-lg-4:last-child {
         margin-right: 0; } }
 
+.my-container.archive .my-inner-container {
+  margin-top: 0;
+  padding-top: 10rem; }
+
 ul,
 ol {
   list-style-type: none;
@@ -777,7 +784,9 @@ figure {
 img,
 picture {
   margin: 0;
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%;
+  height: auto; }
 
 table {
   border-collapse: collapse;
@@ -980,6 +989,42 @@ hr {
 .aligncenter {
   display: block;
   margin: 0 auto; }
+
+.breadcrumb-container {
+  background-color: #f5f5f5;
+  position: relative; }
+  @media (min-width: 80.05em) {
+    .breadcrumb-container {
+      max-width: 120em;
+      margin-left: auto;
+      margin-right: auto; }
+      .breadcrumb-container::after {
+        clear: both;
+        content: "";
+        display: block; } }
+  @media (min-width: 50.05em) {
+    .breadcrumb-container {
+      padding: 0.5em 4rem; } }
+  @media (max-width: 50em) {
+    .breadcrumb-container {
+      padding: 0.5em 2rem; } }
+
+.breadcrumb {
+  list-style: none; }
+  @media (max-width: 20em) {
+    .breadcrumb {
+      font-size: 0.75rem; } }
+  .breadcrumb > li {
+    display: inline-block; }
+    @media (max-width: 20em) {
+      .breadcrumb > li {
+        font-size: 0.75rem; } }
+    .breadcrumb > li + li::before {
+      color: #ccc;
+      content: " ";
+      padding: 0 5px; }
+  .breadcrumb > .active {
+    color: #2ab2f5; }
 
 /**
  * BxSlider v4.1.2 - Fully loaded, responsive content slider
@@ -1291,20 +1336,7 @@ and open the template in the editor.
     content: "";
     display: block; }
   .flexy .home-tiles-2 {
-    display: flex;
-    /*        @media (min-width: $small-screen) {
-                &:nth-last-child(2) {
-                    //margin-bottom: 0;
-                }
-            }*/
-    /*        @media (min-width: $small-screen +1) and (max-width: $medium-screen) {
-                width: 47.5%;
-                margin-right:$global-pg-lr-margin/2;
-                margin-bottom: $global-pg-lr-margin/2;
-                &:nth-child(2n) {
-                    margin-right: 0; 
-                }
-            }*/ }
+    display: flex; }
     @media (min-width: 100.05em) {
       .flexy .home-tiles-2 {
         margin-right: 2rem;
@@ -1371,6 +1403,13 @@ and open the template in the editor.
         color: #fff; }
         .flexy .home-tiles-2 .panel-title a:hover {
           color: #bfbfbf; }
+    .flexy .home-tiles-2 .wp-image {
+      background-color: #ffffff;
+      border: 1px solid #dddddd;
+      border-radius: 4px;
+      line-height: 1.42857;
+      padding: 4px;
+      transition: all 0.2s ease-in-out 0s; }
     .flexy .home-tiles-2 .panel-body {
       display: flex;
       flex-grow: 1;
@@ -1815,12 +1854,13 @@ header.navigation {
 
 .pages .my-container .entry-header {
   margin-bottom: 6rem; }
-.pages header.section-header {
-  text-align: center;
-  margin-bottom: 4rem; }
 
 .my-container.pages {
   margin: 6rem auto 6rem; }
+
+header.section-header {
+  text-align: center;
+  margin-bottom: 4rem; }
 
 .panel {
   background-color: rgba(221, 221, 221, 0.25);
@@ -2080,7 +2120,7 @@ header.navigation {
   color: #000; }
 
 .single .site-main {
-  padding-top: 3rem; }
+  padding-top: 5rem; }
 .single .entry-content-header {
   margin-top: 4rem; }
 .single .entry-meta {

@@ -8,7 +8,13 @@
  */
 
 get_header(); ?>
-
+    <div class="breadcrumb-container">
+        <?php
+        if (function_exists('impTheme_breadcrumbs')) {
+            impTheme_breadcrumbs();
+        }
+        ?>
+    </div>
 	<?php get_template_part( 'underscore-templates' ); ?>
 
 	<section id="primary" class="content-area">
@@ -17,7 +23,7 @@ get_header(); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-				<h1 class="page-title">
+				<h1 class="page-title">xxxx
 					<?php
 						if ( is_category() ) :
 							single_cat_title();

@@ -2,14 +2,15 @@
     .my-container .entry-header {
         margin-bottom: 6rem;
     }
-    header.section-header {
-        text-align: center;
-        margin-bottom: 4rem;
-    }
 }
 
 .my-container {
     &.pages {
-    margin: 6rem auto 6rem;
+        margin: 6rem auto 6rem;
     }
+}
+
+header.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
 }
