@@ -134,8 +134,10 @@ p.lead {
 
 h2.subtitle {
     font-weight: 300;
-    font-size: 2.25rem;
-    margin-bottom: 2rem;
+    @media (min-width: $xsmall-screen + 0.05) {
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+    }
 }
 
 a {

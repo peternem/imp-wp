@@ -28,6 +28,9 @@ html {
 
 .mp-row.row {
     margin: 0 4rem;
+    @media (max-width: $xsmall-screen) {
+        margin: 0 1rem;
+    }
 }
 
 .row {
@@ -36,9 +39,17 @@ html {
 }
 .column-4 {
     @include span-columns(4);
+    @media (max-width: $xsmall-screen) {
+        @include span-columns(12);
+        @include omega();
+    }
 }
 .column-8 {
     @include span-columns(8);
+    @media (max-width: $xsmall-screen) {
+        @include span-columns(12);
+        @include omega();
+    }
 }
 
 .post {
@@ -46,13 +57,15 @@ html {
 
 }
 
-
 .my-container {
     background-color: #fff;
     @include outer-container(100%);
     padding: 0;
     @media (max-width: $small-screen-2) {
         padding: $global-pg-lr-margin/2;
+    }
+    @media (max-width: $xsmall-screen) {
+        padding: 0;
     }
     .my-inner-container {
         @include outer-container(em(1920px));

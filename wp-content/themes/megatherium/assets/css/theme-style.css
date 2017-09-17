@@ -631,6 +631,9 @@ html {
 
 .mp-row.row {
   margin: 0 4rem; }
+  @media (max-width: 30em) {
+    .mp-row.row {
+      margin: 0 1rem; } }
 
 .row {
   max-width: 100%;
@@ -648,6 +651,15 @@ html {
   width: 31.76157%; }
   .column-4:last-child {
     margin-right: 0; }
+  @media (max-width: 30em) {
+    .column-4 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin-right: 0; }
+      .column-4:last-child {
+        margin-right: 0; } }
 
 .column-8 {
   float: left;
@@ -656,6 +668,15 @@ html {
   width: 65.88078%; }
   .column-8:last-child {
     margin-right: 0; }
+  @media (max-width: 30em) {
+    .column-8 {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%;
+      margin-right: 0; }
+      .column-8:last-child {
+        margin-right: 0; } }
 
 .post {
   overflow: auto; }
@@ -673,6 +694,9 @@ html {
   @media (max-width: 46.875em) {
     .my-container {
       padding: 2rem; } }
+  @media (max-width: 30em) {
+    .my-container {
+      padding: 0; } }
   .my-container .my-inner-container {
     max-width: 120em;
     margin-left: auto;
@@ -963,9 +987,11 @@ p.lead {
   line-height: 1.25; }
 
 h2.subtitle {
-  font-weight: 300;
-  font-size: 2.25rem;
-  margin-bottom: 2rem; }
+  font-weight: 300; }
+  @media (min-width: 30.05em) {
+    h2.subtitle {
+      font-size: 2.25rem;
+      margin-bottom: 2rem; } }
 
 a {
   color: #2ab2f5;
@@ -1891,6 +1917,9 @@ header.navigation {
 
 .pages .my-container .entry-header {
   margin-bottom: 6rem; }
+  @media (max-width: 30em) {
+    .pages .my-container .entry-header {
+      margin-bottom: 1rem; } }
 
 .my-container.pages {
   margin: 0 auto 6rem; }
