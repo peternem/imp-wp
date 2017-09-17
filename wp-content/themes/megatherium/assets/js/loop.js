@@ -1,8 +1,8 @@
-/*!  - v1.0.0 - 2017-05-11
+/*!  - v1.0.0 - 2017-05-16
  * https://github.com/peternem/imp-wp#readme
  * Copyright (c) 2017; * Licensed GPLv2+ */
 
-(function ($, Backbone, _, settings, undefined, wpApiSettings) {
+(function (jQuery, Backbone, _, settings, wpApiSettings) {
     'use strict';
 
     var ApplicationRouter = Backbone.Router.extend({
@@ -15,31 +15,26 @@
             "about": "about",
             "contact": "contact"
         },
-
         deselectPills: function () {
             //deselect all navigation pills
-            //$('.js-navigation-menu li').removeClass('active');
-            $('ul.navigation-menus li').removeClass('active');
+            //jQuery('.js-navigation-menu li').removeClass('active');
+            jQuery('ul.navigation-menus li').removeClass('active');
         },
-
         selectPill: function (pill) {
             //deselect all navigation pills
             this.deselectPills();
             //select passed navigation pill by selector
-            $(pill).addClass('active');
+            jQuery(pill).addClass('active');
         },
-
         hidePages: function () {
             //hide all pages with 'pages' class
-            $('section.pages').hide();
+            jQuery('section.pages').hide();
         },
-
         showPage: function (page) {
             //hide all pages
             this.hidePages();
-
             //show passed page by selector
-            $(page).fadeIn("slow");
+            jQuery(page).fadeIn("slow");
         },
         '': function () {
             this.showPage('section#home-page');
@@ -62,12 +57,10 @@
             this.selectPill('li.contact-link');
         }
     });
-
     var ApplicationView = Backbone.View.extend({
 
         //bind view to body element (all views should be bound to DOM elements)
-        el: $('body'),
-
+        el: jQuery('body'),
         //observe navigation click events and map to contained methods
         events: {
             'click ul.navigation-menu li.home-link a': 'displayHome',
@@ -75,16 +68,13 @@
             'click ul.navigation-menu li.about-link a': 'displayAbout',
             'click ul.navigation-menu li.contact-link a': 'displayContact'
         },
-
         //called on instantiation
         initialize: function () {
             //set dependency on ApplicationRouter
             this.router = new ApplicationRouter();
-            console.log(this.router); 
             //call to begin monitoring uri and route changes
             Backbone.history.start();
         },
-
         displayHome: function () {
             //update url and pass true to execute route method
             this.router.navigate("home", true);
@@ -102,7 +92,6 @@
             this.router.navigate("contact", true);
         }
     });
-
     //load application
     new ApplicationView();
 
@@ -129,24 +118,20 @@
                         'per_page': 100
                     },
                     success: function (data_tags) {
-                        var template = _.template($('#tagsTemplate').html())({data_tags: data_tags.toJSON()});
+                        var template = _.template(jQuery('#tagsTemplate').html())({data_tags: data_tags.toJSON()});
                         that.$el.html(template);
                     }
                 });
             }
         });
         var myTags = new MyTags();
-
-
         // All Posts
 
         var MyPosts = Backbone.View.extend({
-            //el:  '.selector',
             initialize: function () {
                 this.render();
             },
             render: function () {
-                //var data = new Data();
                 var that = this;
                 var data_posts = new wp.api.collections.Posts();
                 data_posts.fetch({
@@ -154,86 +139,62 @@
                         per_page: 25
                     },
                     success: function (data_posts) {
-                        console.log(data_posts);
-
-                        var template = _.template($('#welcomeTemplate').html())({data_posts: data_posts.toJSON()});
-                        $('#welcome').html(template);
-
-                        var template_aa = _.template($('#aboutTemplate').html())({data_posts: data_posts.toJSON()});
-                        $('#about-page').html(template_aa);
-
-                        var template_contact = _.template($('#contactTemplate').html())({data_posts: data_posts.toJSON()});
-                        $('#contact-page').html(template_contact);
-
-                        var template_skills = _.template($('#skillTemplate').html())({data_posts: data_posts.toJSON()});
-                        $('#skillset-page').html(template_skills);
-                        
-                        var template_work_intro = _.template($('#temp-wp1').html())({data_posts: data_posts.toJSON()});
-                        $('#recentWorkInto').html(template_work_intro);
+                        var template = _.template(jQuery('#welcomeTemplate').html())({data_posts: data_posts.toJSON()});
+                        jQuery('#welcome').html(template);
+                        var template_aa = _.template(jQuery('#aboutTemplate').html())({data_posts: data_posts.toJSON()});
+                        jQuery('#about-page').html(template_aa);
+                        var template_contact = _.template(jQuery('#contactTemplate').html())({data_posts: data_posts.toJSON()});
+                        jQuery('#contact-page').html(template_contact);
+                        var template_skills = _.template(jQuery('#skillTemplate').html())({data_posts: data_posts.toJSON()});
+                        jQuery('#skillset-page').html(template_skills);
+                        var template_work_intro = _.template(jQuery('#temp-wp1').html())({data_posts: data_posts.toJSON()});
+                        jQuery('#recentWorkInto').html(template_work_intro);
                     }
                 });
             }
         });
         var myPost = new MyPosts();
 
-
-        var MyPages = Backbone.View.extend({
-            el: '#mypages',
+        var MyPortfolio = Backbone.View.extend({
             initialize: function () {
                 this.render();
             },
             render: function () {
                 //var data = new Data();
                 var thatis = this;
-                var data_pages = new wp.api.collections.Pages();
-                data_pages.fetch({
-                    success: function (data_pages) {
-                        //var template_pages = _.template($('#temp').html())({data: data_pages.toJSON()});
-                        //thatis.$el.html(template);
+                var data_portfolio = new wp.api.collections.Web_portfolio();
+                data_portfolio.fetch({
+                    data: {
+                        'filter': {
+                            'orderby': '',
+                            'order': 'DESC'
+                        },
+                        '_embed': true,
+                        'per_page': 25
+                    },
+                    success: function (data_portfolio) {
+                        var template_wp = _.template(jQuery('#temp-wp').html())({data_portfolio: data_portfolio.toJSON()});
+                        jQuery('#recentWork-page1').html(template_wp);
                     }
                 });
             }
         });
-        
-        var myPages = new MyPages();
-        
-        var MyWebPortfolio = wp.api.models.Post.extend({
-            urlRoot: 'http://mattpeternell.dev/wp-json/wp/v2/web-portfolio',
-            defaults: {
-                type: 'web-portfolio'
-            }
-        });
-
-        MyWebPortfolio = wp.api.collections.Posts.extend({
-            url: 'http://mattpeternell.dev/wp-json/wp/v2/web-portfolio',
-            model: MyWebPortfolio
-        });
-
-        self.events = new MyWebPortfolio();
-        self.events.fetch({
-            data: {
-                'filter': {
-                    'orderby': '',
-                    'order': 'DESC'
-                },
-                '_embed': true,
-                'per_page': 20
-            }
-        }).done(function () {
-            var template_wp = _.template($('#temp-wp').html())({events: self.events.toJSON()});
-            $('#recentWork-page1').html(template_wp);
-        });
-
+        var myPortfolios = new MyPortfolio();
+//        console.log(wpApiSettings);
+//        console.log(wpApiSettings.root + 'acf/v2/options/');
         var MyAcfOptions = wp.api.models.Post.extend({
-            urlRoot: 'http://mattpeternell.dev/wp-json/acf/v2/options',
+            //url: 'http://mattpeternell.dev/wp-json/acf/v2/options',
+            urlRoot: wpApiSettings.root + 'acf/v2/options/',
             defaults: {
                 type: 'options'
             }
         });
 
         //Hero Section
+
         MyAcfOptions = wp.api.collections.Posts.extend({
-            url: 'http://mattpeternell.dev/wp-json/acf/v2/options',
+            //url: 'http://mattpeternell.dev/wp-json/acf/v2/options',
+            url: wpApiSettings.root + 'acf/v2/options/',
             model: MyAcfOptions
         });
 
@@ -249,11 +210,14 @@
             }
         }).done(function () {
             //console.log(self.options);
-            var template = _.template($('#hero2Template').html())({options: self.options.toJSON()});
-            $('#hero').html(template);
-            var template_x = _.template($('#keyPointsTemplate').html())({options: self.options.toJSON()});
-            $('#keyPoints').html(template_x);
+            var template = _.template(jQuery('#hero2Template').html())({options: self.options.toJSON()});
+            jQuery('#hero').html(template);
+            
+            var template_x = _.template(jQuery('#keyPointsTemplate').html())({options: self.options.toJSON()});
+            jQuery('#keyPoints').html(template_x);
+            
+            var template_social = _.template(jQuery('#socialTemplate').html())({options: self.options.toJSON()});
+            jQuery('#socialLinks').html(template_social);
         });
-    }
-    );
+    });
 })(jQuery, Backbone, _, settings, wpApiSettings);

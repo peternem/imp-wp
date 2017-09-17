@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-(function (jQuery, Backbone, _, undefined, wpApiSettings) {
+(function (jQuery, Backbone, _, settings, wpApiSettings) {
     'use strict';
     wp.api.loadPromise.done(function () {
         var WebPosts = Backbone.View.extend({
@@ -14,11 +14,18 @@
             render: function () {
                 //var data = new Data();
                 var that = this;
-                var data = new wp.api.collections.WebPortfolio();
+                var data = new wp.api.collections.Web_portfolio();
 
                 data.fetch({
+                    data: {
+                        'filter': {
+                            'orderby': '',
+                            'order': 'DESC'
+                        },
+                        '_embed': true,
+                        'per_page': 25
+                    },
                     success: function (data) {
-                        console.log(data.toJSON());
                         var template_cpt = _.template(jQuery('#webCptTemplate').html())({data: data.toJSON()});
                         jQuery('#webCptContent').html(template_cpt);
                         jQuery('#webCarousel').bxSlider({
@@ -32,4 +39,4 @@
         });
         var webPost = new WebPosts();
     });
-})(jQuery, Backbone, _, wpApiSettings);
+})(jQuery, Backbone, _, settings, wpApiSettings);

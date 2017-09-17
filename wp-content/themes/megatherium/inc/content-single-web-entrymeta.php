@@ -20,7 +20,7 @@ if ($port_web_developement) {
 
 $port_site_design = get_field("port_site_design");
 if ($port_site_design) {
-    echo '<div class="port_web_des"><strong>Web Design:</strong> <a href="' . $port_site_design . '" target="_blank">' . $port_site_design . '</a></div>';
+    echo '<div class="port_web_des"><strong>Web Design:</strong>' . $port_site_design . '</div>';
 }
 ?>
 <?php

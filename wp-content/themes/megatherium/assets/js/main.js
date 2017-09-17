@@ -1,4 +1,4 @@
-/*!  - v1.0.0 - 2017-05-11
+/*!  - v1.0.0 - 2017-05-16
  * https://github.com/peternem/imp-wp#readme
  * Copyright (c) 2017; * Licensed GPLv2+ */
 /* 
@@ -10,15 +10,13 @@
 // A $( document ).ready() block.
 
 jQuery(window).load(function () {
-    console.log("window load");
+
 });
 jQuery(document).ready(function () {
-    console.log("Document ready");
 
-
-    jQuery("#learny").click("click", function () {
-        console.log("claick");
-    });
+//    jQuery("#learny").click("click", function () {
+//        console.log("claick");
+//    });
 
 
     var menuToggle = jQuery("#js-mobile-menu").unbind();

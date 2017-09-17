@@ -18,15 +18,17 @@
                 'theme_location' => 'footer_navigation',
                 'container' => 'nav',
                 'container_id' => 'footerNav',
-                'container_class' => 'col-lg-8 footer-nav',
+                'container_class' => 'column-8 footer-nav',
                 'menu_class' => 'footer-nav-main',
                 'depth' => '1',
                     //'walker' => new Footernav_Walker ()
             );
             wp_nav_menu($footer_argsx);
             ?>
-            <div class="col-lg-4 footer-secondary-links ">
-                <?php do_action('my_footer_hook'); ?>
+            <div class="column-4 footer-secondary-links ">
+                <?php get_template_part('underscore-templates-social-icons'); ?>
+                
+                <?php //do_action('my_footer_hook'); ?>
             </div>
         </div>
     </div>
@@ -43,6 +45,7 @@
 
 
 <?php wp_footer(); ?>
+
 <?php if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) { ?>
     <script src="//localhost:35729/livereload.js"></script>
 <?php } ?>

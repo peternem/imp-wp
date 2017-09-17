@@ -9,13 +9,6 @@ get_header();
 
 <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-        <div class="breadcrumb-container">
-            <?php
-            if (function_exists('impTheme_breadcrumbs')) {
-                impTheme_breadcrumbs();
-            }
-            ?>
-        </div>
         <?php
         if (is_singular('post')) {
             get_template_part('underscore-templates-posts');

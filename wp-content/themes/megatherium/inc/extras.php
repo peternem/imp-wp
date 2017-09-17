@@ -115,3 +115,38 @@ if (!function_exists('imp_primary_menu()')) :
 /* end header menu */
 endif;
 add_filter('wp_title', 'impTheme_wp_title', 10, 2);
+
+
+add_action('my_footer_hook', 'my_footer_echo');
+
+function my_footer_echo() {
+    ?>
+    <?php
+    //        echo '<pre>';
+//        print_r(get_field('social_links', 'options'));
+//        echo '</pre>';
+    //die;
+    if (have_rows('social_links', 'option')):
+        ?>
+        <ul class="social-list">
+            <?php
+            while (have_rows('social_links', 'option')): the_row();
+
+                // vars
+                $social_icon = get_sub_field('social_icon');
+                $social_title = get_sub_field('social_title');
+                $social_url = get_sub_field('social_url');
+                //$social_link_url = get_sub_field('social_link_url');
+                ?>
+
+                <li class="social-link-item">  <a href="http://<?php echo "".$social_url; ?>" title="<?php echo $social_title; ?>" target="_blank">
+                        <i class="fa <?php echo $social_icon; ?>" aria-hidden="true"></i>    
+                    </a>
+
+
+                </li>
+            <?php endwhile; ?>
+        </ul>
+    <?php endif; ?>
+    <?php
+}

@@ -1,7 +1,31 @@
 
 <script type = "text/html" id="webCptTemplate">
-    <% var my_cpt_post_id = settings.queriedObject.ID; 
-    console.log(my_cpt_post_id); %>
+    <% var my_cpt_post_id = settings.queriedObject.ID; %>
+    <%
+    var bread_path_base = "";
+    var bread_path_base_page = "";
+    %>
+    <div class="breadcrumb-container">
+        <ol class="breadcrumb">
+            <li><a href="/" title=="home">Home</a><i class="fa fa-angle-double-right"></i></li>
+            <% 
+            bread_path_base = settings.pathInfo.path_base;
+            var str_base = bread_path_base.replace(/-/g, ' ');
+            %>
+            <% if (settings.pathInfo.path_base && settings.pathInfo.path_base_page) { %>
+            <li><a href="/<%= settings.pathInfo.path_base %>"><%= str_base %></a><i class="fa fa-angle-double-right"></i></li>
+            <% } else { %>
+            <li><%= str_base %></li>
+            <% } %>
+            <% if (settings.pathInfo.path_base_page) { %>
+            <% 
+            bread_path_base_page = settings.pathInfo.path_base_page; 
+            var str_base_page = bread_path_base_page.replace(/-/g, ' ');
+            %>
+            <li><%= str_base_page %></li>
+            <% } %>
+            </ul>
+    </div>
     <% _.each(data, function(item,key,list){ %>
     <% if (item.id === my_cpt_post_id) { %>
     <article id="post-<%= item.id %>" class="post my-inner-container">
@@ -18,26 +42,26 @@
                 <%= item.content.rendered %>
                 <% } %>
                 <h3 class="entry-content-header">Project Details:</h3>
-                <% if ( item.fields.portfolio_description ) { %>
-                <div class="port_web_url"><strong>Web URL:</strong> <a href="<%= item.acf.website_url %>" target="_blank"><%= item.acf.website_url %></a></div>
+                <% if ( item.fields.website_url ) { %>
+                <div class="port_web_url"><strong>Web URL:</strong> <a href="<%= item.acf.website_url %>" target="_blank"><%= item.fields.website_url %></a></div>
                 <% } %>
                 <% if ( item.fields.port_web_developement ) { %>
                 <div class="port_web_dev"><strong>Web Developement:</strong> <%= item.fields.port_web_developement %></a></div>
                 <% } %>
                 <% if ( item.fields.port_site_design ) { %>
-                <div class="port_web_des"><strong>Web Design:</strong> <a href="<%= item.acf.port_site_design %>" target="_blank"><%= item.acf.port_site_design %></a></div>
+                <div class="port_web_des"><strong>Web Design:</strong> <%= item.acf.port_site_design %></div>
                 <% } %>
                 <footer class="entry-meta ">
-                    <p><strong>Posted in:</strong></p>
+<!--                    <p><strong>Posted in:</strong></p>
                     <ul class="tag-list single-posts">
                         <% _.each(item.cpt_category, function(item,key,list){ %>
-                        <li><a href="tag/<%= item.slug %>"><%= item.cat_name %></a></li>
+                        <li><a href="/category/<%= item.slug %>"><%= item.cat_name %></a></li>
                         <% }); %>
-                    </ul>
+                    </ul>-->
                     <p><strong>Web Technologies Utilized:</strong></p>
                     <ul class="tag-list single-posts">
                         <% _.each(item.cpt_tag, function(item,key,list){ %>
-                        <li><a href="tag/<%= item.slug %>"><%= item.name %></a></li>
+                        <li><a href="/tag/<%= item.slug %>"><%= item.name %></a></li>
                         <% }); %>
                     </ul>
                 </footer>

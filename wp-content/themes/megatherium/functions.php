@@ -122,7 +122,8 @@ function megatherium_scripts() {
         $minified = "";
     }
 
-    wp_enqueue_style('_s_backbone-style', get_stylesheet_uri());
+    //wp_enqueue_style('_s_backbone-style', get_stylesheet_uri());
+    wp_enqueue_style('_s_backbone-style', get_template_directory_uri() . '/assets/css//theme-style' . $minified . '.css', array(), '20130908');
     wp_enqueue_style('font-awesome-icons', get_template_directory_uri() . '/assets/css/font-awesome' . $minified . '.css');
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr.custom.92053' . $minified . '.js', array('jquery'), 'v2.8.3');
     //wp_enqueue_script('jquery-js', get_template_directory_uri() . '/assets/js/vendor/jquery.js', array(), '20130115', true);
@@ -140,6 +141,7 @@ function megatherium_scripts() {
 
         wp_enqueue_script('_s_backbone-loop', get_template_directory_uri() . '/assets/js/loop' . $minified . '.js', array('wp-api', 'jquery', 'backbone', 'underscore'), '1.0', true);
 
+        $key = explode('/', $_SERVER["REQUEST_URI"]);
         $queried_object = get_queried_object();
         $local = array(
             'loopType' => 'home',
@@ -148,11 +150,16 @@ function megatherium_scripts() {
                 'author_permastruct' => $wp_rewrite->get_author_permastruct(),
                 'host' => preg_replace('#^http(s)?://#i', '', untrailingslashit(get_option('home'))),
                 'path' => _s_backbone_get_request_path(),
+                'path_base' => $key[1],
+                'path_base_page' => $key[2],
+                'path_base' => $uri = $_SERVER['REQUEST_URI'],
                 'use_trailing_slashes' => $wp_rewrite->use_trailing_slashes,
                 'parameters' => _s_backbone_get_request_parameters(),
             ),
         );
-
+//        echo '<pre>';
+//        print_r($local);
+//        echo '</pre>';
         if (is_category() || is_tag() || is_tax()) {
             $local['loopType'] = 'archive';
             $local['taxonomy'] = get_taxonomy($queried_object->taxonomy);
@@ -172,10 +179,12 @@ function megatherium_scripts() {
         wp_localize_script('_s_backbone-loop', 'settings', $local, 'wpApiSettings');
         wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', array(), '20130115', true);
     }
+    
     if (is_singular('post')) {
         global $wp_rewrite;
         wp_enqueue_script('_s_backbone-post-loop', get_template_directory_uri() . '/assets/js/post' . $minified . '.js', array('wp-api', 'jquery', 'backbone', 'underscore'), '1.0', true);
 
+        $key = explode('/', $_SERVER["REQUEST_URI"]);
         $queried_object = get_queried_object();
         $local = array(
             'loopType' => 'home',
@@ -184,14 +193,16 @@ function megatherium_scripts() {
                 'author_permastruct' => $wp_rewrite->get_author_permastruct(),
                 'host' => preg_replace('#^http(s)?://#i', '', untrailingslashit(get_option('home'))),
                 'path' => _s_backbone_get_request_path(),
+                'path_base' => $key[1],
+                'path_base_page' => $key[2],
                 'use_trailing_slashes' => $wp_rewrite->use_trailing_slashes,
                 'parameters' => _s_backbone_get_request_parameters(),
             ),
         );
-        echo '<pre>';
-        print_r($local);
-        echo '</pre>';
-        
+//        echo '<pre>';
+//        print_r($local);
+//        echo '</pre>';
+
         wp_localize_script('_s_backbone-post-loop', 'settings', $local, 'wpApiSettings');
     }
     if (is_singular('web_portfolio')) {
@@ -199,6 +210,9 @@ function megatherium_scripts() {
         wp_enqueue_script('web-cpt-loop', get_template_directory_uri() . '/assets/js/web-cpt-post' . $minified . '.js', array('wp-api', 'jquery', 'backbone', 'underscore'), '1.0', true);
 
         $queried_object = get_queried_object();
+
+        $key = explode('/', $_SERVER["REQUEST_URI"]);
+
         $local = array(
             'loopType' => 'home',
             'queriedObject' => $queried_object,
@@ -206,6 +220,8 @@ function megatherium_scripts() {
                 'author_permastruct' => $wp_rewrite->get_author_permastruct(),
                 'host' => preg_replace('#^http(s)?://#i', '', untrailingslashit(get_option('home'))),
                 'path' => _s_backbone_get_request_path(),
+                'path_base' => $key[1],
+                'path_base_page' => $key[2],
                 'use_trailing_slashes' => $wp_rewrite->use_trailing_slashes,
                 'parameters' => _s_backbone_get_request_parameters(),
             ),
@@ -453,16 +469,16 @@ function wp_rest_api_alter() {
 
 add_action('rest_api_init', 'wp_rest_api_alter');
 
-function wpse28145_add_custom_types( $query ) {
-    if( is_tag() && $query->is_main_query() ) {
+function wpse28145_add_custom_types($query) {
+    if (is_tag() && $query->is_main_query()) {
 
         // this gets all post types:
-        $post_types = get_post_types();
-
+         $post_types = get_post_types();
         // alternately, you can add just specific post types using this line instead of the above:
         // $post_types = array( 'post', 'your_custom_type' );
 
-        $query->set( 'post_type', $post_types );
+        $query->set('post_type', $post_types);
     }
 }
-add_filter( 'pre_get_posts', 'wpse28145_add_custom_types' );
+
+add_filter('pre_get_posts', 'wpse28145_add_custom_types');

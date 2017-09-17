@@ -1,5 +1,17 @@
 <section id="recentWork-page"  class="my-container pages">
     <script type = "text/html" id="temp-wp1">
+        <%
+        var bread_path_base = "";
+        var bread_path_base_page = "";
+        %>
+
+        <div class="breadcrumb-container">
+            <ol class="breadcrumb">
+                <li><a href="/" title=="home">Home</a><i class="fa fa-angle-double-right"></i></li>
+                <li>Web Portfolio</li>
+            </ol>
+        </div>
+
         <% _.each(data_posts, function(item,key,list){ %>
         <% if (item.slug == "my-web-portfolio") { %>
         <article id="post-<%= item.id %>" class="post my-inner-container">
@@ -28,7 +40,7 @@
             <h2 class="section-title">Past and Present Web Projects</h2>
         </header>
         <div class="slidetile-area flexy">
-            <% _.each(events, function(item,key,list){ %>
+            <% _.each(data_portfolio, function(item,key,list){ %>
             <div id="post-<%= item.id %>" class="home-tiles-2 post">
                 <div class="panel">
                     <div class="panel-body">

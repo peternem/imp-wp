@@ -123,7 +123,7 @@ module.exports = function (grunt) {
         sass: {
             all: {
                 files: {
-                    'style.css': 'sass/style.scss'
+                    'assets/css/theme-style.css': 'sass/style.scss'
                 }
             }
         },
@@ -139,9 +139,9 @@ module.exports = function (grunt) {
             },
             target: {
                 expand: true,
-                cwd: '/',
+                cwd: 'assets/css/',
                 src: ['*.css', '!*.min.css'],
-                dest: '/',
+                dest: 'assets/css/',
                 ext: '.min.css'
             }
         },

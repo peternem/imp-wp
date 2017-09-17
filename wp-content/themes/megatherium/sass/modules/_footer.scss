@@ -80,10 +80,7 @@
         list-style: none;
         padding-right: 1em;
         display: inline-block;
-        /*        @include media($large-screen) {
-                    display: inline;
-                    text-align: left;
-                }*/
+        line-height: 2em;
     }
 
     ul li a {
@@ -120,7 +117,7 @@
             li {
                 display: inline-block;
                 font-size: $base-font-size;
-                line-height: 0;
+                line-height: 2em;
                 margin: 0;
                 padding-right: 0.7em;
                 @media (max-width: $large-screen) {

@@ -28,12 +28,12 @@
                 <div class="port_web_des"><strong>Web Design:</strong> <a href="<%= item.acf.port_site_design %>" target="_blank"><%= item.acf.port_site_design %></a></div>
                 <% } %>
                 <footer class="entry-meta ">
-                    <p><strong>Posted in:</strong></p>
+<!--                    <p><strong>Posted in:</strong></p>
                     <ul class="tag-list single-posts">
                         <% _.each(item.cpt_category, function(item,key,list){ %>
                         <li><a href="tag/<%= item.slug %>"><%= item.cat_name %></a></li>
                         <% }); %>
-                    </ul>
+                    </ul>-->
                     <p><strong>Web Technologies Utilized:</strong></p>
                     <ul class="tag-list single-posts">
                         <% _.each(item.cpt_tag, function(item,key,list){ %>

@@ -21,3 +21,18 @@
         margin: 0 0.188rem;
     }
 }
+
+.tag-cta {
+    .mp-tags {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        a {
+            color: #0071a8;
+            &:hover {
+                color: lighten(#0071a8, 13.5%);
+            }
+        }
+    }
+}

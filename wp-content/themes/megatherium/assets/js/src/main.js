@@ -7,15 +7,13 @@
 // A $( document ).ready() block.
 
 jQuery(window).load(function () {
-    console.log("window load");
+
 });
 jQuery(document).ready(function () {
-    console.log("Document ready");
 
-
-    jQuery("#learny").click("click", function () {
-        console.log("claick");
-    });
+//    jQuery("#learny").click("click", function () {
+//        console.log("claick");
+//    });
 
 
     var menuToggle = jQuery("#js-mobile-menu").unbind();

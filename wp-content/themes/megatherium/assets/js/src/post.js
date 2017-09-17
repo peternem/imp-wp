@@ -5,7 +5,7 @@
  */
 
 
-(function (jQuery, Backbone, _, undefined, wpApiSettings) {
+(function (jQuery, Backbone, _, settings, wpApiSettings) {
     'use strict';
     wp.api.loadPromise.done(function () {
         var MyPosts = Backbone.View.extend({
@@ -16,17 +16,25 @@
             render: function () {
                 //var data = new Data();
                 var that = this;
-                var data_posts = new wp.api.collections.Posts();
-                data_posts.fetch({
-                    success: function (data_posts) {
-                        var templatexxx = _.template(jQuery('#postContentTemplate').html())({data_posts: data_posts.toJSON()});
+                var data_single_post = new wp.api.collections.Posts();
+                data_single_post.fetch({
+                     data_single_post: {
+                        'filter': {
+                            'orderby': '',
+                            'order': 'DESC'
+                        },
+                        '_embed': true,
+                        'per_page': 25
+                    },
+                    success: function (data_single_post ) {
+                         console.log(data_single_post);
+                        var templatexxx = _.template(jQuery('#postContentTemplate').html())({data_single_post : data_single_post .toJSON()});
+                       
                         jQuery('#postContent').html(templatexxx);
-                        
-
                     }
                 });
             }
         });
         var myPost = new MyPosts();
     });
-})(jQuery, Backbone, _, wpApiSettings);
+})(jQuery, Backbone, _, settings, wpApiSettings);

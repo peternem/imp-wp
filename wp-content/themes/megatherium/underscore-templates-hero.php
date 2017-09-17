@@ -17,7 +17,7 @@
     </style>
     <div id="parallaxHome" class="parallax-window" >		
         <div class="parallax-static-content">
-            <h1 id="entryTitle" class="entry-title"><%= item.acf.hero_title %><%= item.acf.home_page_hero_image.alt %></h1>
+            <h1 id="entryTitle" class="entry-title"><%= item.acf.hero_title %></h1>
             <h2><%= item.acf.hero_subtitle %></h2>
             <ul id="heroLinks" class="hero-links">
                 <li><a id="learny" class="btn btn-primary" data-word="clacky" role="button" title="Learn More" href="#welcome">Learn More</a></li>
