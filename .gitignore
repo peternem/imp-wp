@@ -18,6 +18,8 @@ wp-content/wp-cache-config.php
 node_modules
 node_modules/*
 
+.sass-cache/
+
 
 #################################################
 # Eclipse Ignore
