@@ -138,8 +138,11 @@ and open the template in the editor.
 
 
 .flexy {
-    // background-color: cadetblue;
-    @include outer-container(1920px);  
+    max-width: 1920px;  
+    @media (max-width: $xsmall-screen) {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
     .home-tiles-2 {
         display: flex;
         //align-items: baseline;
