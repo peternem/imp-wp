@@ -1394,13 +1394,11 @@ and open the template in the editor.
           max-width: 75%; } }
 
 .flexy {
-  max-width: 1920px;
-  margin-left: auto;
-  margin-right: auto; }
-  .flexy::after {
-    clear: both;
-    content: "";
-    display: block; }
+  max-width: 1920px; }
+  @media (max-width: 30em) {
+    .flexy {
+      margin-left: 1em;
+      margin-right: 1em; } }
   .flexy .home-tiles-2 {
     display: flex; }
     @media (min-width: 100.05em) {
