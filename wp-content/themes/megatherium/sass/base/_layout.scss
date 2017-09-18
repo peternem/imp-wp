@@ -49,6 +49,7 @@ html {
     @media (max-width: $xsmall-screen) {
         @include span-columns(12);
         @include omega();
+        margin-bottom: 4rem;
     }
 }
 

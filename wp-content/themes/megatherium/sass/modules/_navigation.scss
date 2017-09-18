@@ -27,14 +27,14 @@ header.navigation {
     z-index: 999;
 
     .navigation-wrapper {
-        @media (min-width: $xsmall-screen+1) {
+        @media (min-width: $xsmall-screen+0.05) {
             padding-left: $global-pg-lr-margin;
             padding-right: $global-pg-lr-margin;
         }
-        @media (max-width: $xsmall-screen) {
-            padding-left: $global-pg-lr-margin/2;
-            padding-right: $global-pg-lr-margin/2;
-        }
+        /*        @media (max-width: $xsmall-screen) {
+                    padding-left: $global-pg-lr-margin/2;
+                    padding-right: $global-pg-lr-margin/2;
+                }*/
         position: relative;
         z-index: 9999;
         overflow: auto;
@@ -44,6 +44,9 @@ header.navigation {
         float: left;
         max-height: $navigation-height;
         margin-top: 12px;
+        @media (max-width: $xsmall-screen){
+            margin-left: 1em;
+        }
         img {
             max-height: $navigation-height;
             padding: 0.8em 0;
@@ -69,12 +72,14 @@ header.navigation {
         float: right;
         line-height: $navigation-height;
         margin: 0;
-        @media (min-width: $medium-screen +1) {
+        @media (min-width: $medium-screen+ 0.05) {
             padding-right: 1em;
         }
         text-decoration: none;
         text-transform: uppercase;
-
+        @media (max-width: $xsmall-screen){
+            margin-right: 1em;
+        }
         @include media ($horizontal-bar-mode) {
             display: none;
         }
@@ -105,7 +110,10 @@ header.navigation {
         padding: 0;
         width: 100%;
         z-index: 9999;
-
+        @media (max-width: $xsmall-screen){
+            height: 100vh;
+            background-color: #222;
+        }
         &.show {
             display: block;
         }
@@ -120,15 +128,12 @@ header.navigation {
     // The nav items
 
     ul li.nav-link, ul li.menu-item {
-        background: $navigation-background;
         display: block;
         line-height: $navigation-height;
         overflow: hidden;
-        //padding-right: 0.8em;
         text-align: left;
         width: 100%;
         z-index: 9999;
-
         @include media ($horizontal-bar-mode) {
             background: transparent;
             display: inline;
@@ -145,7 +150,10 @@ header.navigation {
             @include media ($horizontal-bar-mode) {
                 padding-right: 1em;
             }
-
+            @media (max-width: $xsmall-screen){
+                padding: 0 1em;
+                width: 100%;
+            }
             &:focus,
                 &:hover {
                 color: $navigation-color-hover;
