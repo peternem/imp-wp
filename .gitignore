@@ -6,6 +6,10 @@
 sitemap.xml
 sitemap.xml.gz
 .DS_Store
+
+wp-admin/
+wp-includes/
+
 wp-config.php
 wp-content/advanced-cache.php
 wp-content/backup-db/
