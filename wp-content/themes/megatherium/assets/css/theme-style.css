@@ -1927,11 +1927,9 @@ header.navigation {
           box-sizing: border-box;
           display: block; } }
 
-.pages .my-container .entry-header {
-  margin-bottom: 6rem; }
-  @media (max-width: 30em) {
-    .pages .my-container .entry-header {
-      margin-bottom: 1rem; } }
+@media (max-width: 30em) {
+  .pages .my-container .entry-header {
+    margin-bottom: 1rem; } }
 
 .my-container.pages {
   margin: 0 auto 6rem; }
