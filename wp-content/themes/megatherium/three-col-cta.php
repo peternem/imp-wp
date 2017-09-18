@@ -6,7 +6,7 @@
  */
 ?>
 
-<section id="keyPointsA" class="three-col-cta black">
+<section id="keyPointsA" class="three-col-cta black" data-git="MyGitTest">
     <div class="my-inner-container">
         <div class="mp-row row">
             <?php if (have_rows('cta_repeater', 'option')): ?>
