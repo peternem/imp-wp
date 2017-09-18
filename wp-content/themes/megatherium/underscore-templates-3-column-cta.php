@@ -1,4 +1,4 @@
-<script type = "text/html" id="keyPointsTemplate" data-git="MyGitTest">
+<script type = "text/html" id="keyPointsTemplate">
     <div class="my-inner-container">
         <div class="mp-row row">
             <% _.each(options, function(item,key,list){ %>
