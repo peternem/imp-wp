@@ -23,7 +23,7 @@ html {
 
 .container, .site-header {
     @include outer-container(100%);
-    margin-bottom: 6rem;
+    //margin-bottom: 6rem;
 }
 
 .mp-row.row {
@@ -64,17 +64,28 @@ html {
 
 .column-10 {
     @include span-columns(10);
-/*    @media (max-width: $xsmall-screen) {
-        @include span-columns(12);
-        @include omega();
-        margin-bottom: 4rem;
-    }*/
+    /*    @media (max-width: $xsmall-screen) {
+            @include span-columns(12);
+            @include omega();
+            margin-bottom: 4rem;
+        }*/
+}
+
+.column-12 {
+    @include span-columns(12);
+    @include omega();
 }
 
 
 .post {
     overflow: auto;
 
+}
+
+.my-inner-container {
+    @include outer-container(em(1920px));
+    padding-top: 6rem;
+    padding-bottom: 6rem;
 }
 
 .my-container {
@@ -87,11 +98,7 @@ html {
     @media (max-width: $xsmall-screen) {
         padding: 0;
     }
-    .my-inner-container {
-        @include outer-container(em(1920px));
-        margin-top: 8rem;
-        margin-bottom: 8rem;
-    }
+
     .entry-header {
         margin: 0 auto 1rem;
         h1 {

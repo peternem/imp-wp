@@ -622,8 +622,7 @@ html {
 .container, .site-header {
   max-width: 100%;
   margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 6rem; }
+  margin-right: auto; }
   .container::after, .site-header::after {
     clear: both;
     content: "";
@@ -698,8 +697,28 @@ html {
   .column-10:last-child {
     margin-right: 0; }
 
+.column-12 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%;
+  margin-right: 0; }
+  .column-12:last-child {
+    margin-right: 0; }
+
 .post {
   overflow: auto; }
+
+.my-inner-container {
+  max-width: 120em;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6rem;
+  padding-bottom: 6rem; }
+  .my-inner-container::after {
+    clear: both;
+    content: "";
+    display: block; }
 
 .my-container {
   background-color: #fff;
@@ -717,16 +736,6 @@ html {
   @media (max-width: 30em) {
     .my-container {
       padding: 0; } }
-  .my-container .my-inner-container {
-    max-width: 120em;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8rem;
-    margin-bottom: 8rem; }
-    .my-container .my-inner-container::after {
-      clear: both;
-      content: "";
-      display: block; }
   .my-container .entry-header {
     margin: 0 auto 1rem; }
     .my-container .entry-header h1 {
@@ -2418,9 +2427,7 @@ and open the template in the editor.
     font-weight: 900; }
 
 .three-col-cta {
-  background-color: rgba(0, 0, 0, 0.1);
-  padding-top: 4rem;
-  padding-bottom: 4rem; }
+  background-color: rgba(0, 0, 0, 0.1); }
   .three-col-cta .column-4 {
     text-align: center;
     padding: 0 1rem; }

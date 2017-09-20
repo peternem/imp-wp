@@ -13,14 +13,14 @@
 get_header();
 ?>
 
-<div id="primary" class="column-12 content-area">
+<div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
         <section id="home-page" class="pages">
             <?php get_template_part('underscore-templates-hero'); ?>
             <div class="my-container black">
                 <div id="welcome-section" class="my-inner-container ">
                     <div class="mp-row row">
-                        <div class="offset-1 column-10">
+                        <div class="offset-2 column-8">
                             <?php get_template_part('underscore-templates-welcome'); ?>
                         </div>
                     </div>
@@ -30,12 +30,10 @@ get_header();
             <?php get_template_part('underscore-templates-3-column-cta'); ?>
             <?php get_template_part('underscore-templates-skills'); ?>
             <section id="keyPoints" class="three-col-cta black">
-                <div class="my-inner-container"> 
-                    <div id="tag-section" class="my-inner-container ">
-                        <div class="mp-row row">
-                            <div class="offset-1 column-10 entry-image">
-                                <?php get_template_part('underscore-templates-tags'); ?>
-                            </div>
+                <div id="tag-section" class="my-inner-container ">
+                    <div class="mp-row row">
+                        <div class="column-12">
+                            <?php get_template_part('underscore-templates-tags'); ?>
                         </div>
                     </div>
                 </div>
