@@ -20,17 +20,27 @@ get_header();
             <div class="my-container black">
                 <div id="welcome-section" class="my-inner-container ">
                     <div class="mp-row row">
-                        <div class=".offset-1 column-10">
+                        <div class="offset-1 column-10">
                             <?php get_template_part('underscore-templates-welcome'); ?>
-                        </div>
-                        <div class="column-12 entry-image">
-                            <?php get_template_part('underscore-templates-tags'); ?>
                         </div>
                     </div>
                 </div>
             </div>
+
             <?php get_template_part('underscore-templates-3-column-cta'); ?>
             <?php get_template_part('underscore-templates-skills'); ?>
+            <section id="keyPoints" class="three-col-cta black">
+                <div class="my-inner-container"> 
+                    <div id="tag-section" class="my-inner-container ">
+                        <div class="mp-row row">
+                            <div class="offset-1 column-10 entry-image">
+                                <?php get_template_part('underscore-templates-tags'); ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
         </section>
         <?php get_template_part('underscore-template-web-portfolio'); ?>
         <?php get_template_part('underscore-templates-about'); ?>

@@ -728,7 +728,7 @@ html {
       content: "";
       display: block; }
   .my-container .entry-header {
-    margin: 0 auto 4rem; }
+    margin: 0 auto 1rem; }
     .my-container .entry-header h1 {
       margin-bottom: 0.75rem; }
     .my-container .entry-header .lead {
