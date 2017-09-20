@@ -16,7 +16,10 @@ wp-signup.php
 wp-config.php
 wp-load.php
 wp-links-opml.php
-
+wp-activate.php
+wp-blog-header.php
+wp-config-sample.php
+wp-cron.php
 xmlrpc.php
 wp-trackback.php 
 wp-mail.php
