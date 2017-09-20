@@ -644,6 +644,12 @@ html {
     content: "";
     display: block; }
 
+.offset-1 {
+  margin-left: 8.5298%; }
+
+.offset-2 {
+  margin-left: 17.05961%; }
+
 .column-4 {
   float: left;
   display: block;
@@ -678,6 +684,19 @@ html {
       margin-bottom: 4rem; }
       .column-8:last-child {
         margin-right: 0; } }
+
+.column-10 {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 82.94039%;
+  /*    @media (max-width: $xsmall-screen) {
+          @include span-columns(12);
+          @include omega();
+          margin-bottom: 4rem;
+      }*/ }
+  .column-10:last-child {
+    margin-right: 0; }
 
 .post {
   overflow: auto; }

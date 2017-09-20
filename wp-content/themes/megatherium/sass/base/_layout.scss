@@ -37,6 +37,15 @@ html {
     @include outer-container(100%);
 
 }
+
+.offset-1 {
+    @include shift(1);
+}
+
+.offset-2 {
+    @include shift(2);
+}
+
 .column-4 {
     @include span-columns(4);
     @media (max-width: $xsmall-screen) {
@@ -52,6 +61,16 @@ html {
         margin-bottom: 4rem;
     }
 }
+
+.column-10 {
+    @include span-columns(10);
+/*    @media (max-width: $xsmall-screen) {
+        @include span-columns(12);
+        @include omega();
+        margin-bottom: 4rem;
+    }*/
+}
+
 
 .post {
     overflow: auto;

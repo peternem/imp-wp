@@ -20,10 +20,10 @@ get_header();
             <div class="my-container black">
                 <div id="welcome-section" class="my-inner-container ">
                     <div class="mp-row row">
-                        <div class="column-8">
+                        <div class=".offset-1 column-10">
                             <?php get_template_part('underscore-templates-welcome'); ?>
                         </div>
-                        <div class="column-4 entry-image">
+                        <div class="column-12 entry-image">
                             <?php get_template_part('underscore-templates-tags'); ?>
                         </div>
                     </div>

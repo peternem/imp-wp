@@ -10,7 +10,11 @@ sitemap.xml.gz
 wp-admin/
 wp-includes/
 
+wp-login.php
+wp-settings.php
+wp-signup.php
 wp-config.php
+readme.html
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
