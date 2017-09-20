@@ -20,6 +20,7 @@ wp-activate.php
 wp-blog-header.php
 wp-config-sample.php
 wp-comments-post.php
+
 wp-cron.php
 xmlrpc.php
 wp-trackback.php 
@@ -40,6 +41,10 @@ node_modules/*
 .sass-cache/
 
 nbproject/
+
+
+!.gitignore
+!wp-content/
 
 #################################################
 # Eclipse Ignore
