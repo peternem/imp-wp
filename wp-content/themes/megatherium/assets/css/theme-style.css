@@ -866,6 +866,9 @@ dt {
 dd {
   margin: 0; }
 
+ul.skillset li {
+  font-size: 1.33em; }
+
 figure {
   margin: 0; }
 
