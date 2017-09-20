@@ -160,6 +160,7 @@
                 //var data = new Data();
                 var thatis = this;
                 var data_portfolio = new wp.api.collections.Web_portfolio();
+                
                 data_portfolio.fetch({
                     data: {
                         'filter': {
@@ -174,8 +175,25 @@
                         jQuery('#recentWork-page1').html(template_wp);
                     }
                 });
+                
+                var data_portfolio_recent = new wp.api.collections.Web_portfolio();
+                data_portfolio_recent.fetch({
+                    data: {
+                        'filter': {
+                            'orderby': '',
+                            'order': 'DESC'
+                        },
+                        '_embed': true,
+                        'per_page': 4
+                    },
+                    success: function (data_portfolio_recent) {
+                        var template_rec_wp = _.template(jQuery('#recentWebPort').html())({data_portfolio_recent: data_portfolio_recent.toJSON()});
+                        jQuery('#recentWork-rec').html(template_rec_wp);
+                    }
+                });
             }
         });
+        
         var myPortfolios = new MyPortfolio();
 //        console.log(wpApiSettings);
 //        console.log(wpApiSettings.root + 'acf/v2/options/');
@@ -209,10 +227,10 @@
             //console.log(self.options);
             var template = _.template(jQuery('#hero2Template').html())({options: self.options.toJSON()});
             jQuery('#hero').html(template);
-            
+
             var template_x = _.template(jQuery('#keyPointsTemplate').html())({options: self.options.toJSON()});
             jQuery('#keyPoints').html(template_x);
-            
+
             var template_social = _.template(jQuery('#socialTemplate').html())({options: self.options.toJSON()});
             jQuery('#socialLinks').html(template_social);
         });

@@ -28,7 +28,7 @@ get_header();
             </div>
 
             <?php get_template_part('underscore-templates-3-column-cta'); ?>
-            <?php get_template_part('underscore-templates-skills'); ?>
+            <?php get_template_part('underscore-template-web-portfolio_recent'); ?>
             <section id="keyPoints" class="three-col-cta black">
                 <div id="tag-section" class="my-inner-container ">
                     <div class="mp-row row">
@@ -38,7 +38,7 @@ get_header();
                     </div>
                 </div>
             </section>
-
+            <?php get_template_part('underscore-templates-skills'); ?>
         </section>
         <?php get_template_part('underscore-template-web-portfolio'); ?>
         <?php get_template_part('underscore-templates-about'); ?>
