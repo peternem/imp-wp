@@ -19,11 +19,13 @@ wp-links-opml.php
 wp-activate.php
 wp-blog-header.php
 wp-config-sample.php
+wp-comments-post.php
 wp-cron.php
 xmlrpc.php
 wp-trackback.php 
 wp-mail.php
 readme.html
+license.txt 
 wp-content/advanced-cache.php
 wp-content/backup-db/
 wp-content/backups/
