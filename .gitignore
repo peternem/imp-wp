@@ -14,6 +14,12 @@ wp-login.php
 wp-settings.php
 wp-signup.php
 wp-config.php
+wp-load.php
+wp-links-opml.php
+
+xmlrpc.php
+wp-trackback.php 
+wp-mail.php
 readme.html
 wp-content/advanced-cache.php
 wp-content/backup-db/
