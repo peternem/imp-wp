@@ -57,6 +57,14 @@ jQuery(document).ready(function () {
 //                }
 //            }
 //        });
+        jQuery('body').on('click', '#js-navigation-menu li a[href*=\\#]:not([href=\\#])', function (e) {
+            jQuery("html, body").animate({scrollTop: 0}, "slow");
+            //return false;
+        });
+        jQuery('body').on('click', 'a.btn[href=\\#recentWork]', function (e) {
+            jQuery("html, body").animate({scrollTop: 0}, "slow");
+            //return false;
+        });
         jQuery('body').on('click', '#heroLinks li a[href*=\\#]:not([href=\\#])', function (e) {
             var location = window.location;
             if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
@@ -70,6 +78,7 @@ jQuery(document).ready(function () {
                     return false;
                 }
             }
+            console.log("click");
         });
     });
 
