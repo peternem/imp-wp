@@ -1327,6 +1327,10 @@ and open the template in the editor.
     Created on : Mar 28, 2017, 8:30:37 PM
     Author     : mattpeternell
 */
+.flexy header.section-header, .flexy header.archive-title {
+  margin-bottom: 2rem;
+  width: 100%; }
+
 .flexy {
   -webkit-display: -webkit-box;
   -webkit-display: -webkit-flex;
