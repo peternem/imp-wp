@@ -2,10 +2,10 @@
 
     <script type = "text/html" id="recentWebPort">
         <div class="post my-inner-container">
+            <header class="row section-header">
+                <h1 class="section-title">Recent Web Projects</h1>
+            </header>
             <div class="slidetile-area flexy">
-                <header class="row section-header">
-                    <h1 class="section-title">Recent Web Projects</h1>
-                </header>
                 <% _.each(data_portfolio_recent, function(item, key, list){ %>
                 <div id="post-<%= item.id %>" class="home-tiles-2 post">
                     <div class="panel">

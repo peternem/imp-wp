@@ -7,11 +7,21 @@ and open the template in the editor.
     Created on : Mar 28, 2017, 8:30:37 PM
     Author     : mattpeternell
 */
-.flexy {
-header.section-header, header.archive-title {
-    margin-bottom: 2rem;
-    width: 100%;
+
+.home {
+    .flexy {
+        .home-tiles-2 {
+            .panel-heading, .panel-title {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
+.flexy {
+    header.section-header, header.archive-title {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
 }
 
 .flexy {
