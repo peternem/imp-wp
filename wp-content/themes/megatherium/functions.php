@@ -298,7 +298,7 @@ function get_image_src($object, $field_name, $request) {
 }
 
 function get_image_src_web_thumb($object, $field_name, $request) {
-    $feat_img_array = wp_get_attachment_image_src($object['featured_media'], 'web-thumb-6x5', true);
+    $feat_img_array = wp_get_attachment_image_src($object['featured_media'], 'homepage-thumb', true);
     return $feat_img_array[0];
 }
 
