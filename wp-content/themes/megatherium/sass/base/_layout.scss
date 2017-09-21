@@ -44,18 +44,21 @@ html {
 
 .offset-2 {
     @include shift(2);
+    @media (max-width: $small-screen) {
+        @include shift(0);
+    }
 }
 
 .column-4 {
     @include span-columns(4);
-    @media (max-width: $xsmall-screen) {
+    @media (max-width: $small-screen) {
         @include span-columns(12);
         @include omega();
     }
 }
 .column-8 {
     @include span-columns(8);
-    @media (max-width: $xsmall-screen) {
+    @media (max-width: $small-screen) {
         @include span-columns(12);
         @include omega();
         margin-bottom: 4rem;

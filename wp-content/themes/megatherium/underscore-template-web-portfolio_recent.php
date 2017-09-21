@@ -2,10 +2,10 @@
 
     <script type = "text/html" id="recentWebPort">
         <div class="post my-inner-container">
-            <header class="row section-header">
-                <h2 class="section-title">Recent Web Projects</h2>
-            </header>
             <div class="slidetile-area flexy">
+                <header class="row section-header">
+                    <h1 class="section-title">Recent Web Projects</h1>
+                </header>
                 <% _.each(data_portfolio_recent, function(item, key, list){ %>
                 <div id="post-<%= item.id %>" class="home-tiles-2 post">
                     <div class="panel">
@@ -23,9 +23,9 @@
                 </div>
                 <% }); %>
             </div>
-                <ul class="see-more-link align-center">
-                    <li><a class="btn btn-light" role="button" title="Web Portfolio" id="scEvent" href="#recentWork">More Work <i class="fa fa-angle-double-right"></i></a></li>
-                </ul>
+            <ul class="see-more-link align-center">
+                <li><a class="btn btn-light" role="button" title="Web Portfolio" id="scEvent" href="#recentWork">More Work <i class="fa fa-angle-double-right"></i></a></li>
+            </ul>
         </div>
     </script>
     <section id="recentWork-rec"  class="my-container"></section>

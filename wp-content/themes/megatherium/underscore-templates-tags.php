@@ -6,7 +6,7 @@
     //console.log(sortTags);
     %> 
     <div class='tag-cloud'>
-        <h2 class="align-center">Popular Tags</h2>
+        <h1 class="align-center">Popular Tags</h1>
         <ul class="mp-tags">
              <li>
             <% _.each(sortTagsObject    , function(item,key,list){ %>

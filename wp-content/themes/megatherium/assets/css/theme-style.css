@@ -648,6 +648,9 @@ html {
 
 .offset-2 {
   margin-left: 17.05961%; }
+  @media (max-width: 50em) {
+    .offset-2 {
+      margin-left: 0%; } }
 
 .column-4 {
   float: left;
@@ -656,7 +659,7 @@ html {
   width: 31.76157%; }
   .column-4:last-child {
     margin-right: 0; }
-  @media (max-width: 30em) {
+  @media (max-width: 50em) {
     .column-4 {
       float: left;
       display: block;
@@ -673,7 +676,7 @@ html {
   width: 65.88078%; }
   .column-8:last-child {
     margin-right: 0; }
-  @media (max-width: 30em) {
+  @media (max-width: 50em) {
     .column-8 {
       float: left;
       display: block;
@@ -942,7 +945,7 @@ h1, .h1 {
       font-size: 2.36859em; } }
   @media (max-width: 50em) {
     h1, .h1 {
-      font-size: 1.77689em; } }
+      font-size: 2.36859em; } }
   @media (max-width: 20em) {
     h1, .h1 {
       font-size: 1.333em; } }
@@ -1003,7 +1006,7 @@ p {
       font-size: 1.333em; } }
   @media (max-width: 90em) {
     p {
-      font-size: 1em; } }
+      font-size: 1.333em; } }
 
 p.tags {
   margin: 0 0 0.75em; }
@@ -1335,6 +1338,10 @@ and open the template in the editor.
   flex-flow: row wrap;
   justify-content: center;
   margin: 0 auto 0; }
+  @media (max-width: 64em) {
+    .flexy {
+      padding-right: 2em;
+      padding-left: 2em; } }
   .flexy .tiles {
     display: flex; }
     @media (min-width: 80.05em) {

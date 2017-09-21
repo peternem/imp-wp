@@ -45,7 +45,7 @@ h1, .h1 {
         font-size: modular-scale(3);
     }
     @media (max-width: $small-screen) {
-        font-size: modular-scale(2);
+        font-size: modular-scale(3);
     }
     @media (max-width: $xxsmall-screen) {
         font-size: modular-scale(1);
@@ -114,7 +114,7 @@ p {
         font-size: modular-scale(1);
     }
     @media (max-width: $xlarge-screen) {
-        font-size: modular-scale(0);
+        font-size: modular-scale(1);
     }
 }
 

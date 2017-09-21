@@ -20,6 +20,10 @@ and open the template in the editor.
     flex-flow: row wrap;
     justify-content: center;
     margin: 0 auto 0;
+    @media (max-width: $medium-screen) {
+        padding-right: 2em;
+        padding-left: 2em;
+    }
     .tiles {
         display: flex;
         //align-items: baseline;
