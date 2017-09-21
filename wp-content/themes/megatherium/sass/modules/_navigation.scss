@@ -66,27 +66,12 @@ header.navigation {
 
     // Mobile view
 
-    .navigation-menu-button {
-        color: $navigation-color;
-        display: block;
-        float: right;
-        line-height: $navigation-height;
-        margin: 0;
-        @media (min-width: $medium-screen+ 0.05) {
-            padding-right: 1em;
-        }
-        text-decoration: none;
-        text-transform: uppercase;
-        @media (max-width: $xsmall-screen){
-            margin-right: 1em;
-        }
+    .hamburger {
+        position: absolute;
+        right: 0.75em;
+        top: 0.75em;
         @include media ($horizontal-bar-mode) {
             display: none;
-        }
-
-        &:focus,
-            &:hover {
-            color: $navigation-color-hover;
         }
     }
 
@@ -378,3 +363,16 @@ header.navigation {
         }
     }
 }
+
+.sr-only {
+    border: 0 none;
+    clip: rect(0px, 0px, 0px, 0px);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+

@@ -24,7 +24,17 @@
                     <a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
                         <?php get_template_part('inc/logo-svg')//header_image(); ?>
                     </a>
-                    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+                    <div href="javascript:void(0)" class="hamburger hamburger--squeeze js-hamburger" id="js-mobile-menu">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
                     <?php imp_primary_menu(); ?>
                 </div>
             </header><!-- #masthead -->

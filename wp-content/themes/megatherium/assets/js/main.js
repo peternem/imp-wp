@@ -1,4 +1,4 @@
-/*!  - v1.0.0 - 2017-09-20
+/*!  - v1.0.0 - 2017-09-21
  * https://github.com/peternem/imp-wp#readme
  * Copyright (c) 2017; * Licensed GPLv2+ */
 /* 
@@ -24,6 +24,7 @@ jQuery(document).ready(function () {
 
     menuToggle.on("click", function (e) {
         e.preventDefault();
+        jQuery("#js-mobile-menu").toggleClass("is-active");
         jQuery("#js-navigation-menu").slideToggle(function () {
             if (jQuery("#js-navigation-menu").is(":hidden")) {
                 jQuery("#js-navigation-menu").removeAttr("style");

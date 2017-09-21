@@ -21,6 +21,7 @@ jQuery(document).ready(function () {
 
     menuToggle.on("click", function (e) {
         e.preventDefault();
+        jQuery("#js-mobile-menu").toggleClass("is-active");
         jQuery("#js-navigation-menu").slideToggle(function () {
             if (jQuery("#js-navigation-menu").is(":hidden")) {
                 jQuery("#js-navigation-menu").removeAttr("style");
