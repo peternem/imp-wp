@@ -136,3 +136,9 @@ and Blueprint http://www.blueprintcss.org/
         color: #fff;
     }
 }
+
+@media screen and (max-width: 600px) {
+    body #wpadminbar {
+        position: fixed;
+    }
+}
