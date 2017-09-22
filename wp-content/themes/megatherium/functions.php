@@ -110,6 +110,11 @@ function megatherium_widgets_init() {
 
 add_action('widgets_init', 'megatherium_widgets_init');
 
+// Local dev live relaod content
+ if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
+	wp_register_script('livereload', 'http://mattpeternell.dev:35729/livereload.js?snipver=1', null, false, true);
+}
+
 /**
  * Enqueue scripts and styles.
  */
@@ -178,7 +183,6 @@ function megatherium_scripts() {
         }
 
         wp_localize_script('_s_backbone-loop', 'settings', $local, 'wpApiSettings');
-        wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', array(), '20130115', true);
     }
 
     if (is_singular('post')) {
