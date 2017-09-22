@@ -122,13 +122,14 @@ function megatherium_scripts() {
         $minified = "";
     }
 
-    //wp_enqueue_style('_s_backbone-style', get_stylesheet_uri());
+    wp_deregister_script('jquery');
+    wp_register_script('jquery', includes_url('/js/jquery/jquery.js'), false, NULL, true);
+    wp_enqueue_script('jquery');
     wp_enqueue_style('_s_backbone-style', get_template_directory_uri() . '/assets/css//theme-style' . $minified . '.css', array(), '20130908');
     wp_enqueue_style('font-awesome-icons', get_template_directory_uri() . '/assets/css/font-awesome' . $minified . '.css');
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr.custom.92053' . $minified . '.js', array('jquery'), 'v2.8.3');
-    //wp_enqueue_script('jquery-js', get_template_directory_uri() . '/assets/js/vendor/jquery.js', array(), '20130115', true);
-    wp_enqueue_script('parallax', get_template_directory_uri() . '/assets/js/vendor/parallax' . $minified . '.js', array(), '20130905', true);
-    wp_enqueue_script('jquery-bxslider', get_template_directory_uri() . '/assets/js/vendor/jquery.bxslider' . $minified . '.js', array(), '20130905', true);
+    wp_enqueue_script('parallax', get_template_directory_uri() . '/assets/js/vendor/parallax' . $minified . '.js', array('jquery'), '20130905', true);
+    wp_enqueue_script('jquery-bxslider', get_template_directory_uri() . '/assets/js/vendor/jquery.bxslider' . $minified . '.js', array('jquery'), '20130905', true);
     wp_enqueue_script('jquery-main', get_template_directory_uri() . '/assets/js/main' . $minified . '.js', array('jquery'), '20130905', true);
 
 
@@ -179,7 +180,7 @@ function megatherium_scripts() {
         wp_localize_script('_s_backbone-loop', 'settings', $local, 'wpApiSettings');
         wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js', array(), '20130115', true);
     }
-    
+
     if (is_singular('post')) {
         global $wp_rewrite;
         wp_enqueue_script('_s_backbone-post-loop', get_template_directory_uri() . '/assets/js/post' . $minified . '.js', array('wp-api', 'jquery', 'backbone', 'underscore'), '1.0', true);
@@ -473,7 +474,7 @@ function wpse28145_add_custom_types($query) {
     if (is_tag() && $query->is_main_query()) {
 
         // this gets all post types:
-         $post_types = get_post_types();
+        $post_types = get_post_types();
         // alternately, you can add just specific post types using this line instead of the above:
         // $post_types = array( 'post', 'your_custom_type' );
 
