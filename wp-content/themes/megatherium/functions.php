@@ -130,7 +130,7 @@ function megatherium_scripts() {
     wp_deregister_script('jquery');
     wp_register_script('jquery', includes_url('/js/jquery/jquery.js'), false, NULL, true);
     wp_enqueue_script('jquery');
-    wp_enqueue_style('_s_backbone-style', get_template_directory_uri() . '/assets/css//theme-style' . $minified . '.css', array(), '20130908');
+    wp_enqueue_style('_s_backbone-style', get_template_directory_uri() . '/assets/css/theme-style' . $minified . '.css', array(), '20130908');
     wp_enqueue_style('font-awesome-icons', get_template_directory_uri() . '/assets/css/font-awesome' . $minified . '.css');
     wp_enqueue_script('modernizr', get_template_directory_uri() . '/assets/js/vendor/modernizr.custom.92053' . $minified . '.js', array('jquery'), 'v2.8.3');
     wp_enqueue_script('parallax', get_template_directory_uri() . '/assets/js/vendor/parallax' . $minified . '.js', array('jquery'), '20130905', true);
