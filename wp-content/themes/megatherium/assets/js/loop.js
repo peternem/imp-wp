@@ -1,4 +1,4 @@
-/*!  - v1.0.0 - 2017-09-22
+/*!  - v1.0.0 - 2017-09-23
  * https://github.com/peternem/imp-wp#readme
  * Copyright (c) 2017; * Licensed GPLv2+ */
 
@@ -176,24 +176,26 @@
                     success: function (data_portfolio) {
                         var template_wp = _.template(jQuery('#temp-wp').html())({data_portfolio: data_portfolio.toJSON()});
                         jQuery('#recentWork-page1').html(template_wp);
-                    }
-                });
-                
-                var data_portfolio_recent = new wp.api.collections.Web_portfolio();
-                data_portfolio_recent.fetch({
-                    data: {
-                        'filter': {
-                            'orderby': '',
-                            'order': 'DESC'
-                        },
-                        '_embed': true,
-                        'per_page': 4
-                    },
-                    success: function (data_portfolio_recent) {
-                        var template_rec_wp = _.template(jQuery('#recentWebPort').html())({data_portfolio_recent: data_portfolio_recent.toJSON()});
+                        var template_rec_wp = _.template(jQuery('#recentWebPort').html())({data_portfolio: data_portfolio.toJSON()});
                         jQuery('#recentWork-rec').html(template_rec_wp);
                     }
                 });
+                
+//                var data_portfolio_recent = new wp.api.collections.Web_portfolio();
+//                data_portfolio_recent.fetch({
+//                    data: {
+//                        'filter': {
+//                            'orderby': '',
+//                            'order': 'DESC'
+//                        },
+//                        '_embed': true,
+//                        'per_page': 25
+//                    },
+//                    success: function (data_portfolio_recent) {
+//                        var template_rec_wp = _.template(jQuery('#recentWebPort').html())({data_portfolio_recent: data_portfolio_recent.toJSON()});
+//                        jQuery('#recentWork-rec').html(template_rec_wp);
+//                    }
+//                });
             }
         });
         

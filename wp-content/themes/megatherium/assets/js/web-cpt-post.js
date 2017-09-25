@@ -1,4 +1,4 @@
-/*!  - v1.0.0 - 2017-09-22
+/*!  - v1.0.0 - 2017-09-23
  * https://github.com/peternem/imp-wp#readme
  * Copyright (c) 2017; * Licensed GPLv2+ */
 /* 

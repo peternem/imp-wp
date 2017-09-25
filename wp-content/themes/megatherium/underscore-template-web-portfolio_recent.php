@@ -6,7 +6,8 @@
                 <h1 class="section-title">Recent Web Projects</h1>
             </header>
             <div class="slidetile-area flexy">
-                <% _.each(data_portfolio_recent, function(item, key, list){ %>
+                <% _.any(data_portfolio, function (item, key, list) { %>
+                    <% if (key >= 4) return true; // break %>
                 <div id="post-<%= item.id %>" class="home-tiles-2 post">
                     <div class="panel">
                         <div class="panel-body">
@@ -20,8 +21,9 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <% }); %>
+                </div> 
+         <% }); %>
+         
             </div>
             <ul class="see-more-link align-center">
                 <li><a class="btn btn-light" role="button" title="Web Portfolio" id="scEvent" href="#recentWork">More Work <i class="fa fa-angle-double-right"></i></a></li>
