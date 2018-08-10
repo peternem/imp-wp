@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let wppost of wpposts" >
+      <h2><a [routerLink]="" (click)="selectPost('web-portfolio/' + wppost.slug)">{{ wppost.title.rendered }} </a></h2>
+      <div [innerHTML]="wppost.excerpt.rendered"></div> 
+  </li>
+</ul>

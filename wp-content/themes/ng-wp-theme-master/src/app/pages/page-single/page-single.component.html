@@ -1,0 +1,8 @@
+<div *ngIf="post" name="xxx">
+  <h1>{{ post.title.rendered }}</h1>
+  <div [innerHTML]="page.content.rendered"></div>
+  <img src="http://mattpeternell.dev/{{page.featured_image_web_thumb}}" />
+</div>
+<div *ngIf="!post">
+  no WP post found
+</div>

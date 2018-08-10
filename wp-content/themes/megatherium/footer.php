@@ -26,8 +26,7 @@
             wp_nav_menu($footer_argsx);
             ?>
             <div class="column-4 footer-secondary-links ">
-                <?php get_template_part('underscore-templates-social-icons'); ?>
-                
+                <ul id="socialLinks" class="social-list"></ul>
                 <?php //do_action('my_footer_hook'); ?>
             </div>
         </div>
@@ -45,7 +44,16 @@
 
 
 <?php wp_footer(); ?>
-
+<?php get_template_part('underscore-templates-hero'); ?>
+<?php get_template_part('underscore-templates-welcome'); ?>
+<?php get_template_part('underscore-templates-3-column-cta'); ?>
+<?php get_template_part('underscore-template-web-portfolio_recent'); ?>
+<?php get_template_part('underscore-templates-tags'); ?>
+<?php get_template_part('underscore-templates-skills'); ?>
+<?php get_template_part('underscore-template-web-portfolio'); ?>
+<?php get_template_part('underscore-templates-about'); ?>
+<?php get_template_part('underscore-templates-contact'); ?>
+<?php get_template_part('underscore-templates-social-icons'); ?>
 <?php if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) { ?>
     <script src="//localhost:35729/livereload.js"></script>
 <?php } ?>

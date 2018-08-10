@@ -54,6 +54,7 @@
             this.selectPill('li.contact-link');
         }
     });
+    
     var ApplicationView = Backbone.View.extend({
 
         //bind view to body element (all views should be bound to DOM elements)

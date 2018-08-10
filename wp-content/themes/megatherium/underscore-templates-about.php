@@ -5,9 +5,8 @@
             <li>About</li>
         </ol>
     </div>
-
     <% _.each(data_posts, function(item,key,list){ %>
-    <% if (item.slug == "about-this-dev") { %>
+    <% if (item.slug == "about") { %>
     <article id="post-<%= item.id %>" class="post my-inner-container">
         <div class="mp-row row">
             <div class="column-8 margin-bottom-50">
@@ -28,6 +27,3 @@
     <% } %>
     <% }); %>
 </script>
-<section id="about-page" class="my-container black pages"></section>
-
-

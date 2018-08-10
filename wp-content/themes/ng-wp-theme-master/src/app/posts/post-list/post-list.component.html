@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let post of posts" >
+      <h2><a [routerLink]="" (click)="selectPost('posts/'+post.slug)">{{ post.title.rendered }}</a></h2>
+      <div [innerHTML]="post.excerpt.rendered"></div> 
+      <div>
+          <img src="http://mattpeternell.dev/{{post.featured_image_src}}" />
+          <img [src]="post.featured_image_src">
+      </div>
+  </li>
+</ul>

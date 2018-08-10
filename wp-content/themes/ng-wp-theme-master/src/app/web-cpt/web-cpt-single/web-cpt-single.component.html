@@ -1,0 +1,7 @@
+<div *ngIf="post" name="ccc">
+  <h1>{{ post.title.rendered }}</h1>
+  <div [innerHTML]="post.content.rendered"></div>
+</div>
+<div *ngIf="!post">
+  no Web Portfolio post found
+</div>

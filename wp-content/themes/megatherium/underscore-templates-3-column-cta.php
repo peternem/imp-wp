@@ -20,13 +20,10 @@
                     <% if ( xyz.cta_link ) { %>
                     <a href="<%= xyz.cta_link %>"><%= xyz.cta_link_label %> <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
                     <% } %>
-                </div>    
+                </div>
                 <% }); %>
 
                 <% }); %>
         </div>
     </div>
 </script>
-<section id="keyPoints" class="three-col-cta black"></section>
-
-

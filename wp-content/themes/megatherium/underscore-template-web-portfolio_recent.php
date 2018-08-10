@@ -1,5 +1,3 @@
-<section id="recentWork-page"  class="my-container">
-
     <script type = "text/html" id="recentWebPort">
         <div class="post my-inner-container">
             <header class="row section-header">
@@ -21,16 +19,12 @@
                             </div>
                         </div>
                     </div>
-                </div> 
+                </div>
          <% }); %>
-         
+
             </div>
             <ul class="see-more-link align-center">
                 <li><a class="btn btn-light" role="button" title="Web Portfolio" id="scEvent" href="#recentWork">More Work <i class="fa fa-angle-double-right"></i></a></li>
             </ul>
         </div>
     </script>
-    <section id="recentWork-rec"  class="my-container"></section>
-</section>
-
-

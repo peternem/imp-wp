@@ -14,6 +14,4 @@
     <% } %>
     <% }); %>
 </script>
-<div id="welcome" class=""></div>
-
-
+<!-- <div id="welcome" class=""></div> -->

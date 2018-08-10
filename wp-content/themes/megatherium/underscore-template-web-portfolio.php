@@ -1,4 +1,4 @@
-<section id="recentWork-page"  class="my-container pages">
+
     <script type = "text/html" id="temp-wp1">
         <%
         var bread_path_base = "";
@@ -51,7 +51,7 @@
                             <div class="panel-heading">
                                 <h1 class="panel-title"><a href="<%= item.link %>" title="<%= item.title.rendered %>"><%= item.title.rendered %></a></h1>
                             </div>
-                            <p class="lead"><%= item.kia_subtitle %></p>                       
+                            <p class="lead"><%= item.kia_subtitle %></p>
                             <% if ( item.cpt_tag ) { %>
                             <ul class="tag-list">
                                 <% _.each(  item.cpt_tag, function( tag ) { %>
@@ -59,7 +59,7 @@
                                 <% } ); %>
                             </ul>
                             <% } %>
-                            <a class="c-call-to-action c-glyph" href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">
+                            <a class="c-call-to-action c-glyph" href="<%= item.link %>" title="<%= item.title.rendered %>">
                                 <span>Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
                             </a>
                         </div>
@@ -73,8 +73,3 @@
                 <li><a class="btn btn-light" role="button" title="Web Portfolio" id="scEvent" href="#web-portfolio">More Work <i class="fa fa-angle-double-right"></i></a></li>
             </ul>-->
     </script>
-    <section id="recentWorkInto" class="my-container black "></section>
-    <section id="recentWork-page1"  class="my-container"></section>
-</section>
-
-

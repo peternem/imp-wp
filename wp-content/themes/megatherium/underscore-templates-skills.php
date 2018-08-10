@@ -21,6 +21,3 @@
     <% } %>
     <% }); %>
 </script>
-<div id="skillset-page" class="my-container black"></div>
-
-

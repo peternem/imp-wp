@@ -24,7 +24,8 @@
                             <% } ); %>
                         </ul>
                         <% } %>
-                        <a class="c-call-to-action c-glyph" href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>">
+
+                        <a class="c-call-to-action c-glyph" href="<%= item.link %>" title="<%= item.title.rendered %>">
                             <span>Read More <i class="fa fa-angle-double-right" aria-hidden="true"></i></span>
                         </a>
                     </div>
@@ -39,5 +40,3 @@
     </ul>
 </script>
 <section id="recentPrint-page"  class="my-container pages"></section>
-
-

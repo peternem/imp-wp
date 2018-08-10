@@ -29,5 +29,3 @@
     <% }); %>
 </script>
 <section id="contact-page" class="my-container black pages"></section>
-
-
